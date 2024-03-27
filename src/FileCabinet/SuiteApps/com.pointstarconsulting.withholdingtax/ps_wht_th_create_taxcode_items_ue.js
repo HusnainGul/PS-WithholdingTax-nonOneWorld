@@ -27,7 +27,6 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', 'N/error'],
           let taxCodeItemFieldMapObject = {
             "custrecord_ps_wht_taxcode_rate": "rate",
             "name": "itemid",
-            // "custrecord_ps_wht_taxcode_subs_list": "subsidiary",
             "custrecord_ps_wht_taxcode_ar_acc": "araccount",
             "custrecord_ps_wht_taxcode_ap_account": "apaccount",
             "custrecord_ps_wht_taxcode_ap_item": "internalid",
@@ -248,20 +247,12 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', 'N/error'],
                let fieldValue = taxCodeValesObj[sourceFieldId]
                log.debug("fieldValue", fieldValue);
 
-              //  if(targetFieldId=="subsidiary")
-              //  {
-              //       objRecord.setValue({
-              //         fieldId: targetFieldId,
-              //         value: "[11,5]",
-              //       });
-              //  }
-              //  else
-              //  {
+
                   objRecord.setValue({
                     fieldId: targetFieldId,
                     value: fieldValue,
                   });
-              //  }
+             
               
              }
            }
@@ -337,23 +328,11 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', 'N/error'],
 
               let fieldValue = taxCodeValesObj[sourceFieldId];
 
-              // log.debug("fieldValue", fieldValue);
-              //  if (targetFieldId == "subsidiary") {
-              //   var strArrayValue = new Array();
-              //   strArrayValue[0] = "11";
-              //   strArrayValue[1] = "5";
-
-              //    objRecord.setValue({
-              //      fieldId: targetFieldId,
-              //      value: fieldValue,
-              //    });
-              //   } 
-              //  else {
+           
                  objRecord.setValue({
                    fieldId: targetFieldId,
                    value: fieldValue,
                  });
-              //   }
             }
           }
         }
