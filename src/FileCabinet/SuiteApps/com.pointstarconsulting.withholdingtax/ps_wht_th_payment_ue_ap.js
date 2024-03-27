@@ -496,10 +496,6 @@ define(['N/record', 'N/search', 'N/https','N/url','N/task', 'N/runtime', './lib/
         
                                         log.debug('amount set in payment..');
         
-                                        let subsidiaryFld = helper_lib.getSubsidiary(vendorPaymentRecord);
-                                        vendorPaymentRecord.setValue("subsidiary", subsidiaryFld);
-        
-                                        log.debug('subsidiary set in payment..');
         
                                       
                                         let creditRecord = record.load({
@@ -819,7 +815,7 @@ define(['N/record', 'N/search', 'N/https','N/url','N/task', 'N/runtime', './lib/
 
                 log.debug("taxAmount: ", taxAmount);
 
-                let data = {"internalid" : checkRecordId , "subsidiary" : checkRecord.getValue("subsidiary") };
+                let data = {"internalid" : checkRecordId };
                 let journalEntryId =   helper_lib.createReversalJournalEntry(data, taxAmount, checkRecordId, recordType)
                 journalEntryId ? checkRecord.setValue('custbody_ps_wht_ref_journal_entry', journalEntryId) : true
 
@@ -979,12 +975,7 @@ define(['N/record', 'N/search', 'N/https','N/url','N/task', 'N/runtime', './lib/
             log.debug('billPaymentAmount Final', billPaymentAmount);
             log.debug('whtTaxAmountItems Final', whtTaxAmountItems); 
             log.debug('billPaymentDiscount', billPaymentDiscount);
-
-            let subsidiaryFld = helper_lib.getSubsidiary(vendorPaymentRecord);
-
             log.debug("finalPayload.lenght",finalPayload.length);
-
-            vendorPaymentRecord.setValue("subsidiary", subsidiaryFld);
 
             if (billPaymentDiscount > 0) {
                 vendorPaymentRecord.setSublistValue({

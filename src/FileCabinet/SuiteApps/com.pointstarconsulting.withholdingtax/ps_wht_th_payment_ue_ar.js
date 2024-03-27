@@ -305,12 +305,6 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', './lib/helper_lib', './li
 
                                     log.debug('amount set in customer payment..');
 
-                                    // let subsidiaryFld = helper_lib.getSubsidiary(customerPaymentRecord);
-                                    // customerPaymentRecord.setValue("subsidiary", subsidiaryFld);
-
-                                    log.debug('subsidiary set in payment..');
-
-
                                     let creditMemoRecord = record.load({
                                         type: 'creditmemo',
                                         id: creditMemoId,
@@ -536,12 +530,14 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', './lib/helper_lib', './li
             try {
 
                 const tranDate = cashSaleRecord.getValue("trandate");
+
                 const itemSublistCount = cashSaleRecord.getLineCount('item');
                 log.debug("itemSublistCount", itemSublistCount);
 
                 let taxAmount = helper_lib.getWhtTaxAmountForVatLines(cashSaleRecord, '', 'item')
                 log.debug("taxAmount: ", taxAmount);
-                let data = {"internalid": cashSaleRecordId, "subsidiary": cashSaleRecord.getValue("subsidiary")};
+
+                let data = {"internalid": cashSaleRecordId};
                 let journalEntryId = helper_lib.createReversalJournalEntry(data, taxAmount, cashSaleRecordId, recordType)
                 journalEntryId ? cashSaleRecord.setValue('custbody_ps_wht_ref_journal_entry', journalEntryId) : true
 
@@ -720,10 +716,7 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', './lib/helper_lib', './li
                 log.debug('whtTaxAmountItems Final', whtTaxAmountItems);
                 log.debug('customerPaymentDiscount', customerPaymentDiscount);
 
-                // let subsidiaryFld = helper_lib.getSubsidiary(customerPaymentRecord);
-
-                // customerPaymentRecord.setValue("subsidiary", subsidiaryFld); //commented before JK demo on 7thNov23 due to the issue that wrone invoices were applied to payment
-                if (customerPaymentDiscount > 0) {
+               if (customerPaymentDiscount > 0) {
                     log.debug("  if (customerPaymentDiscount > 0)", (customerPaymentDiscount > 0));
                     customerPaymentRecord.setSublistValue({
                         sublistId: 'apply',

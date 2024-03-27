@@ -476,7 +476,7 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                     "appliedtotransaction",
                     "location",
                     "trandate",
-                    "custbody_ps_wht_filing_status",
+                    "custbody_ps_wht_filing_status", 
                     "cseg_subs_branch",
                     "entity"
                 ]
@@ -6132,10 +6132,6 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                     value: new Date()
                 });
 
-                journalEntry.setValue({
-                    fieldId: 'subsidiary',
-                    value: data.subsidiary
-                });
 
                 journalEntry.setValue({
                     fieldId: 'custbody_ps_wht_related_transaction',
