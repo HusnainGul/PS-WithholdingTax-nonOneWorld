@@ -134,8 +134,6 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', 'N/error'],
 
       let taxCodeRacordValues = search.lookupFields({ type: 'customrecord_ps_tht_wht_tax_code', id: internalId, columns: taxCodeValueArray });
 
-      // log.debug("custrecord_ps_wht_taxcode_subs_list value 32", taxCodeRacordValues.custrecord_ps_wht_taxcode_subs_list)
-
       if (Array.isArray(taxCodeRacordValues.custrecord_ps_wht_taxcode_subs_list)) {
         let newArray = [];
 

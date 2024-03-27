@@ -472,7 +472,7 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
 
                 let type = (paymentType == 'vendorpayment') ? 'VendPymt' : (paymentType == 'customerpayment') ? 'CustPymt' : '';
 
-                let columns = [
+                let columns = [ 
                     "appliedtotransaction",
                     "location",
                     "trandate",
@@ -480,8 +480,6 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                     "cseg_subs_branch",
                     "entity"
                 ]
-
-                isOneWorld ? columns.push("subsidiary") : true
 
                 let vendorpaymentSearchObj = search.create({
                     type: paymentType,
@@ -508,7 +506,6 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                             trandate: result.getValue("trandate"),
                             location: result.getValue("location"),
                             paymentId: paymentId,
-                            subsidiary: isOneWorld ? result.getValue("subsidiary") : "",
                             subsidiarybranch: result.getValue("cseg_subs_branch"),
                             filingstatus: result.getValue("custbody_ps_wht_filing_status"),
                             entity: result.getValue("entity"),
