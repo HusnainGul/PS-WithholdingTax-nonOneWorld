@@ -1,0 +1,88 @@
+<!-- This file is used for locking the content of your SuiteApp when deploying to a NetSuite account. -->
+<!-- The configuration below locks all content except for the files and objects specified under the apply tag. Use the commented lines as examples. -->
+<!-- This configuration is only applied when the "Apply Installation Preferences" option is provided through SuiteCloud SDK. Otherwise this file is ignored. -->
+<!-- For more information, see https://system.netsuite.com/app/help/helpcenter.nl?fid=section_1543865613.html -->
+
+<preference type="LOCKING" defaultAction="UNLOCK">
+    <apply action="LOCK">
+      
+      <!-- <path appliesTo="FILES_AND_FOLDERS" includeRoot="T">~/FileCabinet/SuiteApps/com.pointstarconsulting.withholdingtax/Fonts/*</path>
+      <path appliesTo="FILES_AND_FOLDERS" includeRoot="T">~/FileCabinet/SuiteApps/com.pointstarconsulting.withholdingtax/header logo/*</path>
+       
+        <object>custform_ps_wht_bill_pmnt_form</object>
+        <object>custform_ps_wht_cashsale_form</object>
+        <object>custform_ps_wht_check_form</object>
+        <object>custform_ps_wht_credit_memo_form</object>
+        <object>custform_ps_wht_bill_credit_form</object>
+        <object>custform_ps_wht_cust_pymt_form</object>
+        <object>custform_ps_wht_invoice_form</object>
+        <object>custform_ps_wht_journal_form</object>
+        <object>custform_ps_wht_vendor_bill_form</object>
+        <object>custentity_ps_wht_entity_branch</object>
+        <object>custentity_ps_wht_tax_id</object>
+        <object>custentity_ps_wht_vat_registration_no</object>
+        <object>custitem_ps_wht_item_tax_code</object>
+        <object>customlist_submit_method</object>
+        <object>customlist_wht_available_on_reference</object>
+        <object>customlist_wht_grouped_wht_tax_codes</object>
+        <object>customlist_wht_purchase_wht_tax_point</object>
+        <object>customlist_wht_sale_wht_tax_point</object>
+        <object>customlist_wht_tax_base</object>
+        <object>customlist_wht_tax_payment_history</object>
+        <object>custrecord_ps_wht_address1</object>
+        <object>custrecord_ps_wht_address2</object>
+        <object>custrecord_ps_wht_address3</object>
+        <object>custrecord_ps_wht_brn</object>
+        <object>custrecord_ps_wht_city</object>
+        <object>custrecord_ps_wht_vat_registration_no</object>
+        <object>custrecord_ps_wht_zip</object>
+        <object>customrecord_ps_tht_wht_category</object>
+        <object>customrecord_ps_tht_wht_cert_section</object>
+        <object>customrecord_ps_tht_wht_condition</object>
+        <object>customrecord_ps_tht_wht_configuration</object>
+        <object>customrecord_ps_tht_wht_filing_status</object>
+        <object>customrecord_ps_tht_wht_income_type</object>
+        <object>customrecord_ps_tht_wht_job</object>
+        <object>customrecord_ps_tht_wht_pp36_section</object>
+        <object>customrecord_ps_tht_wht_remittance</object>
+        <object>customrecord_ps_tht_wht_tax_code</object>
+        <object>customrecord_ps_tht_wht_trans_forms</object>
+        <object>custbody_ps_wht_bill_lines_data</object>
+        <object>custbody_ps_wht_certificate_no</object>
+        <object>custbody_ps_wht_condition</object>
+        <object>custbody_ps_wht_exch_rate_doc_no</object>
+        <object>custbody_ps_wht_filing_status</object>
+        <object>custbody_ps_wht_is_thai_tax_trans</object>
+        <object>custbody_ps_wht_memo</object>
+        <object>custbody_ps_wht_pay_partially</object>
+        <object>custbody_ps_wht_pp36_section</object>
+        <object>custbody_ps_wht_ref_journal_entry</object>
+        <object>custbody_ps_wht_related_transaction</object>
+        <object>custbody_ps_wht_sequence_no</object>
+        <object>custbody_ps_wht_tax_amount_sum</object>
+        <object>custbody_ps_wht_tax_invoice_no</object>
+        <object>custbody_ps_wht_tax_period</object>
+        <object>custbody_ps_wht_total_bill_amt_bef_vat</object>
+        <object>custbody_ps_wht_vat_registration_no</object>
+        <object>custbody_ps_wht_vendor</object>
+        <object>custbody_wht_related_bill_pymnt</object>
+        <object>custcol_ps_wht_apply_partial_payments</object>
+        <object>custcol_ps_wht_bill_line_no</object>
+        <object>custcol_ps_wht_cond_base_amount</object>
+        <object>custcol_ps_wht_net_amount</object>
+        <object>custcol_ps_wht_partial_net_amount</object>
+        <object>custcol_ps_wht_partial_wht_amount_new</object>
+        <object>custcol_ps_wht_partial_wht_amount_nfm</object>
+        <object>custcol_ps_wht_related_vat_rate</object>
+        <object>custcol_ps_wht_remaining_amount</object>
+        <object>custcol_ps_wht_tax_amount</object>
+        <object>custcol_ps_wht_tax_code</object>
+        <object>custcol_ps_wht_tax_rate</object>
+        <object>custcol_wht_partial_payment_amount</object>
+        <object>customrecord_cseg_subs_branch</object>
+        <object>cseg_subs_branch</object> -->
+               
+    </apply>
+</preference>
+
+

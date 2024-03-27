@@ -1,0 +1,711 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>ERP Delivery 3</LastAuthor>
+  <Created>2023-10-13T05:02:48Z</Created>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12570</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="m2118583399648">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m2118583399668">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118583399688">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118583399708">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118583399728">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118583399748">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118583399768">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118583399788">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118999574816">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m2118999574836">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118999574856">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118999574876">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118999574896">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m2118999574916">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118999574936">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118999574956">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118999581472">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118999581492">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118999581512">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118999581532">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118999581552">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m2118999581572">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118999581592">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="m2118999581612">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118893782180">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118893782200">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118893782240">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m2118893782260">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s62">
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Vertical="Top"/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s68">
+   <Alignment ss:Vertical="Top"/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s70">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s71">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s72">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s73">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s75">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s76">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s99">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s100">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="dd/mm/yyyy"/>
+  </Style>
+  <Style ss:ID="s101">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s102">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s103">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="TH Sarabun New" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="All">
+  <Names>
+   <NamedRange ss:Name="Print_Titles" ss:RefersTo="=All!R1:R10"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="19" ss:ExpandedRowCount="15" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s62" ss:DefaultRowHeight="18.5625">
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="30"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="54"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="78"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="105.75"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="114"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="13.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="19.5" ss:Span="12"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:MergeAcross="12" ss:StyleID="s64"><Data ss:Type="String">รายงานภาษีซื้อ</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s66"><Data ss:Type="String"></Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:MergeAcross="12" ss:StyleID="s64"><Data ss:Type="String">เดือนภาษี ${ds.monthInThai} ปี ${ds.year}</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:MergeAcross="12" ss:StyleID="s64"><Data ss:Type="String">${ds.companyName}</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="7"><Data ss:Type="String">เลขประจำตัวผู้เสียภาษีอากร</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="19.6875">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ชื่อสถานประกอบการ ${ds.address1}</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s68"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeAcross="3" ss:MergeDown="2" ss:StyleID="s70"><Data
+      ss:Type="String"> ${ds.address1} ${ds.address2} ${ds.address3} ${ds.zipCode} </Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+
+  <#list ds.companyTaxId as item>
+          <Cell ss:StyleID="s71"><Data ss:Type="Number">${item.id}</Data><NamedCell
+          ss:Name="Print_Titles"/></Cell>
+     </#list>
+
+
+
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="9">
+    <Cell ss:StyleID="s67"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s68"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:Index="7" ss:StyleID="s72"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s72"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s72"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s72"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s72"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s72"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s72"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s73"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s73"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s73"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s73"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s73"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s73"><NamedCell ss:Name="Print_Titles"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="19.3125">
+    <Cell ss:StyleID="s67"><Data ss:Type="String"></Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:Index="7" ss:StyleID="s74"><Data ss:Type="String"><#if ds.hq == 'true'> ✓ </#if></Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String"> สำนักงานใหญ่</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s68"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s68"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String"><#if ds.branch == 'true'> ✓ </#if></Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String"> สาขาที่</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s68"><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s76"><NamedCell ss:Name="Print_Titles"/></Cell>
+
+
+    <#list ds.branchCode as item>
+      <Cell ss:StyleID="s71"><Data ss:Type="Number">${item.id}</Data><NamedCell
+        ss:Name="Print_Titles"/></Cell>
+      </#list>
+
+
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="9"/>
+   <Row ss:AutoFitHeight="0" ss:Height="21">
+    <Cell ss:MergeDown="1" ss:StyleID="m2118893782180"><Data ss:Type="String">ลำดับที่</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m2118893782200"><Data ss:Type="String">ใบกำกับภาษี</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m2118893782240"><Data ss:Type="String">ชื่อผู้ซื้อสินค้า / ผู้รับบริการ</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m2118893782260"><Data ss:Type="String">เลขประจำตัวผู้เสียภาษีอากร&#10;ของผู้ขายสินค้า / ผู้ให้บริการ</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeAcross="2" ss:MergeDown="1" ss:StyleID="m2118999581472"><Data
+      ss:Type="String">สถาน&#10;ประกอบการ</Data><NamedCell ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeAcross="3" ss:MergeDown="1" ss:StyleID="m2118999581492"><Data
+      ss:Type="String">มูลค่าของสินค้า&#10;หรือบริการ</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeAcross="2" ss:MergeDown="1" ss:StyleID="m2118999581512"><Data
+      ss:Type="String">จำนวนเงิน&#10;ภาษีมูลค่าเพิ่ม</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:MergeAcross="3" ss:MergeDown="1" ss:StyleID="m2118999581532"><Data
+      ss:Type="String">หมายเหตุ</Data><NamedCell ss:Name="Print_Titles"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s71"><Data ss:Type="String">วัน เดือน ปี</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">ลขที่</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+   </Row>
+
+   <!-- <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s99"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">10-17-2023</Data></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">INVOICE36</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="m2118999581552"><Data ss:Type="String">36</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2118999581572"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="m2118999581592"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2118999581612"><Data ss:Type="String"></Data></Cell>
+   </Row> -->
+
+   
+  <#list ds.tranDataLines as item>
+      <Row ss:AutoFitHeight="0">
+        <Cell ss:StyleID="s99"><Data ss:Type="String"></Data></Cell>
+        <Cell ss:StyleID="s100"><Data ss:Type="String">${item.trandate}</Data></Cell>
+        <Cell ss:StyleID="s101"><Data ss:Type="String">${item.tranNumber}</Data></Cell>
+        <Cell ss:StyleID="s102"><Data ss:Type="String">${item.vendorName}</Data></Cell>
+        <Cell ss:StyleID="s103"><Data ss:Type="String">${item.vendorTaxRegId}</Data></Cell>
+        <Cell ss:MergeAcross="2" ss:StyleID="m2118999581552"><Data ss:Type="String">${item.vendorEntityBranch}</Data></Cell>
+        <Cell ss:MergeAcross="3" ss:StyleID="m2118999581572"><Data ss:Type="Number">${item.totalBillAmountWithOutVat}</Data></Cell>
+        <Cell ss:MergeAcross="2" ss:StyleID="m2118999581592"><Data ss:Type="Number">${item.totalVatAmountPerBill}</Data></Cell>
+        <Cell ss:MergeAcross="3" ss:StyleID="m2118999581612"><Data ss:Type="String">${item.whtMemo}</Data></Cell>
+      </Row>
+     </#list>
+   
+ 
+  
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="7" ss:StyleID="m2118583399728"><Data ss:Type="String">รวม</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2118583399748"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="m2118583399768"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2118583399788"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.2"/>
+    <PageMargins x:Bottom="0.2" x:Left="0.2" x:Right="0.2" x:Top="0.2"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>19</ActiveRow>
+     <ActiveCol>6</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

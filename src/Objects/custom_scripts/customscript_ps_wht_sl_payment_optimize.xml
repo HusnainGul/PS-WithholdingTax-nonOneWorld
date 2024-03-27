@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_ps_wht_sl_payment_optimize">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PS|WHT|SL Payment Optimization</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.pointstarconsulting.withholdingtax/ps_wht_th_optimization_sl.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ps_wht_sl_payment_optimize">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>T</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>PS|WHT|SL Payment Optimization</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

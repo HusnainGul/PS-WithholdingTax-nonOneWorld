@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_ps_wht_sl_print_certificate">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PS|WHT|SL PRINT WITHHOLDING CERTIFICATE</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>F</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.pointstarconsulting.withholdingtax/ps_wht_th_print_templates_sl.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ps_wht_sl_print_certificate">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>PS|WHT|SL PRINT WITHHOLDING CERTIFICATE</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

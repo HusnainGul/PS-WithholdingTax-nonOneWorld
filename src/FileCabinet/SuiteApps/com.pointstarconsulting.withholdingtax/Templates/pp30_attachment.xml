@@ -1,0 +1,703 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+	<head>
+		<!-- <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" /> -->
+		<link name="NotoSans" type="font" subtype="truetype" src="${ds.fonts.TFPimpakarn_ttf}" src-bold="${ds.fonts.TFPimpakarnBold_ttf}" src-italic="${ds.fonts.TFPimpakarnItalic_ttf}" src-bolditalic="${ds.fonts.TFPimpakarnBoldItalic_ttf}" bytes="2" />
+		<!-- <#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if> -->
+		<macrolist>
+			<macro id="nlheader">
+				<table class="header" style="width: 100%; font-size: 10pt;" cellpadding="0" cellspacing="0">
+					<tr >
+						<td width="100%" style="font-size:25px; color:#8a6257;" >
+							<b>
+								<span font-size="22px" > ใบแนบ</span>
+								<span font-size="26px"  >ภ.พ.30 </span>
+								<span font-size="22px"> ายละเอียดภาษีขายและภาษีซื้อของสถานประกอบการแต่ละแห่ง </span>
+							</b>
+						</td>
+					</tr>
+				</table>
+				<table align="right" class="header" style="font-size: 13pt; color:#8a6257;" width="18%">
+					<tr>
+						<td  width="10%">แผ่นที่ </td>
+						<td width="20%" align="center"  style="border-bottom: 1.5px dotted #99A4BB; color: #237e6d;">
+							<pagenumber/>
+						</td>
+						<td width="10%">ในจำนวน</td>
+						<td width="10%" align="center" style="border-bottom: 1.5px dotted #99A4BB; color: #237e6d;">
+							<totalpages/>
+						</td>
+						<td width="20%">แผ่น</td>
+					</tr>
+					<tr>
+						<td>
+				
+				 </td>
+					</tr>
+				</table>
+				<table style="font-size: 15px; color:#8a6257;" width="100%">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+					     เป็นใบแนบ ภ.พ.30
+					 </td>
+						<td>
+							<input checked="true" name="กรณียื่นปกติ" style="width: 10px; height:10px;" type="checkbox" />
+						</td>
+						<td>
+					    กรณียื่นปกติ
+					 </td>
+						<td>
+							<input checked="true" name="กรณียื่นเพิ่ม" style="width: 10px; height:10px;" type="checkbox" />
+						</td>
+						<td>
+					   กรณียื่นเพิ่มเติมครั้งที่.....
+					 </td>
+						<td></td>
+						<td></td>
+						<td>
+					สำหรับเดือนภาษี
+					</td>
+						<td>กรกฎาคม</td>
+						<td>พ.ศ.</td>
+						<td>2023</td>
+					</tr>
+				</table>
+				<table style="font-size: 15px; color:#8a6257;" width="100%" >
+					<tr>
+						<td >
+						 ชื่อผู้ประกอบการ
+						</td>
+						<td width="60%" style="border-bottom: 1.5px dotted #8a6257">
+						 .
+						</td>
+						<td>
+						 .เลขประจำตัวผู้เสียภาษีอากร
+						</td>
+						<td   align="left">
+							<table width="100%" >
+								<tr  style="color:#8a6257">
+												 ${ds.brnNumber}
+											</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</macro>
+			<macro id="nlfooter">
+				<!-- <table class="footer" style="width: 100%;">
+					<tr>
+						<td align="left" style="color: #237e6d;">
+							<b>สอบถามข้อมูลเพิ่มเติมได้ที่ศูรย์สารนิเทศสรรพากร RD Intelligence Center โทร. 1611</b>
+						</td>
+					</tr>
+				</table> -->
+			</macro>
+		</macrolist>
+		<style type="text/css">* {
+			<#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+				<#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+					<#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+						<#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+							<#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+								<#else>
+			font-family: NotoSans, sans-serif;
+								</#if>
+		}
+		td p { align:left }
+		 #bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+				 .pic div { position:absolute; width:5; height:5}
+							</style>
+						</head>
+						<body header="nlheader" header-height="15%" footer="nlfooter" footer-height="1%"  margin-top="-10px"  size="Letter-LANDSCAPE" padding="0.2in 0.2in 0.2in 0.2in">
+							<!-- 
+   <table width="100%" class="table1" border="1">
+
+	   <tr>
+		   <td>
+			 
+			 </td>
+     </tr>
+	 </table>
+	 -->
+							<table width="100%" class="table1" border="1"  style="color:#8a6257;">
+								<thead border-bottom="1">
+									<tr>
+										<th  align="center" width="5%">
+											<table>
+												<tr>
+													<td align="center">ลำดับ</td>
+												</tr>
+												<tr>
+													<td align="center"> ที่</td>
+												</tr>
+											</table>
+										</th>
+										<th align="center" border-left="1"  colspan="4" width="20%">
+											<table>
+												<tr>
+													<td align="center">สนง.ใหญ่/</td>
+												</tr>
+												<tr>
+													<td align="center">สาขาที่</td>
+												</tr>
+											</table>
+											<!-- สนง.ใหญ่/
+											<br/> 
+											สาขาที่ -->
+										</th>
+										<th align="center" border-left="1" width="30%">
+											<table>
+												<tr>
+													<td align="center">
+														<b>ที่ตั้งสถานประกอบการ </b>
+													</td>
+												</tr>
+												<tr>
+													<td align="center" font-size="12px">
+														(ให้ระบุเลขที่ ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์)
+													</td>
+												</tr>
+											</table>
+										</th>
+										<th align="center"  border-left="1" border-bottom="1" colspan="2">
+											<b> ยอดขายที่ต้องเสียภาษี </b>
+										</th>
+										<th align="center"  border-left="1" border-bottom="1" colspan="2">
+											<b> ภาษีขาย </b>
+										</th>
+										<th align="center"  border-left="1" border-bottom="1" colspan="2">
+											<b> ยอดซื้อ </b>
+										</th>
+										<th align="center"  border-left="1" border-bottom="1" colspan="2">
+											<b> ภาษีซื้อ </b>
+										</th>
+										<th align="center"  border-left="1" border-bottom="1" colspan="2">
+											<b> ภาษีมูลค่าเพิ่มที่ต้อง </b>
+											<br/> ชำระ (+) / ชำระเกิน (-)
+										</th>
+									</tr>
+									<tr>
+										<th></th>
+										<th border-left="1"></th>
+										<th ></th>
+										<th ></th>
+										<th ></th>
+										<th border-left="1"></th>
+										<th border-left="1" width="12%">บาท  </th>
+										<th border-left="1" width="5%"> สต.</th>
+										<th border-left="1" width="10%">บาท  </th>
+										<th border-left="1" width="5%"> สต.</th>
+										<th border-left="1"  width="10%">บาท  </th>
+										<th border-left="1" width="5%"> สต.</th>
+										<th border-left="1"  width="10%">บาท  </th>
+										<th border-left="1" width="5%"> สต.</th>
+										<th border-left="1"  width="10%">บาท  </th>
+										<th border-left="1" width="5%"> สต.</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<tr>
+										<td >0</td>
+										<td border-left="1">	</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> 0</td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1"></td>
+										<td border-left="1"> </td>
+										<td border-left="1">0</td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+										<td border-left="1"></td>
+									</tr>
+									<!-- <#list ds.lineData as attach>
+										<tr>
+											<td  border-bottom="1" align="center"> ${attach.sno} </td>
+											
+												<td border-left="1" border-bottom="1">
+													<table width="100%">
+														<tr> 
+												 ${ds.branchCode}
+											</tr>
+													</table>
+												</td>
+												<td border-left="1" border-bottom="1" >
+													<table  width="100%">
+														<tr>
+															<td  style="height:30px;"></td>
+														</tr>
+														<#list attach.tranDates as line>
+															<tr>
+																<td style="border-bottom: 1px dotted #001B54;">${line.tranDate}</td>
+															</tr>
+														</#list>
+													</table>
+												</td>
+												<td border-left="1" border-bottom="1">
+													<table  width="100%">
+														<tr>
+															<td  style="height:30px;"></td>
+														</tr>
+														<#list attach.taxCodes as line>
+															<tr>
+																<td style="border-bottom: 1px dotted #001B54;">${line.taxCode}</td>
+															</tr>
+														</#list>
+													</table>
+												</td>
+												<td border-left="1" border-bottom="1">
+													<table  width="100%" >
+														<tr>
+															<td  style="height:30px;"></td>
+														</tr>
+														<#list attach.taxRates as line>
+															<tr>
+																<td style="border-bottom: 1px dotted #001B54;" >${line.taxRate}</td>
+															</tr>
+														</#list>
+													</table>
+												</td>
+												<td border-left="1" border-bottom="1">
+													<table  width="100%">
+														<tr>
+															<td  style="height:30px;"></td>
+														</tr>
+														<#list attach.amounts as line>
+															<tr>
+																<td style="border-bottom: 1px dotted #001B54;" align="right">${line.amount}</td>
+															</tr>
+														</#list>
+													</table>
+												</td>
+												<td border-left="1" border-bottom="1" border-right="1">
+													<table  width="100%">
+														<tr>
+															<td  style="height:30px;"></td>
+														</tr>
+														<#list attach.taxAmounts as line>
+															<tr>
+																<td style="border-bottom: 1px dotted #001B54;" align="right">${line.taxAmount}</td>
+															</tr>
+														</#list>
+													</table>
+												</td>
+												
+											</tr>
+										</#list> -->
+								</tbody>
+								<tfoot>
+									<tr border-top="1">
+										<td colspan="16">
+											<table width="100%" style="color:#8a6257;">
+												<tr>
+													<td  width="65%">
+															
+														</td>
+													<td width="40%">
+														<table width="100%" style="color:#8a6257;">
+															<tr margin-top="30px">
+																<td vertical-align="middle" width="25%">
+																	<p align="center" style="margin-top:30px; font-size:11px; margin-left : -30px">
+																		<b> ประทับตรา </b>
+																		<br/>
+																		<b>นิติบุคคล </b>
+																		<br/>
+																		<b> (ถ้ามี) </b>
+																	</p>
+																	<circle x="32%" y="30%" radius="30%" border="1" style="border-color: #8a6257; position:fixed;" />
+																</td>
+																<td width="10%" align="center">
+																	<p>
+        ลงชื่อ.................................................................ผู้จ่ายเงิน
+																		<br/>
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;(.................................................................)
+																		<br/>
+																	</p>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+							<!-- <table width="100%" style="color:#8a6257;">
+									<tr>
+										<td border-left="1" border-bottom="1" width="65%">
+											<table width="100%">
+												<tr>
+													<td colspan="3">
+														<em> (ให้กรอกลำดับที่ต่อเนื่องกันไปทุกแผ่นตามเงินได้แต่ละประเภท) </em>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<b>
+															<u>หมายเหตุ </u>
+														</b>
+													</td>
+													<td>
+									     1
+									 </td>
+													<td>
+									  ให้ระบุว่าจ่ายเป็นค่าอะไร เช่น ค่านายหน้า ค่าแห่งกู๊ดวิลล์ ดอกเบี้ยเงินฝาก ดอกเบี้ยตั๋วเงิน เงินปันผล เงินส่วนแบ่งกำ�ไร
+														<br/>
+										 ค่าเช่าอาคาร ค่าสอบบัญชี ค่าออกแบบ ค่าก่อสร้างโรงเรียน ค่าซื้อเครื่องพิมพ์ดีด ค่าซื้อพืชผลทางการเกษตร (ยางพารา
+														<br/>
+											มันสำ�ปะหลัง ปอ ข้าว ฯลฯ) ค่าจ้างทำ�ของ ค่าจ้างโฆษณา รางวัล ส่วนลดหรือประโยชน์ใดๆ เนื่องจากการส่งเสริมการขาย
+														<br/>
+										รางวัลในการประกวด การแ ข่งขัน การชิงโชค ค่าขนส่งสินค้า ค่าเบี้ยประกันวินาศภัย
+													</td>
+												</tr>
+												<tr>
+													<td>
+									  
+									 </td>
+													<td>
+									    2
+									 </td>
+													<td>
+									  เงื่อนไขการหักภาษี ณ ที่จ่ายให้กรอกดังนี้
+														<br/>
+										 หัก ณ ที่จ่าย กรอก
+														<span font-weight="bold"> 1 </span>
+														<br/>
+											ออกภาษีให้ กรอก
+														<span font-weight="bold"> 2 </span>
+														<br/>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td width="40%" border-left="1" border-right="1" border-bottom="1">
+											<table width="100%" style="color:#8a6257;">
+												<tr margin-top="30px">
+													<td vertical-align="middle" width="25%">
+														<p align="center" style="margin-top:20px; font-size:11px; margin-left : -30px">
+															<b> ประทับตรา </b>
+															<br/>
+															<b>นิติบุคคล </b>
+															<br/>
+															<b> (ถ้ามี) </b>
+														</p>
+														<circle x="32%" y="30%" radius="30%" border="1" style="border-color: #237e6d; position:fixed;" />
+													</td>
+													<td width="10%" align="center">
+														<p>
+        ลงชื่อ.................................................................ผู้จ่ายเงิน
+															<br/>
+        &nbsp;&nbsp; &nbsp;&nbsp;(.........................................................................)
+															<br/>
+       ตำแหน่ง..........................................................................
+															<br/>
+        ยื่นวันที่.........เดือน................................พ.ศ......................
+														</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table> -->
+						</body>
+					</pdf>

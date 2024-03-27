@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory__ps_wht_vat">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_ps_wht_ps_thai_localization]</centertab>
+  <label>VAT</label>
+  <links>
+    <link>
+      <linklabel>Manage VAT Transaction</linklabel>
+      <linkobject>[scriptid=customscript_ps_wht_manage_vat_trans_sl.customdeploy_ps_wht_manage_vat_trans_sl]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>VAT Return (P.P.30)</linklabel>
+      <linkobject>[scriptid=customscript_ps_wht_vat_return_pp30_sl.customdeploy_ps_wht_vat_return_pp30_sl]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

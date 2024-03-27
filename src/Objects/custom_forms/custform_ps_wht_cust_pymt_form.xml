@@ -1,0 +1,850 @@
+<transactionForm scriptid="custform_ps_wht_cust_pymt_form" standard="STANDARDCUSTOMERPAYMENT">
+  <name>PS WHT Customer Payment Form</name>
+  <recordType>CUSTOMERPAYMENT</recordType>
+  <inactive>F</inactive>
+  <preferred>F</preferred>
+  <mainFields>
+    <fieldGroup scriptid="primaryinformation">
+      <label>Primary Information</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <field>
+          <id>CUSTOMFORM</id>
+          <label>Custom Form</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CUSTOMER</id>
+          <label>Customer</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>TRANID</id>
+          <label>Payment #</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>BALANCE</id>
+          <label>Balance</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>INLINETEXT</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CONSOLIDATEBALANCE</id>
+          <label>Consolidated Balance</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>INLINETEXT</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>T</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>PENDING</id>
+          <label>Pending</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>INLINETEXT</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>T</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CURRENCY</id>
+          <label>Currency</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>EXCHANGERATE</id>
+          <label>Exchange Rate</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>ARACCT</id>
+          <label>A/R Account</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>ACCOUNT</id>
+          <label>Account</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>TRANDATE</id>
+          <label>Date</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>POSTINGPERIOD</id>
+          <label>Posting Period</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>MEMO</id>
+          <label>Memo</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>TRANSACTIONNUMBER</id>
+          <label>Transaction Number</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>GENERATETRANIDONSAVE</id>
+          <label>Generate Document Number on Save</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+          <checkBoxDefault>UNCHECKED</checkBoxDefault>
+        </field>
+      </fields>
+    </fieldGroup>
+    <fieldGroup scriptid="classification">
+      <label>Classification</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <field>
+          <id>SUBSIDIARY</id>
+          <label>Subsidiary</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>DEPARTMENT</id>
+          <label>Cost Category</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CLASS</id>
+          <label>Project</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>LOCATION</id>
+          <label>Location</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+       
+      </fields>
+    </fieldGroup>
+    <fieldGroup scriptid="intercompanymanagement">
+      <label>Intercompany Management</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+    </fieldGroup>
+    <fieldGroup scriptid="fieldgroup_1_t2397753_252">
+      <label>PS Withholding Thai Tax</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <!-- <field>
+           <id>[scriptid=cseg_subs_branch]</id>
+          <label>PS|WHT|Subsidiary Branch</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field> -->
+        <!-- <field>
+          <id>[scriptid=custbody_ps_wht_filing_status]</id>
+    <label>PS|THT|Filing Status</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field> -->
+        <!-- <field>
+          <id>[scriptid=custbody_ps_wht_tax_period]</id>
+            <label>PS|THT|Tax Period</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field> -->
+        <field>
+          <id>[scriptid=custbody_ps_wht_tax_amount_sum]</id>
+        <label>PS|THT|Tax Amount</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=custbody_ps_wht_sequence_no]</id>
+          <label>PS|THT|Sequence Number</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=custbody_ps_wht_certificate_no]</id>
+      <label>PS|THT|Certificate No. </label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <!-- <field>
+          <id>[scriptid=custbody_ps_wht_condition]</id>
+   <label>PS|THT|Withholding Condition</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field> -->
+      </fields>
+    </fieldGroup>
+    <defaultFieldGroup>
+      <fields position="MIDDLE">
+      
+      
+      
+        <field>
+          <id>[scriptid=custbody_ps_wht_ref_journal_entry]</id>
+          <label>PS|THT|Ref. Journal Entry</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </defaultFieldGroup>
+  </mainFields>
+  <tabs>
+    <tab>
+      <id>APPLICATIONS</id>
+      <label>Apply</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            <field>
+              <id>PAYMENT</id>
+              <label>Payment Amount</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>AUTOAPPLY</id>
+              <label>Auto Apply</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>TRANSACTIONPAYMENT</id>
+      <label>Payment Method</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            <field>
+              <id>PAYMENTMETHOD</id>
+              <label>Payment Method</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CHECKNUM</id>
+              <label>Check #</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CREDITCARDPROCESSOR</id>
+              <label>Payment Processing Profile</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CREDITCARD</id>
+              <label>Credit Card Select</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCNUMBER</id>
+              <label>Credit Card #</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCSECURITYCODE</id>
+              <label>CSC</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCEXPIREDATE</id>
+              <label>Expires (MM/YYYY)</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CARDDATAPROVIDED</id>
+              <label>Card Data Provided</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCNAME</id>
+              <label>Name on Card</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCSTREET</id>
+              <label>Card Street</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCZIPCODE</id>
+              <label>Card Zip Code</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CUSTOMERCODE</id>
+              <label>Customer Code</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCAPPROVED</id>
+              <label>CC Approved</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+            <field>
+              <id>CHARGEIT</id>
+              <label>Charge Credit Card</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>PNREFNUM</id>
+              <label>P/N Ref.</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>AUTHCODE</id>
+              <label>Auth. Code</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCAVSSTREETMATCH</id>
+              <label>AVS Street Match</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCAVSZIPMATCH</id>
+              <label>AVS Zip Match</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>IGNOREAVS</id>
+              <label>Ignore AVS</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCSECURITYCODEMATCH</id>
+              <label>CSC Match</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>IGNORECSC</id>
+              <label>Ignore CSC</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCISPURCHASECARDBIN</id>
+              <label>Purchase Card BIN</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>CCPROCESSASPURCHASECARD</id>
+              <label>Send Line-Level Data</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>ISRECURRINGPAYMENT</id>
+              <label>Recurring Payment</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>SOFTDESCRIPTOR</id>
+              <label>Soft Descriptor</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>PAYMENTOPERATION</id>
+              <label>Payment Operation</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>TRANSACTIONRELATIONSHIPS</id>
+      <label>Relationships</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>CRMCONTACTS</id>
+          <label>Contacts</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>TRANSACTIONCOMMUNICATION</id>
+      <label>Communication</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>MESSAGES</id>
+          <label>Messages</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>ACTIVITIES</id>
+          <label>Activities</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>EVENTS</id>
+          <label>Events</label>
+          <visible>F</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>TASKS</id>
+          <label>Tasks</label>
+          <visible>F</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>CALLS</id>
+          <label>Phone Calls</label>
+          <visible>F</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>MEDIAITEM</id>
+          <label>Files</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>USERNOTES</id>
+          <label>User Notes</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>TRANSACTIONSYSTEMINFORMATION</id>
+      <label>System Information</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>SYSTEMNOTES</id>
+          <label>System Notes</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>ACTIVEWORKFLOWS</id>
+          <label>Active Workflows</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>WORKFLOWHISTORY</id>
+          <label>Workflow History</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>CUSTOM</id>
+      <label>Custom</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            
+            <!-- <field>
+              <id>[type=transactionbodycustomfield, scriptid=cseg_subs_branch]</id>
+              <label>Subsidiary Branch</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field> -->
+           
+            <!-- <field>
+              <id>[scriptid=custbody_wht_tax_subsidiarybranch_code]</id>
+              <label>WHT Tax Subsidiary Branch Code</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field> -->
+            <field>
+              <id>[scriptid=custbody_ps_wht_bill_lines_data]</id>
+        <label>PS|THT|Lines Payload</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+           
+            <field>
+              <id>[scriptid=custbody_ps_wht_related_transaction]</id>
+          <label>PS|THT|Related Transaction</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_ps_wht_vat_registration_no]</id>
+               <label>PS|THT|Vat Registration No</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>MULTIBOOK</id>
+      <label>Accounting Books</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>GLIMPACTTAB</id>
+      <label>GL Impact</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>TRANSACTIONRELATEDRECORDS</id>
+      <label>Related Records</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>LINKS</id>
+          <label>Related Records</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    
+  </tabs>
+  <actionbar>
+    <menu>
+      <menuitem>
+        <id>DELETE</id>
+        <label>Delete</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>EMAIL</id>
+        <label>Email</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>FAX</id>
+        <label>Fax</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>GLIMPACT</id>
+        <label>GL Impact</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>GOTOREGISTER</id>
+        <label>Go To Register</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>NEW</id>
+        <label>New</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>PRINT</id>
+        <label>Print</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>PRINTGLIMPACT</id>
+        <label>Print GL Impact</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SAVEEMAIL</id>
+        <label>Save &amp; Email</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SUBMITNEW</id>
+        <label>Save &amp; New</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SAVEPRINT</id>
+        <label>Save &amp; Print</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>ACTIVITYHISTORY</id>
+        <label>Show Activity</label>
+        <visible>T</visible>
+      </menuitem>
+    </menu>
+  </actionbar>
+  <disclaimer/>
+  <address/>
+  <emailMessageTemplate>USE_DEFAULT</emailMessageTemplate>
+  <printingType>
+    <advanced>
+      <printTemplate>STDTMPLCUSTPYMT</printTemplate>
+      <emailTemplate>STDTMPLCUSTPYMT</emailTemplate>
+    </advanced>
+  </printingType>
+  <linkedForms>
+    <linkedForm>
+      <type>PAYMENT_CUSTOMER_REFUND_TRANSACTION</type>
+      <form>USE_DEFAULT</form>
+    </linkedForm>
+  </linkedForms>
+  <roles>
+    
+    <role>
+      <id>ADMINISTRATOR</id>
+      <preferred>F</preferred>
+    </role>
+    
+    
+      
+  </roles>
+</transactionForm>

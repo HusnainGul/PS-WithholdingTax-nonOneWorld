@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_ps_wht_manage_vat_trans_sl">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PS WHT Manage Vat Transactions SL</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.pointstarconsulting.withholdingtax/ps_wht_th_manage_vat_trans_sl.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ps_wht_manage_vat_trans_sl">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>Manage VAT Transaction</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

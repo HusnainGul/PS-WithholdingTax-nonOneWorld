@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory__ps_wht_withholdingtax">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_ps_wht_ps_thai_localization]</centertab>
+  <label>Withholding Tax</label>
+  <links>
+    <link>
+      <linklabel>Manage Withholding Tax Transaction</linklabel>
+      <linkobject>[scriptid=customscript_ps_wht_manage_wht_trans_sl.customdeploy_ps_wht_manage_wht_trans_sl]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Withholding Income Tax Return</linklabel>
+      <linkobject>[scriptid=customscript_ps_wht_sl_income_tax_return.customdeploy_ps_wht_sl_income_tax_return]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_wht_purchase_wht_tax_point">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Purchase Withholding Tax Point</name>
+  <customvalues>
+    <customvalue scriptid="val_57009_t2397753_139">
+      <isinactive>F</isinactive>
+      <value>on payment</value>
+    </customvalue>
+    <customvalue scriptid="val_57410_t2397753_329">
+      <isinactive>F</isinactive>
+      <value>on accrual</value>
+    </customvalue>
+  </customvalues>
+</customlist>

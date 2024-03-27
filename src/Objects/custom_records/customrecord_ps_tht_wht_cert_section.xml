@@ -1,0 +1,232 @@
+<customrecordtype scriptid="customrecord_ps_tht_wht_cert_section">
+  <accesstype>NONENEEDED</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowinlinedeleting>F</allowinlinedeleting>
+  <allowinlinedetaching>T</allowinlinedetaching>
+  <allowinlineediting>F</allowinlineediting>
+  <allowmobileaccess>F</allowmobileaccess>
+  <allownumberingoverride>F</allownumberingoverride>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>F</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <customsegment></customsegment>
+  <description></description>
+  <enabledle>T</enabledle>
+  <enablekeywords>T</enablekeywords>
+  <enablemailmerge>F</enablemailmerge>
+  <enablenumbering>F</enablenumbering>
+  <enableoptimisticlocking>T</enableoptimisticlocking>
+  <enablesystemnotes>T</enablesystemnotes>
+  <hierarchical>F</hierarchical>
+  <icon></icon>
+  <iconbuiltin>T</iconbuiltin>
+  <iconindex></iconindex>
+  <includeinsearchmenu>T</includeinsearchmenu>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <numberinginit></numberinginit>
+  <numberingmindigits></numberingmindigits>
+  <numberingprefix></numberingprefix>
+  <numberingsuffix></numberingsuffix>
+  <recordname>PS|WHT|Withholding Certificate Section</recordname>
+  <showcreationdate>F</showcreationdate>
+  <showcreationdateonlist>F</showcreationdateonlist>
+  <showid>F</showid>
+  <showlastmodified>F</showlastmodified>
+  <showlastmodifiedonlist>F</showlastmodifiedonlist>
+  <shownotes>T</shownotes>
+  <showowner>F</showowner>
+  <showownerallowchange>F</showownerallowchange>
+  <showowneronlist>F</showowneronlist>
+  <customrecordcustomfields>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_certificate_sect_code">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>TEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Code</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_certificate_category">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Category</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_ps_tht_wht_category]</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_57406_t2397753_331">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>5</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>5.การจ่ายเงินได้ที่ต้องหักภาษี ณ ที่จ่ายตามคำสั่งกรมสรรพากรที่ออกตามมาตรา 3 เตรส</name>
+    </instance>
+    <instance scriptid="val_57407_t2397753_850">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>5</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>5.การจ่ายเงินได้ที่ต้องหักภาษี ณ ที่จ่ายตามคำสั่งกรมสรรพากรที่ออกตามมาตรา 3 เตรส</name>
+    </instance>
+    <instance scriptid="val_57408_t2397753_400">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>6</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>6.อื่นๆ</name>
+    </instance>
+    <instance scriptid="val_57409_t2397753_454">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>6</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>6.อื่นๆ</name>
+    </instance>
+    <instance scriptid="val_57558_t2397753_502">
+      <custrecord_ps_wht_certificate_category></custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>1</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>1. เงินเดือน ค่าจ้าง เบี้ยเลี้ยง โบนัส ฯลฯ ตามมาตรา 40 (1)</name>
+    </instance>
+    <instance scriptid="val_57559_t2397753_361">
+      <custrecord_ps_wht_certificate_category></custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>2</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>2. ค่าธรรมเนียม ค่านายหน้า ฯลฯ ตามมาตรา 40 (2)</name>
+    </instance>
+    <instance scriptid="val_57560_t2397753_602">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>3</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>3. ค่าแห่งลิขสิทธิ์ ฯลฯ ตามมาตรา 40 (3)</name>
+    </instance>
+    <instance scriptid="val_57561_t2397753_883">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.A</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ก) ดอกเบี้ย ฯลฯ ตามมาตรา 40 (4) (ก)</name>
+    </instance>
+    <instance scriptid="val_57562_t2397753_260">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.1.1</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (1.1) เงินปันผล เงินส่วนแบ่งกำไร ฯลฯ ตามมาตรา 40 (4) (ข) อัตราร้อยละ 30 ของกำไรสุทธิ</name>
+    </instance>
+    <instance scriptid="val_57563_t2397753_711">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.1.2</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (1.2) เงินปันผล เงินส่วนแบ่งกำไร ฯลฯ ตามมาตรา 40 (4) (ข) อัตราร้อยละ 25 ของกำไรสุทธิ</name>
+    </instance>
+    <instance scriptid="val_57564_t2397753_791">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.1.3</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (1.3) เงินปันผล เงินส่วนแบ่งกำไร ฯลฯ ตามมาตรา 40 (4) (ข) อัตราร้อยละ 20 ของกำไรสุทธิ</name>
+    </instance>
+    <instance scriptid="val_57565_t2397753_137">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.1.4</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (1.4) อัตราอื่นๆ (ระบุ) ....... ของกำไรสุทธิ</name>
+    </instance>
+    <instance scriptid="val_57566_t2397753_364">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.2.1</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (2.1) กำไรสุทธิของกิจการที่ได้รับยกเว้นภาษีเงินได้นิติบุคคล</name>
+    </instance>
+    <instance scriptid="val_57567_t2397753_431">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.2.2</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (2.2) เงินปันผลหรือเงินส่วนแบ่งของกำไรที่ได้รับยกเว้น</name>
+    </instance>
+    <instance scriptid="val_57568_t2397753_179">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.2.3</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (2.3) กำไรสุทธิส่วนที่ได้หักผลขาดทุนสุทธิยกมาไม่เกิน 5 ปี</name>
+    </instance>
+    <instance scriptid="val_57569_t2397753_925">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.2.4</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (2.4) กำไรที่รับรู้ทางบัญชีโดยวิธีส่วนได้เสีย (equity method)</name>
+    </instance>
+    <instance scriptid="val_57570_t2397753_595">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>4.B.2.5</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>4. (ข) (2.5) อื่นๆ (ระบุ) .......</name>
+    </instance>
+    <instance scriptid="val_59079_t2397753_151">
+      <custrecord_ps_wht_certificate_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_certificate_category>
+      <custrecord_ps_wht_certificate_sect_code>6</custrecord_ps_wht_certificate_sect_code>
+      <isinactive>F</isinactive>
+      <name>6.อื่นๆ</name>
+    </instance>
+  </instances>
+</customrecordtype>

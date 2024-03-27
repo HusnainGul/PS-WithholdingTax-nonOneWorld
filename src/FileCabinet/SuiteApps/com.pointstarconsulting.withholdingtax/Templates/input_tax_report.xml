@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+  <head>
+   <!-- <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" /> -->
+    <link name="NotoSans" type="font" subtype="truetype" src="${ds.fonts.TFPimpakarn_ttf}" src-bold="${ds.fonts.TFPimpakarnBold_ttf}" src-italic="${ds.fonts.TFPimpakarnItalic_ttf}" src-bolditalic="${ds.fonts.TFPimpakarnBoldItalic_ttf}" bytes="2" />
+
+    
+    <!-- <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+    <link name="NotoSans" type="font" subtype="truetype" src="https://tstdrv925863.app.netsuite.com/core/media/media.nl?id=94686&amp;c=TSTDRV925863&amp;h=cK5Mj99U1CrxrOgG79WjsWCOFvgzkzLkvB5ox-5mgrqe_iaC&amp;_xt=.ttf" src-bold="https://tstdrv925863.app.netsuite.com/core/media/media.nl?id=93545&amp;c=TSTDRV925863&amp;h=uCXJILqKSWCQdljeRxv0z6nNJKHxTPsf7Bo320eK7aP5LAVJ&amp;_xt=.ttf" src-italic="https://tstdrv925863.app.netsuite.com/core/media/media.nl?id=93248&amp;c=TSTDRV925863&amp;h=3DEatPurHcIsp7hl-LTy6BIs37an1zJwXbiucByaiTvT7nfx&amp;_xt=.ttf" src-bolditalic="https://tstdrv925863.app.netsuite.com/core/media/media.nl?id=93248&amp;c=TSTDRV925863&amp;h=3DEatPurHcIsp7hl-LTy6BIs37an1zJwXbiucByaiTvT7nfx&amp;_xt=.ttf
+" bytes="2" /> -->
+    <!-- <#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if> -->
+    <macrolist>
+      <macro id="nlheader">
+
+     <table align="center" class="header" style="width: 100%;" cellpadding="0" cellspacing="0">
+         
+            <tr>
+              <td width="94%"  align="center">
+                 
+                  รายงานภาษีซื้อ
+              </td>
+               <td width="6%" align="right">
+                 
+                หน้า 	<pagenumber/>/<totalpages/>
+              </td>
+              
+              
+            </tr>
+        </table>
+
+         <table align="center" class="header" style="width: 100%;" cellpadding="0" cellspacing="0">
+         
+            <tr>
+              <td width="94%" align="center">
+                 เดือนภาษี ${ds.monthInThai} ปี ${ds.year}
+              </td>
+              <td width="6%" >
+              
+              </td>
+
+            </tr>
+            <tr>
+              <td width="94%"  align="center">
+                 
+               ${ds.branchName}
+              </td>
+
+            </tr>
+             <tr>
+              <td width="97%"  align="right" margin-right="80px"> 
+               ลขประจำตัวผู้เสียภาษีอากร
+              </td>
+
+            </tr>
+        </table>
+
+              <table align="center" class="header" style="width: 100%;" cellpadding="0" cellspacing="0">
+         
+            <tr>
+              <td width="75%" >
+                 
+                  <table>
+                      <tr>
+                        <td>
+                         <b>ชื่อสถานประกอบการ</b> ${ds.address1} ${ds.address23} ${ds.inputOutputZipCode}
+
+                        
+
+                        </td>
+                      </tr>
+                  </table>
+              </td>
+              <td width="25%">
+               <table width="100%" cellpadding="0" cellspacing="0">
+
+                                                                  <tr>
+                                                                        
+                                                                  <#if ds.brnNumber != ''>
+                                                   ${ds.brnNumber}
+                                    <#else>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                                                            <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                                                           <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                    
+                                    </#if>
+
+                                                                  </tr>
+                                                               </table>
+              </td>
+              
+            </tr>
+           
+        </table>
+
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+          <td width="75%">
+         
+          </td>
+            <td>
+              <input checked="${ds.hq}" name="hq" style="width: 13px; height:13px;" type="checkbox" />
+            </td>
+             <td>สำนักงานใหญ่</td>
+              <td>
+              <input checked="${ds.branch}" name="isbranch" style="width: 13px; height:13px;" type="checkbox" />
+            </td>
+            <td>สาขาที่</td>
+        
+           ${ds.branchCode}
+          </tr>
+        </table>
+
+      </macro>
+      <macro id="nlfooter">
+        <table class="footer" style="width: 100%;">
+          <tr>
+            <td align="left" style="color: #001B54;">
+                 
+                 </td>
+          </tr>
+        </table>
+      </macro>
+    </macrolist>
+    <style type="text/css">* {
+      <#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+        <#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+          <#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+            <#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+              <#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+                <#else>
+			font-family: NotoSans, sans-serif;
+                </#if>
+		}
+		td p { align:left }
+		 #bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+				 .pic div { position:absolute; width:5; height:5}
+         th {
+          font-weight: bold;
+        }
+         body {
+        height: 50%;
+    }
+              </style>
+            </head>
+            <!-- 
+   <table width="100%" class="table1" border="0.5">
+
+	   <tr>
+		   <td>
+			 
+			 </td>
+     </tr>
+	 </table>
+	 -->
+            <body  header="nlheader" header-height="16%" footer="nlfooter" footer-height="5%" size="LETTER-LANDSCAPE" margin-top="-3px" >
+             
+                   <table width="100%">  
+                 <thead>
+                                <tr style="page-break-inside: auto;" >
+
+                                <th align="center" border-right="0.5" border-bottom="0.5" border-top="0.5" border-left="0.5">ลำดับที่</th>
+                                  <th colspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">เอกสารรายวัน</th>
+                                   <th colspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">ใบกำกับภาษี</th>
+                                   <th rowspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">ชื่อผู้ขายสินค้า / ผู้ให้บริการ</th>
+                                    <th rowspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">ลขประจำตัวผู้เสียภาษีอากร <br/>ของผู้ขายสินค้า / ผู้ให้บริการ</th>
+                                     <th rowspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">สถาน <br/>ประกอบการ</th>
+                                       <th rowspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">มูลค่าของสินค้า <br/>หรือบริการ</th>
+                                        <th rowspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">จำนวนเงิน <br/>ภาษีมูลค่าเพิ่ม</th>
+                                         <th rowspan="2" align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">หมายเหตุ</th>
+                                 
+                                </tr>
+                                <tr style="page-break-inside: auto;" >
+                                  <th border-right="0.5" border-bottom="0.5" border-top="0.5" border-left="0.5"> </th>
+                                  <th align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">วัน เดือน ปี</th>
+                                  <th align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">เลขที่เอกสาร</th>
+
+                                   <th align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">วัน เดือน ปี</th>
+                                  <th align="center" border-right="0.5" border-bottom="0.5" border-top="0.5">ลขที่เอกสาร</th>
+                                </tr>
+                              </thead>
+                              02134013546
+
+                             <tbody>
+
+                               <#assign count = 0>
+                                <#list ds.tranDataLines as item>
+                                <#assign count = count + 1>
+                                <tr border-bottom="0.5">
+                                  <td align="center" border-right="0.5" border-left="0.5"></td>
+                                  <td align="center" border-right="0.5">${item.trandate}</td>
+                                  <td align="center" border-right="0.5">${item.tranNumber}</td>
+                                  <td align="center" border-right="0.5">${item.trandate}</td>
+                                  <td align="center" border-right="0.5">${item.DocNumber}</td>
+                                  <td align="center" border-right="0.5">${item.vendorName}</td>
+                                  <td align="center" border-right="0.5">${item.vendorTaxRegId}</td>
+                                  <td align="center" border-right="0.5">${item.vendorEntityBranch}</td>
+                                  <td align="center" border-right="0.5">${item.totalBillAmountWithOutVat}</td>
+                                  <td align="center" border-right="0.5">${item.totalVatAmountPerBill}</td>
+                                  <td align="center" border-right="0.5">${item.whtMemo}</td>
+                                </tr>
+                                </#list>
+                              </tbody>
+                             <tfoot>
+                               <tr border-bottom="0.5">
+                              
+                                  <td align="right" border-right="0.5" border-left="0.5" colspan="8" >รวม</td>
+                                  <td align="center" border-right="0.5">${ds.totalAmountWithOutVat}</td>
+                                  <td align="center" border-right="0.5">${ds.totalVatAmountPerBill}</td>
+                                  <td align="center" border-right="0.5"></td>
+                                  
+                               </tr>
+                             </tfoot>
+                              
+                 </table>
+
+                    </body>
+                     
+     </pdf>

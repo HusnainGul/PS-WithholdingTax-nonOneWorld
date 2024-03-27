@@ -1,0 +1,1383 @@
+<customrecordtype scriptid="customrecord_ps_tht_wht_tax_code">
+  <accesstype>NONENEEDED</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowinlinedeleting>F</allowinlinedeleting>
+  <allowinlinedetaching>T</allowinlinedetaching>
+  <allowinlineediting>F</allowinlineediting>
+  <allowmobileaccess>F</allowmobileaccess>
+  <allownumberingoverride>F</allownumberingoverride>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>F</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <customsegment></customsegment>
+  <description></description>
+  <enabledle>T</enabledle>
+  <enablekeywords>T</enablekeywords>
+  <enablemailmerge>F</enablemailmerge>
+  <enablenumbering>F</enablenumbering>
+  <enableoptimisticlocking>T</enableoptimisticlocking>
+  <enablesystemnotes>T</enablesystemnotes>
+  <hierarchical>F</hierarchical>
+  <icon></icon>
+  <iconbuiltin>T</iconbuiltin>
+  <iconindex></iconindex>
+  <includeinsearchmenu>T</includeinsearchmenu>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <numberinginit></numberinginit>
+  <numberingmindigits></numberingmindigits>
+  <numberingprefix></numberingprefix>
+  <numberingsuffix></numberingsuffix>
+  <recordname>PS|WHT|Tax Code</recordname>
+  <showcreationdate>F</showcreationdate>
+  <showcreationdateonlist>F</showcreationdateonlist>
+  <showid>F</showid>
+  <showlastmodified>F</showlastmodified>
+  <showlastmodifiedonlist>F</showlastmodifiedonlist>
+  <shownotes>T</shownotes>
+  <showowner>F</showowner>
+  <showownerallowchange>F</showownerallowchange>
+  <showowneronlist>F</showowneronlist>
+  <customrecordcustomfields>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_rate">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>T</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>PERCENT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Rate</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_effec_from">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>DATE</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Effective From</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_valid_until">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>DATE</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Valid Until</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_cert_sect">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>WHT Tax Certificate Section</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_ps_tht_wht_cert_section]</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_income_type">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>WHT Tax Income Type</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_ps_tht_wht_income_type]</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_pdt_des">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>CLOBTEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Description</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_country_name">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Country Name</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>-159</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_tax_agency">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Tax Agency </label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>SET_NULL</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>-3</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_avail_on_ref">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Available On</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customlist_wht_available_on_reference]</selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_subs_list">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>MULTISELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Subsidiary List</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>-117</selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_category">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>WHT Tax Category </label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_ps_tht_wht_category]</selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_include_auto_journal">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>CHECKBOX</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Include Auto Journal</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_remittance">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Remittance</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_ps_tht_wht_remittance]</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_ap_account">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>AP Account</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>-112</selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_ar_acc">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>AR Account</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>-112</selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_ap_item">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>AP Item</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>SET_NULL</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>-10</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_taxcode_ar_item">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>AR Item</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>SET_NULL</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>-10</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_57107_t2397753_316">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57396_t2397753_244]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Rental fees and other benefit by Section 40 (5)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>5.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Rental (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57108_t2397753_678">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57391_t2397753_344]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Services fee by Section 40(8)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Services fee (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57498_t2397753_100">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57439_t2397753_180]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (2) Commission</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Commission (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57499_t2397753_595">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57500_t2397753_851]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (3) Copy right, goodwill, other right and ect</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>License fee, goodwill (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57503_t2397753_215">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57561_t2397753_883]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57384_t2397753_159]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (4) (a) Interest on deposit account, boans, note bills and ect</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>1.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Interest (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57504_t2397753_405">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57385_t2397753_740]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (4) (b) Dividend, share of profits and ect.</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>10.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Dividend (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57505_t2397753_627">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57388_t2397753_646]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Subcontract fee by Section 40(7) and (8)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Subcontract fee (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57506_t2397753_409">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57389_t2397753_881]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Reward from compilition or lucky draw</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>5.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Reward (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57507_t2397753_371">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57390_t2397753_147]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Advertising fee</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>2.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Advertising (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57508_t2397753_437">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57392_t2397753_195]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Reward , discount or benefit from sales promotion</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Sales promotion (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57509_t2397753_965">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57393_t2397753_952]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Reward from competition or lucky draw</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Reward from competition or lucky draw (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57510_t2397753_766">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+      <custrecord_ps_wht_taxcode_ar_item></custrecord_ps_wht_taxcode_ar_item>
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57394_t2397753_589]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Transportation</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>1.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Transportation (P.N.D 53)</name>
+    </instance>
+    <instance scriptid="val_57511_t2397753_538">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57396_t2397753_244]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Rental fees and other benefit by Section 40 (5)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>5.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Rental (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57512_t2397753_580">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57397_t2397753_844]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>The rental fee of Ocean liner</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>1.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Ocean liner rental fee (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57513_t2397753_802">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57409_t2397753_454]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57398_t2397753_137]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Income from liberal professional by Section 40 (6)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Services fee (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57514_t2397753_525">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57399_t2397753_981]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Subcontract fee by Section 40(7) and (8)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Subcontract fee (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57515_t2397753_951">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57400_t2397753_178]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Reward from competition or lucky draw</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>5.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Reward (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57516_t2397753_629">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+     
+     
+     
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57401_t2397753_757]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40(8)&#xd;
+Income paid to public an actor or actress who is a resident of Thailand</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>5.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Actor fees (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57517_t2397753_581">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+     
+     
+     
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57558_t2397753_502]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57402_t2397753_672]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Advertising fee</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>2.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Advertising (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57518_t2397753_768">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57403_t2397753_139]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Services fee by Section 40(8)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Services fee (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57519_t2397753_640">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57404_t2397753_337]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Transportation</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>1.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Transportation (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_57520_t2397753_185">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57405_t2397753_506]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Reward , discount or benefit from sales promotion</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>3.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Sales promotion (P.N.D 3)</name>
+    </instance>
+    <instance scriptid="val_59074_t2397753_610">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57560_t2397753_602]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57441_t2397753_969]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (3) Copy right, goodwill, other right and ect</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>10.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>License fee, goodwill (P.N.D 2)</name>
+    </instance>
+    <instance scriptid="val_59075_t2397753_924">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57561_t2397753_883]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57442_t2397753_660]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (4) (a) Interest on deposit accountd, boans, note bills and ect</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>15.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Interest (P.N.D 2)</name>
+    </instance>
+    <instance scriptid="val_59076_t2397753_481">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57562_t2397753_260]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-07-10</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57443_t2397753_282]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (4) (b) Dividend, share of profits and ect.</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>10.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Dividend (P.N.D 2)</name>
+    </instance>
+    <instance scriptid="val_59077_t2397753_503">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_59079_t2397753_151]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57444_t2397753_757]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (4) (g) Profit from the trasfer of shares and ect.</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>10.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Capital gain (P.N.D 2)</name>
+    </instance>
+    <instance scriptid="val_59078_t2397753_372">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_59079_t2397753_151]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57445_t2397753_823]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Section 40 (4) Other</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>10.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Other (P.N.D 2)</name>
+    </instance>
+    
+    <instance scriptid="val_59331_t2397753_511">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+     
+     
+     
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57407_t2397753_850]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57446_t2397753_938]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Services 10 (P.N.D 54)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>10.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+    
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Services 10 (P.N.D 54)</name>
+    </instance>
+    <instance scriptid="val_59332_t2397753_736">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-03-21</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57446_t2397753_938]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Services 15 (P.N.D 54)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>15.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+     
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Services 15 (P.N.D 54)</name>
+    </instance>
+    <instance scriptid="val_59719_t2397753_295">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57406_t2397753_331]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-08-01</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57386_t2397753_610]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Rental (P.N.D 54)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>5.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+     
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Rental (P.N.D 54)</name>
+    </instance>
+    <instance scriptid="val_59720_t2397753_516">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+      <custrecord_ps_wht_taxcode_ap_account></custrecord_ps_wht_taxcode_ap_account>
+     
+      <custrecord_ps_wht_taxcode_ar_acc></custrecord_ps_wht_taxcode_ar_acc>
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57409_t2397753_454]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-08-28</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type>[scriptid=customrecord_ps_tht_wht_income_type.val_57456_t2397753_306]</custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Freight Forwarder (P.N.D 54)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>1.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+     
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Freight Forwarder (P.N.D 54)</name>
+    </instance>
+    <instance scriptid="val_59721_t2397753_824">
+      <custrecord_ps_wht_include_auto_journal>F</custrecord_ps_wht_include_auto_journal>
+     
+     
+     
+    
+      <custrecord_ps_wht_taxcode_avail_on_ref></custrecord_ps_wht_taxcode_avail_on_ref>
+      <custrecord_ps_wht_taxcode_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_taxcode_category>
+      <custrecord_ps_wht_taxcode_cert_sect>[scriptid=customrecord_ps_tht_wht_cert_section.val_57559_t2397753_361]</custrecord_ps_wht_taxcode_cert_sect>
+      <custrecord_ps_wht_taxcode_country_name></custrecord_ps_wht_taxcode_country_name>
+      <custrecord_ps_wht_taxcode_effec_from>2023-08-28</custrecord_ps_wht_taxcode_effec_from>
+      <custrecord_ps_wht_taxcode_income_type></custrecord_ps_wht_taxcode_income_type>
+      <custrecord_ps_wht_taxcode_pdt_des>Commission (P.N.D 54)</custrecord_ps_wht_taxcode_pdt_des>
+      <custrecord_ps_wht_taxcode_rate>15.0%</custrecord_ps_wht_taxcode_rate>
+      <custrecord_ps_wht_taxcode_remittance></custrecord_ps_wht_taxcode_remittance>
+     
+
+      <custrecord_ps_wht_taxcode_valid_until></custrecord_ps_wht_taxcode_valid_until>
+      <isinactive>F</isinactive>
+      <name>Commission (P.N.D 54)</name>
+    </instance>
+  </instances>
+</customrecordtype>

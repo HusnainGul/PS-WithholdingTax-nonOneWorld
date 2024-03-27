@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_ps_wht_reports">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_ps_wht_ps_thai_localization]</centertab>
+  <label>Reports</label>
+  <links>
+    <link>
+      <linklabel>Inventory Valuation Report</linklabel>
+      <linkobject>[scriptid=customscript_ps_wht_sl_inventory_val_rep.customdeploy_ps_wht_sl_inventory_val_rep]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Supplementary Tax Report</linklabel>
+      <linkobject>[scriptid=customscript_ps_wht_sl_supple_tax_report.customdeploy_ps_wht_sl_supple_tax_report]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

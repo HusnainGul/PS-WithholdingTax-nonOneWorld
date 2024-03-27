@@ -1,0 +1,1151 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+  <head>
+    <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+    <link name="NotoSans" type="font" subtype="truetype" src="${ds.fonts.AW_Siam_ttf}" src-bold="${ds.fonts.THSarabunNewBold_ttf}" src-italic="${ds.fonts.AW_Siam_ttf}" src-bolditalic="${ds.fonts.AW_Siam_ttf}" bytes="2" />
+    <#if .locale == "zh_CN">
+      <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+      <#elseif .locale == "zh_TW">
+        <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+        <#elseif .locale == "ja_JP">
+          <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+          <#elseif .locale == "ko_KR">
+            <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+            <#elseif .locale == "th_TH">
+              <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+            </#if>
+            <macrolist>
+              <macro id="nlheader">
+            &nbsp;
+							</macro>
+            </macrolist>
+            <style type="text/css">* {
+              <#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+                <#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+                  <#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+                    <#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+                      <#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+                        <#else>
+			font-family: NotoSans, sans-serif;
+                        </#if>
+		}
+		td p { align:left }
+                      </style>
+                    </head>
+                    <body header="nlheader" header-height="0%" margin-top="-15px" size="A4" padding="0.2in 0.2in 0.2in 0.2in">
+                      <table align="center" class="header" style="width: 100%; font-size: 10pt;">
+                        <tr align="center">
+                          <td align="center">
+                            <img width="550" height="58"  align="center" src="${ds.images.pnd2_header_png}" />
+                          </td>
+                        </tr>
+                      </table>
+                      <table width="100%" style="border-bottom: 1.5px solid #99A4BB">
+                        <tr>
+                          <td width="53%" style="border-right: 1.5px solid #99A4BB">
+                            <table width="100%">
+                              <tr style="width:100%; border-bottom: 1.5px solid #99A4BB">
+                                <td>
+                                  <div style="font-size:14px; color:#001B54;" width="100%">
+                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td width="40%">
+                                          <table cellpadding="0" cellspacing="0">
+                                            <tr>
+                                              <td style="font-size:15px;">
+                                                <span align="left">
+                                                  <b>เลขประจําตัวผู้เสียภาษีอากร</b>
+                                                </span>
+                                              </td>
+                                            </tr>
+                                            <tr align="right">
+                                              <td align="right">
+                                                <span align="right" font-size="11px">
+                                                  <em>(ของผู้มีหน้าที่หักภาษี ณ ที่จ่าย)</em>
+                                                </span>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                        <td>
+                                          <table width="100%">
+                                            <tr>
+																						  
+
+
+
+                                               			 <#if ds.brnNumber != ''>
+                                                   ${ds.brnNumber}
+                                    <#else>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                                                            <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                                                           <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                    
+                                      
+                                    </#if>
+																						</tr>
+                                            <!-- <tr>
+																						<td><input maxlength="1" name="0" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black" type="text" value="1" /></td>
+																						<td style="margin-left:-6px">-</td>
+																						<td><input maxlength="1" name="1" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="3" /></td>
+																						<td><input maxlength="1" name="2" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="4" /></td>
+																						<td><input maxlength="1" name="3" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="6" /></td>
+																						<td><input maxlength="1" name="4" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="8" /></td>
+																						<td style="margin-left:-6px">-</td>
+																						<td><input maxlength="1" name="5" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="9" /></td>
+																						<td><input maxlength="1" name="6" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="4" /></td>
+																						<td><input maxlength="1" name="7" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="7" /></td>
+																						<td><input maxlength="1" name="8" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="9" /></td>
+																						<td><input maxlength="1" name="9" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="5" /></td>
+																						<td style="margin-left:-6px">-</td>
+																						<td><input maxlength="1" name="10" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="8" /></td>
+																						<td><input maxlength="1" name="11" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="9" /></td>
+																						<td style="margin-left:-6px">-</td>
+																						<td><input maxlength="1" name="10" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-6px" type="text" value="4" /></td>
+																						</tr>-->
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="70%">
+                                          <table width="100%">
+                                            <tr>
+                                              <td style="font-size:15px">
+                                                <span align="left">
+                                                  <b>ชื่อผู้มีหน้าที่หักภาษี ณ ที่จ่าย </b>
+                                                </span>
+                                                <span align="right" font-size="14px">
+                                                  <em>(หน่วยงาน) :</em>
+                                                </span>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                        <td></td>
+                                        <td width="40%">
+                                          <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr >
+                                              <td align="right" style="font-size:16px;">สาขาที่</td>
+                                              <td align="right" style="font-size:16px;">	&nbsp;</td>
+																						 ${ds.branchCode}
+                                              <!-- <td>
+																								<input maxlength="1" name="13" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-12px" type="text" value="0" />
+																							</td>
+																							<td>
+																								<input maxlength="1" name="14" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-12px" type="text" value="0" />
+																							</td>
+																							<td>
+																								<input maxlength="1" name="15" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-12px" type="text" value="0" />
+																							</td>
+																							<td>
+																								<input maxlength="1" name="16" style="font-size:18px; width:10px; height:17px; background-color:white; border-color:#001B54; font-color:black;margin-left:-12px" type="text" value="0" />
+																							</td> -->
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table width="93%">
+                                      <tr>
+                                        <td style="border-bottom: 1px dotted #99A4BB;">${ds.branchName}</td>
+                                      </tr>
+                                    </table>
+                                    <table width="100%">
+                                      <tr >
+                                        <td width="93%">
+                                          <b>ที่อยู่ :</b>&nbsp;&nbsp;
+                                          <span style="border-bottom: 1px dotted #99A4BB; ">${ds.address1} </span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td width="93%" style="border-bottom: 1px dotted #99A4BB; "> ${ds.address23}</td>
+                                      </tr>
+                                      <tr>
+                                        <td width="93%" style="border-bottom: 1px dotted #99A4BB; "> .</td>
+                                      </tr>
+                                    </table>
+                                    <!-- <table width="100%" cellpadding="0" cellspacing="0">
+																			<tr>
+																				<td width="7%" style="font-size:16px;">
+																					<b>เลขที่</b>
+																				</td>
+																				<td width="24%" style="border-bottom: 1px dotted #001B54; "></td>
+																				<td width="2%" style="font-size:16px;"> หมู่ที่.</td>
+																				<td width="10%" style="border-bottom: 1px dotted #001B54; "></td>
+																				<td width="10%" style="font-size:16px;">ตรอก/ซอย</td>
+																				<td width="20%" style="border-bottom: 1px dotted #001B54;"></td>
+																				<td width="2%" style="font-size:16px;">แยก</td>
+																				<td width="20%" style="border-bottom: 1px dotted #001B54;"></td>
+																			</tr>
+																		</table> -->
+                                    <!-- <table width="100%" cellpadding="0" cellspacing="0">
+																			<tr>
+																				<td width="2%">
+																					<b>ถนน</b>
+																				</td>
+																				<td width="40%" style="border-bottom: 1px dotted #001B54; "></td>
+																				<td width="2%" style="font-size:16px;"> ตำ�บล/แขวง</td>
+																				<td width="40%" style="border-bottom: 1px dotted #001B54; "></td>
+																			</tr>
+																		</table> -->
+                                    <!-- <table width="100%" cellpadding="0" cellspacing="0">
+																			<tr>
+																				<td width="2%" style="font-size:16px;">
+																					<b>อำ�เภอ/เขต</b>
+																				</td>
+																				<td width="40%" style="border-bottom: 1px dotted #001B54; "></td>
+																				<td width="2%" style="font-size:16px;"> จังหวัด</td>
+																				<td width="40%" style="border-bottom: 1px dotted #001B54; "></td>
+																			</tr>
+																		</table> -->
+                                    <table width="95%" margin-top="2px">
+                                      <tr>
+                                        <td width="10%" style="font-size:15px;">
+																					รหัสไปรษณีย์
+																				</td>
+																				
+																				${ds.zipCode}
+                                        <td width="70%" margin-left="0.5px" style="border-bottom: 1px dotted #001B54;"></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="2%" height="15px">
+                                          <b></b>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div style="font-size:14px; color:#001B54; margin-top:10px;" width="100%">
+                                    <table padding="1" style="font-size:14px; color:#001B54;" width="100%">
+                                      <tr>
+                                        <td width="45px"></td>
+                                        <td align="left" width="20px">
+                                          <input checked="${ds.ordinaryfiling}" name="ยื่นปกติ" style="width: 13px; height:13px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="60px" style="font-size:18px;">(1)
+                                          <b>ยื่นปกติ</b>
+                                        </td>
+                                        <td width="10px"></td>
+                                        <td margin-left="5px" width="19px">
+                                          <input checked="${ds.additionalfiling}" name="ยื่นเพิ่มเติมครั้งที่" style="width: 13px; height:13px;" type="checkbox" />
+                                        </td>
+                                        <td width="75px" style="font-size:18px;">(2) ยื่น
+                                          <b>เพิ่มเติม</b>ครั้งที่
+                                          <span style="border-bottom: 1px solid #99A4BB;">${ds.additionalFilingNumber} </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="57%">
+                            <table width="100%">
+                              <tr style="width:100%; height:9%; border-bottom: 1.5px solid #99A4BB">
+                                <td>
+                                  <div style="font-size:13px; color:#001B54;">
+                                    <table style="font-size:18px; color:#001B54;" width="96%" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td width="94.2%">
+                                          <b>เดือน</b>ที่จ่ายเงินได้พึงประเมิน
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table style="font-size:16px; color:#001B54;" width="100%" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td>(ให้ทำเครื่องหมาย &ldquo;</td>
+                                        <td>
+                                          <img style="width: 9px; height:9px;" src="https://tstdrv1053777.app.netsuite.com/core/media/media.nl?id=12109&amp;c=TSTDRV1053777&amp;h=pN0pDynYpaAvVxNepRAkRpzq0ITpZs3xqM2hFCY2KlGmzkxI" />
+                                        </td>
+                                        <td>&rdquo; ลงใน &ldquo;</td>
+                                        <td>
+                                          <input checked="false" name="z" style="width: 10px; height:10px;" type="checkbox" />
+                                        </td>
+                                        <td>&rdquo; หน้าชื่อเดือน) พ.ศ. ${ds.thaiYear}</td>
+                                      </tr>
+                                    </table>
+                                    <table padding="1" style="font-size:13px; color:#001B54;" width="100%" cellpadding="0" cellspacing="0" margin-top="12px">
+                                      <tr>
+                                        <td align="left" width="1%">
+                                          <input checked="${ds.jan}" name="มกราคม" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font-size:15px;">(1) มกราคม</td>
+                                        <td width="1%">
+                                          <input checked="${ds.apr}" name="เมษายน" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td width="1%" style="font-size:15px;">(4) เมษายน</td>
+                                        <td width="1%">
+                                          <input checked="${ds.jul}" name="กรกฎาคม" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font-size:15px;">(7) กรกฎาคม</td>
+                                        <td width="1%">
+                                          <input checked="${ds.oct}" name="ตุลาคม" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font-size:15px;">(10) ตุลาคม</td>
+                                      </tr>
+                                      <tr margin-top="12px">
+                                        <td align="left" width="1%">
+                                          <input checked="${ds.feb}" name="กุมภาพันธ์" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font_size:16px;">(2) กุมภาพันธ์</td>
+                                        <td width="1%">
+                                          <input checked="${ds.may}" name="พฤษภาคม" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td width="1%" style="font_size:16px;">(5) พฤษภาคม</td>
+                                        <td width="1%">
+                                          <input checked="${ds.aug}" name="สิงหาคม" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font_size:16px;">(8) สิงหาคม</td>
+                                        <td width="1%">
+                                          <input checked="${ds.nov}" name="พฤศจิกายน" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font-size:16px;">(11) พฤศจิกายน</td>
+                                      </tr>
+                                      <tr margin-top="12px">
+                                        <td align="left" width="1%">
+                                          <input checked="${ds.mar}" name="มีนาคม" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font-size:15px;">(3) มีนาคม</td>
+                                        <td width="1%">
+                                          <input checked="${ds.jun}" name="มิถุนายน" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td width="1%" style="font-size:15px;">(6) มิถุนายน </td>
+                                        <td width="1%">
+                                          <input checked="${ds.sep}" name="กันยายน" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font-size:15px;">(9) กันยายน </td>
+                                        <td width="1%">
+                                          <input checked="${ds.dec}" name="ธันวาคม" style="width: 12px; height:12px;" type="checkbox" />
+                                        </td>
+                                        <td align="left" width="1%" style="font-size:15px;">(12) ธันวาคม </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr style="height:10%">
+                                <td>
+                                  <div style="font-size:18px; color:#B4B8C3;">
+                                    <table align="center" width="100%" margin-top="70px">
+                                      <tr align="center">
+                                        <td align="center"> สำหรับบันทึกข้อมูลจากระบบ TCL</td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <div style="font-size:17px; color:#001B54;" width="100%" margin-top="10px">
+                        <table width="100%">
+                          <tr >
+                            <td width="25%" border="0">
+                              <table>
+                                <tr>
+                                  <td>
+                                    <br />
+                               มีรายละเอียดการหักเป็นรายผู้มีเงินได้ ปรากฏตาม
+                              (ให้แสดงรายละเอียดในใ
+                                    <b> บแนบภ.ง.ด.2</b> หรือในสื่อ
+                                    <b>บันทึกในระบบคอมพิวเตอร์</b>อย่างใดอย่างหนึ่งเท่านั้น)
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width="75%"  >
+                              <table border="0" cellpadding="0" cellspacing="0" style="width:100%; font-size:17px;">
+                                <tr>
+                                  <td>
+                                    <table style="width:100%; font-size:18px;" >
+                                      <tr>
+                                        <td align="center" style="width: 3%;">
+                                          <input checked="true" name="ใบแนบ" style="width: 10px; height:10px;" type="checkbox" />
+                                        </td>
+                                        <td style="width: 60%;">
+                                          <b> ใบแนบ </b>
+                                          <span style="font-size:22px;">
+                                            <b>ภ.ง.ด.2 </b>
+                                          </span> ที่แนบมาพร้อมนี้ :
+                                        </td>
+                                        <td style="width: 10%;"></td>
+                                        <td align="right" style="width: 8%;">จำ�นวน</td>
+                                        <td align="right" style="width: 4%;border-bottom: 1px dotted #99A4BB">${ds.totalVendor}</td>
+                                        <td align="right" style="width: 6%;">แผ่น</td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table style="width:100%; font-size:18px;" >
+                                      <tr>
+                                        <td align="center" style="width: 3%;">
+                                          <input checked="false" name="ใบแนบs" style="width: 10px; height:10px;" type="checkbox" />
+                                        </td>
+                                        <td style="width: 63%;">
+                                          <b> สื่อบันทึกในระบบคอมพิวเตอร์ </b> ที่แนบมาพร้อมนี้ :
+                                        </td>
+                                        <td style="width: 10%;"></td>
+                                        <td align="right" style="width: 8%;">จำ�นวน</td>
+                                        <td align="right" style="width: 4%;border-bottom: 1px dotted #99A4BB"></td>
+                                        <td align="center" style="width: 6%;">แผ่น</td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table style="width:100%; font-size:16px;" >
+                                      <tr>
+                                        <td align="center" style="width: 3%;"></td>
+                                        <td style="width: 63%;">
+                                          (ตามหนังสือแสดงความประสงค์ฯ ทะเบียนรับเลขที่
+                                          </td>
+                                        <td style="width: 10%; border-bottom: 1px dotted #99A4BB"></td>
+                                        <td align="right" style="width: 8%; border-bottom: 1px dotted #99A4BB"></td>
+                                        <td align="right" style="width: 4%; border-bottom: 1px dotted #99A4BB"></td>
+                                        <td align="center" style="width: 6%; border-bottom: 1px dotted #99A4BB"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table style="width:100%; font-size:16px;" >
+                                      <tr>
+                                        <td align="center" style="width: 3%;"></td>
+                                        <td style="width: 63%;">
+                                         หรือตามหนังสือข้อตกลงการใช้งานฯ เลขอ้างอิงการลงทะเบียน
+                                          </td>
+                                        <td style="width: 10%; border-bottom: 1px dotted #99A4BB"></td>
+                                        <td align="right" style="width: 8%; border-bottom: 1px dotted #99A4BB"></td>
+                                        <td align="right" style="width: 4%; border-bottom: 1px dotted #99A4BB"></td>
+                                        <td align="center" style="width: 6%;">)</td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div style="color:#001B54; border-bottom:1.5px solid #B4B8C3" width="100%">
+                        <table width="100%" >
+                          <tr style="font-size:20px;">
+                            <td width= "55%">
+                              <table width="100%" margin-top="20px" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" height="25px" width="100%" style="background:#B4B8C3; font-color: #001B54;  corner-radius:3px">
+                                    <b>สรุปรายการภาษีที่นำส่ง</b>
+                                  </td>
+                                  <!-- <td colspan="2" align="center" width="60px" style="border: 1.5px solid #B4B8C3;corner-radius:3px">จำนวนเงิน</td> -->
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%" margin-top="20px" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" height="25px" width="100%"  style="border: 1.5px solid #B4B8C3 font-color: #001B54; font-size:16px; corner-radius:3px" >
+                                    <b>จำ�นวนราย</b>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%" margin-top="20px" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" height="25px" width="100%"   style="border: 1.5px solid #B4B8C3 font-color: #001B54; font-size:16px; corner-radius:3px" >
+                                    <b>เงินได้ทั้งสิ้น</b>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%" margin-top="20px" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" height="25px" width="100%" style="border: 1.5px solid #B4B8C3 font-color: #001B54; font-size:16px; corner-radius:3px" >
+                                    <b>ภาษีที่นำ�ส่งทั้งสิ้น</b>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%">
+                                    <b>1.</b> เงินได้ตามมาตรา
+                                    <b>40 (3)</b> ค่าแห่งลิขสิทธิ์ ค่าแห่งกู๊ดวิลล์ ฯลฯ
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                        ${ds.incomeTaxTypeCode1Count}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        ${ds.incomeTaxTypeCode1Income}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCode1IncomeAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                         ${ds.incomeTaxTypeCode1Tax}
+                                     </td>
+                                        <td width="20%" >
+                                         ${ds.incomeTaxTypeCode1TaxAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- line-->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td  width="100%">
+                                    <b> 2.</b> เงินได้ตาม
+                                    <b> มาตรา 40 (4) (ก)</b> ดอกเบี้ยเงินฝาก ดอกเบี้ยพันธบัตร
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" align="right">
+                                       
+                                     </td>
+                                        <td width="20%" >
+                                        
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" align="right">
+                                       
+                                     </td>
+                                        <td width="20%" >
+                                       
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- line -->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%" margin-left="10px">
+                                   ดอกเบี้ยตั๋วเงิน ฯลฯ .   .   .    .  .  .   .   .   .   .  .  .  .  .  .  .  .  . 
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                       ${ds.incomeTaxTypeCode2Count}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        ${ds.incomeTaxTypeCode2Income}
+                                     </td>
+                                        <td width="20%" >
+                                        ${ds.incomeTaxTypeCode2IncomeAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                       ${ds.incomeTaxTypeCode2Tax}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCode2TaxAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- line -->
+                          <!-- start line -->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%" >
+                                    <b>3.</b>  เงินได้ตามมาตรา
+                                    <b>40 (4) (ข) </b> เงินปันผล ฯลฯ
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                         ${ds.incomeTaxTypeCode3Count}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        ${ds.incomeTaxTypeCode3Income}
+                                     </td>
+                                        <td width="20%" >
+                                         ${ds.incomeTaxTypeCode3IncomeAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                       ${ds.incomeTaxTypeCode3Tax}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCode3TaxAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end line -->
+                          <!-- start line -->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%" >
+                                    <b>4.</b>  เงินได้ตามมาตรา
+                                    <b>40 (4) (ข) </b> เงินผลประโยชน์ที่ได้จากการโอนหุ้น ฯลฯ
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                       ${ds.incomeTaxTypeCode4Count}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        ${ds.incomeTaxTypeCode4Income}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCode4IncomeAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                       ${ds.incomeTaxTypeCode4Tax}
+                                     </td>
+                                        <td width="20%" >
+                                        ${ds.incomeTaxTypeCode4TaxAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end line -->
+                          <!-- start line -->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%" >
+                                    <b>5.</b>  เงินได้ตามมาตรา
+                                    <b>40 (4) อื่นๆ</b>  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                       ${ds.incomeTaxTypeCode5Count}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        ${ds.incomeTaxTypeCode5Income}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCode5IncomeAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                         ${ds.incomeTaxTypeCode5Tax}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCode5TaxAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end line -->
+                          <!-- start line -->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%" >
+                                    <b>6. รวม</b>  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                        ${ds.incomeTaxTypeCodeTotalCount}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        ${ds.incomeTaxTypeCodeTotalIncome}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCodeTotalIncomeAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                       ${ds.incomeTaxTypeCodeTotalTax}
+                                     </td>
+                                        <td width="20%" >
+                                        00
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end line -->
+                          <!-- start line -->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%" >
+                                    <b>7.</b> เงินเพิ่ม (ถ้ามี) .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style=" font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                       
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" align="right">
+                                       
+                                     </td>
+                                        <td width="20%" >
+                                       
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        00
+                                     </td>
+                                        <td width="20%" >
+                                        00
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end line -->
+                          <!-- start line -->
+                          <tr style="font-size:16px;">
+                            <td width= "55%">
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" width="100%" >
+                                    <b>8.รวม</b> ยอดภาษีที่นำ�ส่งทั้งสิ้น และเงินเพิ่ม (
+                                    <b> 6. + 7. </b>)  . . . . . . . . . . .  .  . .
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center"  style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="100%"  align="right">
+                                       ${ds.incomeTaxTypeCodeTotalCount}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                       ${ds.incomeTaxTypeCodeTotalIncome}
+                                     </td>
+                                        <td width="20%" >
+                                       ${ds.incomeTaxTypeCodeTotalIncomeAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width= "20%" >
+                              <table width="100%"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="border: 1px solid #B4B8C3 font-color: #001B54; font-size:16px;" >
+                                    <table width="100%">
+                                      <tr>
+                                        <td width="80%" style="border-right: 1px solid #B4B8C3; align:right;">
+                                        ${ds.incomeTaxTypeCodeTotalTax}
+                                     </td>
+                                        <td width="20%" >
+                                        ${ds.incomeTaxTypeCodeTotalTaxAfterDot}
+                                     </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end line -->
+                        </table>
+                      </div>
+                      <div style="font-size:16px; color:#001B54; border-bottom:1.5px solid #B4B8C3" width="100%">
+                        <table width="100%" margin-top="10px">
+                          <tr>
+                            <td align="center">ข้าพเจ้าขอรับรองว่า รายการที่แจ้งไว้ข้างต้นนี้ เป็นรายการที่ถูกต้องและครบถ้วนทุกประการ</td>
+                          </tr>
+                        </table>
+                        <table width="100%" margin-top="10px">
+                          <tr>
+                            <td width="25%"></td>
+                            <td width="50%">
+                              <p>
+        ลงชื่อ..............................................................................................ผู้จ่ายเงิน
+                                <br/>
+        &nbsp;&nbsp; &nbsp;&nbsp;(..............................................................................................)
+                                <br/>
+       ตำแหน่ง.......................................................................................................
+                                <br/>
+        ยื่นวันที่...........เดือน............................................พ.ศ. .................................
+                              </p>
+                            </td>
+                            <td vertical-align="middle" width="20%">
+                              <p align="center" style="margin-top:10px;margin-left:-77px; font-size:11px">
+          ประทับตรา
+                                <br/>
+นิติบุคคล
+                                <br/>
+(ถ้ามี)
+                              </p>
+                              <circle x="20%" y="20%" radius="20%" border="1" style="border-color: #B4B8C3; position:fixed" />
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div style="font-size:14px; color:#001B54;" width="100%">
+                        <table width="100%">
+                          <tr>
+                            <td align="right">
+                              <em>(ก่อนกรอกรายการ ดูคำชี้แจงด้านหลัง)</em>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="100%" margin-top="60px">
+                          <tr>
+                            <td align="left">
+                              <b>สอบถามข้อมูลเพิ่มเติมได้ที่ศูนย์สารนิเทศสรรพากร RD Intelligence Center โทร. 1161</b>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </body>
+                  </pdf>

@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_submit_method">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Submit Method</name>
+  <customvalues>
+    <customvalue scriptid="_media">
+      <isinactive>F</isinactive>
+      <value>Media</value>
+    </customvalue>
+    <customvalue scriptid="_attached">
+      <isinactive>F</isinactive>
+      <value>Attached</value>
+    </customvalue>
+  </customvalues>
+</customlist>

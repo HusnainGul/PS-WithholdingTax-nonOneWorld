@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_wht_tax_base">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>WHT Tax Base</name>
+  <customvalues>
+    <customvalue scriptid="val_57023_t2397753_947">
+      <isinactive>F</isinactive>
+      <value>Net Amount</value>
+    </customvalue>
+    <customvalue scriptid="val_57414_t2397753_151">
+      <isinactive>F</isinactive>
+      <value>Gross Amount</value>
+    </customvalue>
+    <customvalue scriptid="val_57415_t2397753_634">
+      <isinactive>F</isinactive>
+      <value>Tax Amount</value>
+    </customvalue>
+  </customvalues>
+</customlist>

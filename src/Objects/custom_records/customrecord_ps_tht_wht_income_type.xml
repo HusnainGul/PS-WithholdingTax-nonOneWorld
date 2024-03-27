@@ -1,0 +1,394 @@
+<customrecordtype scriptid="customrecord_ps_tht_wht_income_type">
+  <accesstype>NONENEEDED</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowinlinedeleting>F</allowinlinedeleting>
+  <allowinlinedetaching>T</allowinlinedetaching>
+  <allowinlineediting>F</allowinlineediting>
+  <allowmobileaccess>F</allowmobileaccess>
+  <allownumberingoverride>F</allownumberingoverride>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>F</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <customsegment></customsegment>
+  <description></description>
+  <enabledle>T</enabledle>
+  <enablekeywords>T</enablekeywords>
+  <enablemailmerge>F</enablemailmerge>
+  <enablenumbering>F</enablenumbering>
+  <enableoptimisticlocking>T</enableoptimisticlocking>
+  <enablesystemnotes>T</enablesystemnotes>
+  <hierarchical>F</hierarchical>
+  <icon></icon>
+  <iconbuiltin>T</iconbuiltin>
+  <iconindex></iconindex>
+  <includeinsearchmenu>T</includeinsearchmenu>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <numberinginit></numberinginit>
+  <numberingmindigits></numberingmindigits>
+  <numberingprefix></numberingprefix>
+  <numberingsuffix></numberingsuffix>
+  <recordname>PS|WHT|Withholding Income Type</recordname>
+  <showcreationdate>F</showcreationdate>
+  <showcreationdateonlist>F</showcreationdateonlist>
+  <showid>F</showid>
+  <showlastmodified>F</showlastmodified>
+  <showlastmodifiedonlist>F</showlastmodifiedonlist>
+  <shownotes>T</shownotes>
+  <showowner>F</showowner>
+  <showownerallowchange>F</showownerallowchange>
+  <showowneronlist>F</showowneronlist>
+  <customrecordcustomfields>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_income_type_code">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>TEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Code</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_ps_wht_income_type_category">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Category</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_ps_tht_wht_category]</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_57361_t2397753_348">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>1</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>เงินได้พึงประเมินตามมาตรา 40 (2) และ (3) แห่งประมวล รัษฎากร เช่น ค่านายหน้า และ ค่าแห่งกู๊ดวิลล์ ค่าแห่งลิขสิทธิ์ หรือสิทธิอย่างอื่น</name>
+    </instance>
+    <instance scriptid="val_57384_t2397753_159">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>2</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>มาตรา 40 (4) (ก) แห่งประมวล รัษฎากร</name>
+    </instance>
+    <instance scriptid="val_57385_t2397753_740">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>3</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>เงินปันผลหรือเงินส่วนแบ่งของ กำไรหรือประโยชน์อื่นใดตาม มาตรา 40 (4) (ข) แห่งประมวล รัษฎากร</name>
+    </instance>
+    <instance scriptid="val_57386_t2397753_610">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>4</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>10. ค่าเช่าหรือเงินหรือประโยชน์อย่างอื่น ตามมาตรา 40 (5)</name>
+    </instance>
+    <instance scriptid="val_57387_t2397753_807">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>5</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>11. เงินได้จากวิชาชีพอิสระ ตามมาตรา 40 (6)</name>
+    </instance>
+    <instance scriptid="val_57388_t2397753_646">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>6</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าจ้างทำของที่เข้าลักษณะเป็น เงินได้พึงประเมินตามมาตรา 40 (7) และ (8) แห่งประมวล รัษฎากร</name>
+    </instance>
+    <instance scriptid="val_57389_t2397753_881">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>7</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>รางวัลใน  -การประกวด  -การแข่งขัน  -การชิงโชค  -การอื่นใดอันมีลักษณะทำนอง เดียวกัน</name>
+    </instance>
+    <instance scriptid="val_57390_t2397753_147">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>8</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าโฆษณา</name>
+    </instance>
+    <instance scriptid="val_57391_t2397753_344">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>9</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>เงินได้พึงประเมินตามมาตรา 40 (8) แห่งประมวลรัษฎากร เฉพาะที่เป็นการจ่ายเงินได้จาก การให้บริการ</name>
+    </instance>
+    <instance scriptid="val_57392_t2397753_195">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>10</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>รางวัล ส่วนลด หรือประโยชน์ใดๆ เนื่องจากการส่งเสริมการขาย</name>
+    </instance>
+    <instance scriptid="val_57393_t2397753_952">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>11</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าเบี้ยประกันวินาศภัย</name>
+    </instance>
+    <instance scriptid="val_57394_t2397753_589">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>12</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าขนส่ง</name>
+    </instance>
+    <instance scriptid="val_57395_t2397753_363">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>13</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>เงินได้พึงประเมินตามมาตรา 40 (8) แห่งประมวลรัษฎากร เฉพาะที่เป็นการจ่ายเงินได้ จากการซื้อขายสินค้า ประเภท ยางแผ่น หรือยางชนิดอื่นจาก ต้นยางพารา มันส าปะหลัง ปอ ข้าว ข้าวโพด อ้อย เมล็ดกาแฟ  ผลปาล์มน ้ามัน</name>
+    </instance>
+    <instance scriptid="val_57396_t2397753_244">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>14</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>10. ค่าเช่าหรือเงินหรือประโยชน์อย่างอื่น ตามมาตรา 40 (5)</name>
+    </instance>
+    <instance scriptid="val_57397_t2397753_844">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>15</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าเช่าเรือ ตามกฎหมายว่าด้วย การส่งเสริมพาณิชย์นาวีที่ใช้ใน การขนส่งสินค้าระหว่างประเทศ</name>
+    </instance>
+    <instance scriptid="val_57398_t2397753_137">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>16</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>11. เงินได้จากวิชาชีพอิสระ ตามมาตรา 40 (6)</name>
+    </instance>
+    <instance scriptid="val_57399_t2397753_981">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>17</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าจ้างทำของที่เข้าลักษณะเป็น เงินได้พึงประเมินตามมาตรา 40 (7) และ (8) แห่งประมวล รัษฎากร</name>
+    </instance>
+    <instance scriptid="val_57400_t2397753_178">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>18</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>รางวัล  -การประกวด  -การแข่งขัน  -การชิงโชค  -การอื่นใดที่มีลักษณะทำนอง เดียวกัน</name>
+    </instance>
+    <instance scriptid="val_57401_t2397753_757">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>19</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าแสดงให้แก่นักแสดง สาธารณะ</name>
+    </instance>
+    <instance scriptid="val_57402_t2397753_672">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>20</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าโฆษณา</name>
+    </instance>
+    <instance scriptid="val_57403_t2397753_139">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>21</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>เงินได้พึงประเมินตามมาตรา 40 (8) แห่งประมวลรัษฎากร เฉพาะที่เป็นการจ่ายเงินได้จาก การให้บริการ</name>
+    </instance>
+    <instance scriptid="val_57404_t2397753_337">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>22</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>ค่าขนส่ง</name>
+    </instance>
+    <instance scriptid="val_57405_t2397753_506">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57359_t2397753_306]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>23</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>รางวัล ส่วนลด หรือประโยชน์ใดๆ เนื่องจากการส่งเสริมการขาย</name>
+    </instance>
+    <instance scriptid="val_57436_t2397753_463">
+      <custrecord_ps_wht_income_type_category></custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>24</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>1. เงินได้ตามมาตรา 40 (1) เงินเดือน ค่าจ้าง ฯลฯ กรณีทั่วไป</name>
+    </instance>
+    <instance scriptid="val_57437_t2397753_274">
+      <custrecord_ps_wht_income_type_category></custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>25</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>2. เงินได้ตามมาตรา 40 (1) เงินเดือน ค่าจ้าง ฯลฯ กรณีได้รับอนุมัติจากกรมสรรพากรให้หักอัตราร้อยละ 3</name>
+    </instance>
+    <instance scriptid="val_57438_t2397753_667">
+      <custrecord_ps_wht_income_type_category></custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>26</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>3. เงินได้ตามมาตรา 40 (1) (2) กรณีนายจ้างจ่ายให้ครั้งเดียวเพราะเหตุออกจากงาน</name>
+    </instance>
+    <instance scriptid="val_57439_t2397753_180">
+      <custrecord_ps_wht_income_type_category></custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>27</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>4. เงินได้ตามมาตรา 40 (2) กรณีผู้รับเงินได้เป็นผู้อยู่ในประเทศไทย</name>
+    </instance>
+    <instance scriptid="val_57440_t2397753_644">
+      <custrecord_ps_wht_income_type_category></custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>28</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>5. เงินได้ตามมาตรา 40 (2) กรณีผู้รับเงินได้มิได้เป็นผู้อยู่ในประเทศไทย</name>
+    </instance>
+    <instance scriptid="val_57441_t2397753_969">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>29</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>1. เงินได้ตามมาตรา 40 (3) ค่าแห่งลิขสิทธิ์ ค่าแห่งกู๊ดวิลล์ ฯลฯ</name>
+    </instance>
+    <instance scriptid="val_57442_t2397753_660">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>30</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>2. เงินได้ตามมาตรา 40 (4) (ก) ดอกเบี้ยเงินฝาก ดอกเบี้ยพันธบัตร ดอกเบี้ยตั๋วเงิน ฯลฯ</name>
+    </instance>
+    <instance scriptid="val_57443_t2397753_282">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>31</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>3. เงินได้ตามมาตรา 40 (4) (ข) เงินปันผล ฯลฯ</name>
+    </instance>
+    <instance scriptid="val_57444_t2397753_757">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>32</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>4. เงินได้ตามมาตรา 40 (4) (ช) เงินผลประโยชน์ที่ได้จากการโอนหุ้น ฯลฯ</name>
+    </instance>
+    <instance scriptid="val_57445_t2397753_823">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57434_t2397753_968]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>33</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>5. เงินได้ตามมาตรา 40 (4) อื่นๆ</name>
+    </instance>
+    <instance scriptid="val_57446_t2397753_938">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>34</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>1. ค่าธรรมเนียม ค่านายหน้า หรืออื่นๆ ตามมาตรา 40 (2)</name>
+    </instance>
+    <instance scriptid="val_57447_t2397753_815">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>35</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>10. ค่าเช่าหรือเงินหรือประโยชน์อย่างอื่น ตามมาตรา 40 (5)</name>
+    </instance>
+    <instance scriptid="val_57448_t2397753_127">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>36</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>11. เงินได้จากวิชาชีพอิสระ ตามมาตรา 40 (6)</name>
+    </instance>
+    <instance scriptid="val_57449_t2397753_172">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>37</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>2. ค่าสิทธิในงานวรรณกรรม ศิลปะ และวิทยาศาสตร์ ตามมาตรา 40 (3)</name>
+    </instance>
+    <instance scriptid="val_57450_t2397753_745">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>38</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>3. ค่าสิทธิในสิทธิบัตร สูตรหรือกรรมวิธี ตามมาตรา 40 (3)</name>
+    </instance>
+    <instance scriptid="val_57451_t2397753_760">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>39</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>4. ค่าสิทธิอื่นๆ ตามมาตรา 40 (3)</name>
+    </instance>
+    <instance scriptid="val_57452_t2397753_766">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>40</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>5. ดอกเบี้ยตามมาตรา 40 (4) (ก) ที่จ่ายให้แก่ธนาคาร กิจการประกันภัย หรือกิจการอื่นทำนองเดียวกัน</name>
+    </instance>
+    <instance scriptid="val_57453_t2397753_834">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>41</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>6. ดอกเบี้ยอื่นๆ ตามมาตรา 40 (4) (ก)</name>
+    </instance>
+    <instance scriptid="val_57454_t2397753_505">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>42</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>7. เงินปันผล ตามมาตรา 40 (4) (ข)</name>
+    </instance>
+    <instance scriptid="val_57455_t2397753_629">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>43</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>8. เงินได้อื่นๆ ตามมาตรา 40 (4)</name>
+    </instance>
+    <instance scriptid="val_57456_t2397753_306">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57435_t2397753_444]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>44</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>9. ค่าเช่าเรือเดินทะเลฯ ตามกฎหมายว่าด้วยการส่งเสริมพาณิชย์นาวี</name>
+    </instance>
+    <instance scriptid="val_57500_t2397753_851">
+      <custrecord_ps_wht_income_type_category>[scriptid=customrecord_ps_tht_wht_category.val_57360_t2397753_879]</custrecord_ps_wht_income_type_category>
+      <custrecord_ps_wht_income_type_code>45</custrecord_ps_wht_income_type_code>
+      <isinactive>F</isinactive>
+      <name>เงินได้พึงประเมินตามมาตรา 40 (3) ค่าแห่งกู๊ดวิลล์ ค่าแห่งลิขสิทธิ์ หรือสิทธิอย่างอื่น</name>
+    </instance>
+  </instances>
+</customrecordtype>

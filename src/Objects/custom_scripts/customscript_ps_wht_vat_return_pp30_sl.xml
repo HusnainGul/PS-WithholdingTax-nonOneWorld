@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_ps_wht_vat_return_pp30_sl">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PS | WHT | SL  VAT Return PP30</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteApps/com.pointstarconsulting.withholdingtax/ps_wht_th_vat_return_form.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ps_wht_vat_return_pp30_sl">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>PS | WHT | SL  VAT Return PP30</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

@@ -1,0 +1,62 @@
+<manifest projecttype="SUITEAPP">
+  <publisherid>com.pointstarconsulting</publisherid>
+  <projectid>withholdingtax</projectid>
+  <projectname>withholdingtax</projectname>
+  <projectversion>1.0.0</projectversion>
+  <frameworkversion>1.0</frameworkversion>
+  <dependencies>
+    <features>
+      <feature required="false">MULTILOCINVT</feature>
+      <feature required="false">INVENTORY</feature>
+      <feature required="false">CRM</feature>
+      <feature required="true">CUSTOMSEGMENTS</feature>
+      <feature required="true">ADVRECEIVING</feature>
+      <feature required="false">WEBSITE</feature>
+      <feature required="false">GROSSPROFIT</feature>
+      <feature required="false">WEBSTORE</feature>
+      <feature required="true">SALESORDERS</feature>
+      <feature required="false">ADVANCEDJOBS</feature>
+      <feature required="true">MULTICURRENCY</feature>
+      <feature required="true">CLASSES</feature>
+      <feature required="false">EXPREPORTS</feature>
+      <feature required="false">EXTREMELIST</feature>
+      <feature required="true">ADVTAXENGINE</feature>
+      <feature required="false">MAILMERGE</feature>
+      <feature required="false">OPPORTUNITIES</feature>
+      <feature required="false">PERIODENDJOURNALENTRIES</feature>
+      <feature required="false">JOBCOSTING</feature>
+      <feature required="true">PAYABLES</feature>
+      <feature required="false">WORKORDERS</feature>
+      <feature required="true">LOCATIONS</feature>
+      <feature required="false">ADVANCEDPRINTING</feature>
+      <feature required="false">ADVBINSERIALLOTMGMT</feature>
+      <feature required="true">DEPARTMENTS</feature>
+      <feature required="true">WORKFLOW</feature>
+      <feature required="false">CONSOLPAYMENTS</feature>
+      <feature required="false">MATRIXITEMS</feature>
+      <feature required="false">JOBS</feature>
+      <feature required="true">RECEIVABLES</feature>
+      <feature required="false">TIMETRACKING</feature>
+      <feature required="true">ADVSHIPPING</feature>
+      <feature required="false">CUSTOMTRANSACTIONS</feature>
+      <feature required="false">ADVANCEDREVENUERECOGNITION</feature>
+      <feature required="true">SERVERSIDESCRIPTING</feature>
+      <feature required="false">PAYCHECKJOURNAL</feature>
+      <feature required="true">BUSINESS</feature>
+      <feature required="false">BILLSCOSTS</feature>
+      <feature required="false">ASSEMBLIES</feature>
+      <feature required="true">ACCOUNTINGPERIODS</feature>
+      <feature required="false">ITEMOPTIONS</feature>
+      <feature required="true">ACCOUNTING</feature>
+      <feature required="false">GIFTCERTIFICATES</feature>
+      <feature required="true">MULTPRICE</feature>
+      <feature required="true">CCTRACKING</feature>
+      <feature required="true">CUSTOMRECORDS</feature>
+      <feature required="false">UNITSOFMEASURE</feature>
+      <feature required="false">PARTNEREMPLOYEECOMMISSN</feature>
+      <feature required="true">LANDEDCOST</feature>
+      <feature required="false">MULTIBOOK</feature>
+      <feature required="false">SUBSIDIARIES</feature>
+    </features>
+  </dependencies>
+</manifest>

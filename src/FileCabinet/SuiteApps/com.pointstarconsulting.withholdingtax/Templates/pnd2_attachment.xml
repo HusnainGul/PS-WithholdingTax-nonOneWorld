@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+  <head>
+  
+    <!-- <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" /> -->
+     <link name="NotoSans" type="font" subtype="truetype" src="${ds.fonts.TFPimpakarn_ttf}" src-bold="${ds.fonts.TFPimpakarnBold_ttf}" src-italic="${ds.fonts.TFPimpakarnItalic_ttf}" src-bolditalic="${ds.fonts.TFPimpakarnBoldItalic_ttf}" bytes="2" />
+    <!-- <#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if> -->
+
+    <macrolist>
+      <macro id="nlheader">
+        <table class="header" style="width: 90%; font-size: 10pt;" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="20%" style="font-size:25px; color:#001B54;">
+              <b>ใบแนบ
+                <span font-size="45px"> ภ.ง.ด.2</span>
+              </b>
+            </td>
+            <td align="right" width="40%" font-size="16px" margin-top="26px" style="color:#001B54;">เลขประจำ�ตัวผู้เสียภาษีอากร
+              <em>         (ของผู้มีเงินได้)</em>  &nbsp;
+              <!-- <b>เลขประจำตัวผู้เสียภาษีอากร </b>
+              <em>(ของผู้มีหน้าที่หักภาษี ณ ที่จ่าย) &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;</em> -->
+            </td>
+            <td width="28%" vertical-align="bottom">
+              <table width="80%" >
+                <tr style="color:#001B54; border-color:#001B54;">
+                  <td >
+                    <table>
+                      <tr>
+                       
+
+
+
+
+                        			 <#if ds.brnNumber != ''>
+                                                   ${ds.brnNumber}
+                                    <#else>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                                                            <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                                                           <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                    
+                                      
+                                    </#if>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%"  style="color:#001B54; border-color:#001B54;">
+          <tr>
+            <td width="78%">
+              <table width="100%" style="border: 2px solid #B4B8C3 font-color: #001B54; corner-radius:3px">
+                <tr>
+                  <td >
+                    <table>
+                      <tr>
+                        <td>
+                (ให้แยกกรอกรายการในใบแนบนี้ตามเงินได้แต่ละประเภท โดยใส่เครื่องหมาย “” ลงใน “” หน้าข้อความแล้วแต่กรณี เพียงข้อเดียว)
+                  </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table width="100%">
+                            <!-- start line -->
+                            <tr>
+                              <td >
+                    ประเภทเงินได้
+                  </td>
+                              <td >
+                   &nbsp; 
+                  </td>
+                              <td >
+                                <input checked="${ds.incomeTaxTypeCode1}" name="ยื่นปกติj" style="width: 13px; height:13px;" type="checkbox" />
+                              </td>
+                              <td  width="50%">
+                  (1) เงินได้ตามมาตรา
+                                <b>40 (3)</b> ค่าแห่งลิขสิทธิ์ ค่าแห่งกู๊ดวิลล์ ฯลฯ
+                              </td>
+                              <td >&nbsp; &nbsp; </td>
+                              <td >
+                                <input checked="${ds.incomeTaxTypeCode3}" name="ยื่นปกติg" style="width: 13px; height:13px;" type="checkbox" />
+                              </td>
+                              <td>
+                    (3) เงินได้ตามมาตรา
+                                <b>40 (4) (ข)</b> เงินปันผล ฯลฯ
+                              </td>
+                            </tr>
+                            <!-- end line -->
+                            <!-- start line -->
+                            <tr>
+                              <td>
+                   
+                  </td>
+                              <td>
+                   &nbsp; 
+                  </td>
+                              <td>
+                                <input checked="${ds.incomeTaxTypeCode2}" name="ยื่นปcกติj" style="width: 13px; height:13px;" type="checkbox" />
+                              </td>
+                              <td>
+                 (2) เงินได้ตามมาตรา
+                                <b>40 (4) (ก)</b> ดอกเบี้ยเงินฝาก ดอกเบี้ยพันธบัตร
+                              </td>
+                              <td>&nbsp; &nbsp; </td>
+                              <td>
+                                <input checked="${ds.incomeTaxTypeCode4}" name="ยื่นxxปกติg" style="width: 13px; height:13px;" type="checkbox" />
+                              </td>
+                              <td>
+                   (4) เงินได้ตามมาตรา
+                                <b>40 (4) (ช) </b> เงินผลประโยชน์ที่ได้จากการโอนหุ้น ฯลฯ
+                              </td>
+                            </tr>
+                            <!-- end line -->
+                            <!-- start line -->
+                            <tr>
+                              <td>
+                  
+                  </td>
+                              <td>
+                   &nbsp; 
+                  </td>
+                              <td>
+                    &nbsp; &nbsp;
+                  </td>
+                              <td>
+                  ดอกเบี้ยตั๋วเงิน ฯลฯ
+                  </td>
+                              <td>&nbsp; &nbsp;</td>
+                              <td>
+                                <input checked="${ds.incomeTaxTypeCode5}" name="ยื่นปffกติg" style="width: 13px; height:13px;" type="checkbox" />
+                              </td>
+                              <td>
+                    (5) เงินได้ตามมาตรา
+                                <b>40 (4)</b> อื่นๆ
+                              </td>
+                            </tr>
+                            <!-- end line -->
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="16%"  align="right">
+              <table>
+                <tr>
+                  <td align="right">
+                    <table>
+                      <tr>
+                        <td>สาขาที่</td>
+                          ${ds.branchCode}
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td  margin-top="50px">
+                    <table width="100%"  align="right" style="font-size: 13pt; color:#001B54;" >
+                      <tr>
+                        <td width="20%" align="right">แผ่นที่ </td>
+                        <td width="30%" align="right" style="border-bottom: 1.5px dotted #99A4BB; color: #001B54;">
+                          <pagenumber/>
+                        </td>
+                        <td width="12%" align="right">ในจำนวน</td>
+                        <td width="10%" align="right" style="border-bottom: 1.5px dotted #99A4BB; color: #001B54;">
+              &nbsp;
+                          <totalpages/>
+                        </td>
+                        <td width="20%" align="right">แผ่น</td>
+                      </tr>
+                      <tr>
+                        <td>
+
+                  </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </macro>
+      <macro id="nlfooter">
+        <table class="footer" style="width: 100%;">
+          <tr>
+            <td align="left" style="color: #001B54;">
+                   สอบถามข้อมูลเพิ่มเติมได้ที่ศูนย์สารนิเทศสรรพากร RD Intelligence Center โทร. 1161
+                 </td>
+          </tr>
+        </table>
+      </macro>
+    </macrolist>
+    <style type="text/css">* {
+      <#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+        <#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+          <#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+            <#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+              <#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+                <#else>
+			font-family: NotoSans, sans-serif;
+                </#if>
+		}
+		td p { align:left }
+		 #bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+				 .pic div { position:absolute; width:5; height:5}
+              </style>
+            </head>
+            <!-- 
+   <table width="100%" class="table1" border="1">
+
+	   <tr>
+		   <td>
+			 
+			 </td>
+     </tr>
+	 </table>
+	 -->
+            <body header="nlheader" header-height="23%" footer="nlfooter" footer-height="3%" size="A4-LANDSCAPE" margin-top="-10px" padding="0.2in 0.2in 0.2in 0.2in">
+              <table width="100%" class="table1" border-left="1" border-right="1" border-top="1" border-bottom="1" style="color:#001B54;">
+                <thead>
+                  <tr>
+                    <th border-bottom="1" align="center" rowspan="3" width="15%">ลำ
+                      <br/>
+ ดับ
+                      <br/>
+ ที่
+                    </th>
+                    <th align="center" border-left="1" border-right="1" width="10%">
+                      <b>เลขประจำตัวผู้เสียภาษีอากร</b>
+                      <em>(ของผู้มีเงินได้)</em>
+                    </th>
+                    <th margin-top="10px" align="center" rowspan="2"  border-bottom="1" width="53%" >
+                      <b>ชื่อผู้มีเงินได้</b> (ให้ระบุให้ชัดเจนว่าเป็น นาย นาง นางสาว หรือยศ)
+                    </th>
+                    <th align="center" colspan="3" border-left="1" border-right="1"  width="53%">
+                       รายละเอียดเกี่ยวกับการจ่ายเงิน 
+                    </th>
+                    <th align="center" rowspan="3" border-bottom="1" border-right="1" width="25%">
+                       จำนวนเงินภาษี
+                      <br/>
+                       ที่หักและนำส่ง
+                      <br/>
+                       ในครั้งนี้
+                    </th>
+                    <th align="center" rowspan="3" border-bottom="1" width="20%">
+                     2
+                      <p rotate="90" valign="middle" align="center" >
+                        <b>  เงื่อนไข
+                          
+                        </b>
+                      </p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th border-top="1" border-left="1" border-bottom="1" border-right="1" align="center" width="50%">
+                      <table>
+                        <tr>
+                          <th align="center">เลขที่บัญชีเงินฝาก (ของผู้มีเงินได้)</th>
+                        </tr>
+                      </table>
+                    </th>
+                    <th align="center" border-top="1" border-bottom="1" border-left="1" width="30%">
+                      วัน เดือน ปี ที่จ่าย 
+                    </th>
+                    <!-- <th align="center" border-left="1" border-top="1" border-bottom="1" width="20%">
+                      <b> ประเภทเงินได้ </b>
+                      <br/>
+                      <b> พึงประเมินที่จ่าย </b>
+                    </th> -->
+                    <th align="center" border-left="1" border-top="1" border-bottom="1" width="5%" font-size="12px">
+                       อัตรา
+                      <br/>
+                       ภาษี
+                      <br/>
+                     ร้อยละ
+                    </th>
+                    <th align="center" border-left="1" border-top="1" border-bottom="1" border-right="1" width="15%">
+                       จำ􀄁นวนเงินได้ที่จ่ายในครั้งนี้ 
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                 <#if ds.lineData?has_content >
+                                
+                                    <#else>
+                                      <tr height="260px" border-bottom="1"> </tr>
+                                   </#if>
+                  <#list ds.lineData as attach>
+
+                   <#if attach?is_last>
+                   <tr height="260px">
+                 <#else>
+                  <tr>
+                 </#if>
+
+                    
+                      <td align="center" border-bottom="1"> ${attach.sno} </td>
+                      <td border-left="1" border-right="1" border-bottom="1">
+                        <table width="100%">
+                          <tr>
+                            <td>
+                              <table height="13px" width="220px">
+                                <tr>
+                                  <#if attach.vendorTaxIdHtml != ''>
+                                 ${attach.vendorTaxIdHtml}
+                                    <#else>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                              -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                              -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                      <td border="0.5" align="center">
+                                                                              -
+                                                                           </td>
+                                    </#if>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <table height="13px" width="220px">
+                                  <tr>
+                                    <#if attach.vendorTaxIdHtml != ''>
+                                 ${attach.vendorTaxIdHtml}
+                                      <#else>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                              -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                              -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                           -
+                                                                           </td>
+                                        <td border="0.5" align="center">
+                                                                              -
+                                                                           </td>
+                                      </#if>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td  border-bottom="1"  align="left">
+                            <table align="center" width="90%">
+                              <tr>
+                                <td  align="center" style="height:30px;"></td>
+                                <td  align="center"></td>
+                                <td  align="center"></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td  align="center">ชื่อ.</td>
+                                <td  align="left" style="border-bottom: 1px dotted #99A4BB; color: #001B54;">${attach.firstName}</td>
+                                <td  align="center">ชื่อสกุล.</td>
+                                <td align="left" style="border-bottom: 1px dotted #99A4BB; color: #001B54;">${attach.lastName}</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td border-left="1" border-bottom="1">
+                            <table width="100%">
+                              <tr>
+                                <td style="height:30px;"></td>
+                              </tr>
+                               
+									 
+
+                              <#list attach.tranDates as line>
+                                <tr>
+                                  <td style="border-bottom: 1px dotted #001B54;" align="right">${line.tranDate}</td>
+                                </tr>
+                              </#list>
+                            </table>
+                          </td>
+                          <td border-left="1" border-bottom="1">
+                            <table width="100%">
+                              <tr>
+                                <td style="height:30px;"></td>
+                              </tr>
+                              <#list attach.taxRates as line>
+                                <tr>
+                                  <td style="border-bottom: 1px dotted #001B54;" align="right">${line.taxRate}</td>
+                                </tr>
+                              </#list>
+                            </table>
+                          </td>
+                          <td border-left="1" border-bottom="1" border-right="1">
+                            <table width="100%">
+                              <tr>
+                                <td style="height:30px;"></td>
+                              </tr>
+                              <#list attach.amounts as line>
+                                <tr>
+                                  <td style="border-bottom: 1px dotted #001B54;" align="right">${line.amount}</td>
+                                </tr>
+                              </#list>
+                            </table>
+                          </td>
+                          <td  border-bottom="1" border-right="1">
+                            <table width="100%">
+                              <tr>
+                                <td style="height:30px;"></td>
+                              </tr>
+                              <#list attach.taxAmounts as line>
+                                <tr>
+                                  <td style="border-bottom: 1px dotted #001B54;" align="right">${line.taxAmount}</td>
+                                </tr>
+                              </#list>
+                            </table>
+                          </td>
+                          <td border-bottom="1" >
+                            <table width="100%">
+                              <tr>
+                                <td style="height:30px;"></td>
+                              </tr>
+                              <#list attach.whtConditions as line>
+                                <tr>
+                                  <#if line.whtCondition != ''>
+                                    <td style="border-bottom: 1px dotted #001B54;" align="center">${line.whtCondition}</td>
+                                    <#else>
+                                      <td style="border-bottom: 1px dotted #001B54;" align="center">-</td>
+                                    </#if>
+                                  </tr>
+                                </#list>
+                              </table>
+                            </td>
+                          </tr>
+                        </#list>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="5" align="right">
+                            รวมยอดเงินได้และภาษีที่นำ􀄁ส่ง (นำ�ไปรวมกับ
+                            <b>ใบแนบ ภ.ง.ด.2 </b> แผ่นอื่น (ถ้ามี))
+                          </td>
+                          <td align="right" border-left="1">
+                            <b> ${ds.totalAmount} </b>
+                          </td>
+                          <td align="right" border-left="1" border-right="1">
+                            <b> ${ds.totalTaxAmount} </b>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="3"  border-top="0.5" >
+                            <table width="100%" >
+                              <tr>
+                                <td >
+                                  <em> (ให้กรอกลำ�ดับที่ต่อเนื่องกันไปทุกแผ่นตามเงินได้แต่ละประเภท) </em>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td  width="10%">
+                                  <table width="43%" cellpadding="0">
+                                    <tr>
+                                      <td  width="10%">
+                                        <b>
+                                          <u>หมายเหตุ </u>
+                                        </b>
+                                      </td>
+                                      <td >
+                                        <b> 1</b>  ให้กรอกเฉพาะกรณีจ่ายดอกเบี้ยเงินฝาก
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td  width="10%"></td>
+                                      <td >
+                                        <b> 2</b>  เงื่อนไขการหักภาษีให้กรอกดังนี้
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td  width="10%"></td>
+                                      <td  >
+                                        <ul >
+                                          <li > หัก ณ ที่จ่าย กรอก
+                                            <b>1</b>
+                                          </li>
+                                          <li >ออกให้ตลอดไป กรอก
+                                            <b>2</b>
+                                          </li>
+                                          <li>ออกให้ครั้งเดียว กรอก
+                                            <b>3</b>
+                                          </li>
+                                        </ul>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td colspan="4" width="40%" border-left="1" border-top="0.5">
+                            <table width="100%" style="color:#001B54;">
+                              <tr margin-top="32px">
+                                <td vertical-align="middle" width="25%">
+                                  <p align="center" style="margin-top:20px; font-size:11px; margin-left : -35px">
+                                    <b> ประทับตรา </b>
+                                    <br/>
+                                    <b>นิติบุคคล </b>
+                                    <br/>
+                                    <b> (ถ้ามี) </b>
+                                  </p>
+                                  <circle x="32%" y="30%" radius="30%" border="1" style="border-color: #001B54; position:fixed;" />
+                                </td>
+                                <td width="10%" align="center">
+                                  <p>
+        ลงชื่อ..................................................ผู้จ่ายเงิน
+                                    <br/>
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;(....................................................)
+                                    <br/>
+       ตำแหน่ง..........................................................
+                                    <br/>
+        ยื่นวันที่...........เดือน...................พ.ศ.................
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </body>
+                </pdf>
