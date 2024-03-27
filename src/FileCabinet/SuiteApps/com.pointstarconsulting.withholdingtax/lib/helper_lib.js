@@ -3947,8 +3947,8 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
             } catch (e) {
                 log.error("Error in addTaxItemsToExpenseSublistOfCheck()", e)
             }
-
-        }
+  
+        }  
 
 
         function getDefaultVatCode() {

@@ -101,15 +101,7 @@
           <columnBreak>F</columnBreak>
           <sameRowAsPrevious>F</sameRowAsPrevious>
         </field>
-        <field>
-          <id>TAX2TOTAL</id>
-          <label>PST</label>
-          <visible>T</visible>
-          <mandatory>F</mandatory>
-          <displayType>NORMAL</displayType>
-          <columnBreak>F</columnBreak>
-          <sameRowAsPrevious>F</sameRowAsPrevious>
-        </field>
+      
         <field>
           <id>TRANDATE</id>
           <label>Date</label>

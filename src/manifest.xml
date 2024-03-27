@@ -20,7 +20,7 @@
       <feature required="true">CLASSES</feature>
       <feature required="false">EXPREPORTS</feature>
       <feature required="false">EXTREMELIST</feature>
-      <feature required="true">ADVTAXENGINE</feature>
+      <feature required="false">ADVTAXENGINE</feature>
       <feature required="false">MAILMERGE</feature>
       <feature required="false">OPPORTUNITIES</feature>
       <feature required="false">PERIODENDJOURNALENTRIES</feature>
@@ -54,7 +54,7 @@
       <feature required="true">CUSTOMRECORDS</feature>
       <feature required="false">UNITSOFMEASURE</feature>
       <feature required="false">PARTNEREMPLOYEECOMMISSN</feature>
-      <feature required="true">LANDEDCOST</feature>
+      <feature required="false">LANDEDCOST</feature>
       <feature required="false">MULTIBOOK</feature>
       <feature required="false">SUBSIDIARIES</feature>
     </features>
