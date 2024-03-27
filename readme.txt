@@ -1,0 +1,1 @@
+This version of the Thai Bundle is compaitable with non-oneWorld accounts of NetSuite
