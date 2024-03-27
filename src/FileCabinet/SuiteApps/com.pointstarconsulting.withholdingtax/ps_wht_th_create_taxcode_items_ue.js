@@ -27,7 +27,7 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', 'N/error'],
           let taxCodeItemFieldMapObject = {
             "custrecord_ps_wht_taxcode_rate": "rate",
             "name": "itemid",
-            "custrecord_ps_wht_taxcode_subs_list": "subsidiary",
+            // "custrecord_ps_wht_taxcode_subs_list": "subsidiary",
             "custrecord_ps_wht_taxcode_ar_acc": "araccount",
             "custrecord_ps_wht_taxcode_ap_account": "apaccount",
             "custrecord_ps_wht_taxcode_ap_item": "internalid",
@@ -135,7 +135,7 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', 'N/error'],
 
       let taxCodeRacordValues = search.lookupFields({ type: 'customrecord_ps_tht_wht_tax_code', id: internalId, columns: taxCodeValueArray });
 
-      log.debug("custrecord_ps_wht_taxcode_subs_list value 32", taxCodeRacordValues.custrecord_ps_wht_taxcode_subs_list)
+      // log.debug("custrecord_ps_wht_taxcode_subs_list value 32", taxCodeRacordValues.custrecord_ps_wht_taxcode_subs_list)
 
       if (Array.isArray(taxCodeRacordValues.custrecord_ps_wht_taxcode_subs_list)) {
         let newArray = [];
@@ -154,15 +154,15 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', 'N/error'],
         taxCodeRacordValues["custrecord_ps_wht_taxcode_subs_list"] = newArray
       }
 
-      else
-      {
-        const commaSeparatedString = taxCodeRacordValues.custrecord_ps_wht_taxcode_subs_list.value
-        const arrayOfNumbers = commaSeparatedString.split(',').map(Number);
+      // else
+      // {
+      //   const commaSeparatedString = taxCodeRacordValues.custrecord_ps_wht_taxcode_subs_list.value
+      //   const arrayOfNumbers = commaSeparatedString.split(',').map(Number);
 
-        taxCodeRacordValues["custrecord_ps_wht_taxcode_subs_list"] = arrayOfNumbers
-      }
+      //   taxCodeRacordValues["custrecord_ps_wht_taxcode_subs_list"] = arrayOfNumbers
+      // }
 
-      log.debug("custrecord_ps_wht_taxcode_subs_list",taxCodeRacordValues["custrecord_ps_wht_taxcode_subs_list"])
+      // log.debug("custrecord_ps_wht_taxcode_subs_list",taxCodeRacordValues["custrecord_ps_wht_taxcode_subs_list"])
 
       taxCodeRacordValues["custrecord_ps_wht_taxcode_ar_acc"] = taxCodeRacordValues["custrecord_ps_wht_taxcode_ar_acc"].length>0? 
         taxCodeRacordValues.custrecord_ps_wht_taxcode_ar_acc[0].value : ""
