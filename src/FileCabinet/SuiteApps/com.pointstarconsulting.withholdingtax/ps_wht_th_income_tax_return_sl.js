@@ -34,11 +34,8 @@ define([
     log.debug("check log", params);
 
     // Check if the account is OneWorld and Multi-Book
-    var isOneWorld = runtime.isFeatureInEffect({ feature: "SUBSIDIARIES" });
     var isMultiBook = runtime.isFeatureInEffect({ feature: "MULTIBOOK" });
 
-    // isOneWorld = false
-    log.debug("isOneWorld", isOneWorld);
     log.debug("isMultiBook", isMultiBook);
 
     let form = ui.createForm({
@@ -119,56 +116,7 @@ define([
         text: option.name,
       });
     });
-
-    if (isOneWorld) {
-      let subsidiaryFld = form.addField({
-        id: "custpage_subsidiary_fld",
-        type: ui.FieldType.SELECT,
-        label: "Subsidiary",
-        container: "custpage_criteria",
-      });
-
-      let subsidiaryList = getRecordsList("subsidiary");
-      subsidiaryFld.addSelectOption({
-        value: "",
-        text: "",
-      });
-
-      subsidiaryList.map(function (option) {
-        subsidiaryFld.addSelectOption({
-          value: option.id,
-          text: option.name,
-        });
-      });
-
-      let subsidiaryBranchFld = form.addField({
-        id: "custpage_subs_branch_fld",
-        type: ui.FieldType.SELECT,
-        label: "Subsidiary Branch",
-        container: "custpage_criteria",
-      });
-
-      let subsidiaryBranchList = getSubsidaryBranch(isNull(params.subsidiary));
-
-      log.debug("subsidiaryBranchList", subsidiaryBranchList);
-
-      subsidiaryBranchFld.addSelectOption({
-        value: "",
-        text: "",
-      });
-      if (subsidiaryBranchList) {
-        subsidiaryBranchList.map(function (option) {
-          subsidiaryBranchFld.addSelectOption({
-            value: option.id,
-            text: option.name,
-          });
-        });
-      }
-
-      subsidiaryFld.defaultValue = isNull(params.subsidiary);
-
-      subsidiaryBranchFld.defaultValue = isNull(params.subsidiaryBranch);
-    }
+ 
 
     if (isMultiBook) {
       let accountingBookFld = form.addField({
@@ -358,50 +306,7 @@ define([
     }
   }
 
-  function getSubsidaryBranch(subsidiary) {
-    log.debug("subsidiary in function", subsidiary);
-    if (!subsidiary) {
-      return;
-    }
-
-    let customrecord_cseg_subs_branchSearchObj = search.create({
-      type: "customrecord_cseg_subs_branch",
-      filters: [
-        ["custrecord_ps_wht_subs_brn_filterby_subs", "anyof", subsidiary],
-      ],
-      columns: [
-        search.createColumn({
-          name: "name",
-          sort: search.Sort.ASC,
-          label: "Name",
-        }),
-        search.createColumn({
-          name: "internalid",
-          label: "Internal Id",
-        }),
-      ],
-    });
-
-    let reportResults = customrecord_cseg_subs_branchSearchObj.run().getRange({
-      start: 0,
-      end: 1000,
-    });
-
-    let internalId;
-    let name;
-    let data = [];
-
-    for (let i in reportResults) {
-      internalId = reportResults[i].getValue("internalid");
-      name = reportResults[i].getValue("name");
-      data.push({ id: internalId, name: name });
-    }
-
-    log.debug("data: ", data);
-
-    return data;
-  }
-
+ 
   function isNull(value) {
     if (
       value != null &&

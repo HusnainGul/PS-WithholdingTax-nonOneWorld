@@ -54,18 +54,7 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 functionName: `populateSublistOnClick()`
             });
 
-            // form.addButton({
-            //     id: 'custpage_btn_print',
-            //     label: 'Withholding Tax Transaction',
-            //     functionName: `printPdf('attachment')`
-            // });
-
-            // form.addButton({
-            //     id: 'custpage_btn_print',
-            //     label: 'Export (Excel)',
-            //     functionName: `printPdf('attachment')`
-            // });
-        
+      
         
 
             form.addFieldGroup({
@@ -79,62 +68,7 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 label: 'Transaction'
             });
 
-            
-    
-                let subsidiaryFld = form.addField({
-                    id: 'custpage_subsidiary_fld_wht_sl',
-                    type: ui.FieldType.SELECT,
-                    label: 'Subsidiary',
-                    container: 'custpage_criteria'
-                });
-
-                let subsidiaryList = getRecordsList('subsidiary');
-                subsidiaryFld.addSelectOption({
-                    value: "",
-                    text: ""
-                });
-
-                subsidiaryList.map(function(option) {
-                    subsidiaryFld.addSelectOption({
-                        value: option.id,
-                        text: option.name
-                    });
-
-                })
-
-                let subsidiaryBranchFld = form.addField({
-                    id: 'custpage_subs_branch_fld',
-                    type: ui.FieldType.SELECT,
-                    label: 'Subsidiary Branch',
-                    container: 'custpage_criteria'
-                });
-
-                // let subsidiaryBranchList = getSubsidaryBranch(isNull(params.subsidiary))
-                let subsidiaryBranchList =  getRecordsList('customrecord_cseg_subs_branch');
-
-                log.debug("subsidiaryBranchList", subsidiaryBranchList)
-
-                subsidiaryBranchFld.addSelectOption({
-                    value: "",
-                    text: ""
-                });
-                if (subsidiaryBranchList) {
-                    subsidiaryBranchList.map(function(option) {
-                        subsidiaryBranchFld.addSelectOption({
-                            value: option.id,
-                            text: option.name
-                        });
-                    })
-
-                }
-
-
-
-                // subsidiaryFld.defaultValue = isNull(params.subsidiary);
-
-                // subsidiaryBranchFld.defaultValue = isNull(params.subsidiaryBranch);
-
-        
+      
                 let accountingBookFld = form.addField({
                     id: 'custpage_wht_acc_book_fld',
                     type: ui.FieldType.SELECT,
@@ -236,7 +170,6 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 tab: 'custpage_tab'
             });
 
-            var subsidiary = '';
             var taxperiod = '';
             var filingstatus = '';
             var subsidiarybranch = '';
@@ -264,15 +197,8 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 params.fromdate = fromDate
                 params.todate = toDate
 
-                subsidiaryFld.defaultValue = subsidiary
-                params.subsidiary = subsidiary
-
                 whtPeriodFld.defaultValue = taxperiod
                 params.whtperiod = taxperiod
-
-
-                subsidiaryBranchFld.defaultValue = subsidiarybranch
-                params.subsidiaryBranch = subsidiarybranch
 
 
                 whtFilingStatusFld.defaultValue = filingstatus
@@ -295,7 +221,6 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
             log.audit(" else ");
             log.audit(" params.filingstatus", params.filingstatus);
             log.audit(" params.whtperiod", params.whtperiod);
-            log.audit(" params.subsidiary",params.subsidiary);
             log.audit(" params.subsidiaryBranch",params.subsidiaryBranch);
 
 
@@ -307,12 +232,6 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 dateTo.defaultValue = params.todate ? format.format({
                     value: params.todate,
                     type: format.Type.DATE
-                }) : '';
-
-               
-                subsidiaryFld.defaultValue = params.subsidiary ? format.format({
-                    value: params.subsidiary,
-                    type: format.Type.TEXT
                 }) : '';
 
 
@@ -348,19 +267,12 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 var toDate = params.todate;
                 var fromDate = params.fromdate;
 
-                if (!!params.subsidiary) {
-                    subsidiary = params.subsidiary;
-                }
 
                 if (!!params.whtperiod) {
                     taxperiod = params.whtperiod;
                 }
 
-                if (!!params.subsidiaryBranch) {
-                    subsidiarybranch = params.subsidiaryBranch;
-                }
-
-            
+              
                 if (!!params.filingstatus) {
                     filingstatus = params.filingstatus;
                 }
@@ -383,7 +295,7 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                     startindex = params.startindex;
                 }
                 
-                var transactionsData = getTransactionsData(toDate, fromDate, subsidiary, taxperiod, filingstatus, subsidiarybranch);
+                var transactionsData = getTransactionsData(toDate, fromDate, taxperiod, filingstatus);
 
                 if (!!transactionsData && transactionsData.length > 0) {
     
@@ -606,16 +518,14 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
     }
     
        
-    function getTransactionsData(toDate, fromDate, subsidiary, taxperiod, filingstatus, subsidiarybranch) {
+    function getTransactionsData(toDate, fromDate, taxperiod, filingstatus) {
 
         try {
 
             log.audit("toDate ss", toDate);
             log.audit("fromDate ss", fromDate);
-            log.audit("subsidiary ss", subsidiary);
             log.audit("taxperiod Filter ss", taxperiod);
             log.audit("filingstatus Filter ss", filingstatus);
-            log.audit("subsidiarybranch Filter ss", subsidiarybranch);
 
             var filters = [
                 ["type","anyof","CashSale","Check","CustPymt","VendPymt"], 
@@ -626,11 +536,7 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 // "AND",
                 // ["custbody_ps_wht_tax_period","anyof",taxperiod],
                 // "AND", 
-                // ["custbody_ps_wht_filing_status","anyof",filingstatus],
-                // "AND", 
-                // ["subsidiary", "is", subsidiary],
-                // "AND", 
-                // ["cseg_subs_branch", "anyof", subsidiarybranch]
+                // ["custbody_ps_wht_filing_status","anyof",filingstatus]
             ]
 
        
@@ -639,13 +545,6 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 filters.push("AND", ["custbody_ps_wht_filing_status","anyof",filingstatus])
             }
 
-            if (subsidiary) {
-                filters.push("AND", ["subsidiary", "is", subsidiary])
-            }
-
-            if (subsidiarybranch) {
-                filters.push("AND", ["cseg_subs_branch", "anyof", subsidiarybranch])
-            }
 
             var transactionSearchObj  = search.create({
                 type: "transaction",
@@ -660,8 +559,7 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
       search.createColumn({name: "entity", label: "Name"}),
       search.createColumn({name: "amount", label: "Amount"}),
       search.createColumn({name: "custbody_ps_wht_condition", label: "PS WHT Condition"}),
-      search.createColumn({name: "custbody_ps_wht_filing_status", label: "PS Filing Status"}),
-      search.createColumn({name: "cseg_subs_branch", label: "PS Subsidiary Branch"}),
+      search.createColumn({name: "custbody_ps_wht_filing_status", label: "PS Filing Status"})
 
                     ]
             });
@@ -724,53 +622,6 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/task', 'N/runtime', 'N/u
                 return [{ id: '', name: '' }]
             }
 
-        }
-
-
-       
-        function getSubsidaryBranch(subsidiary) {
-
-            log.debug("subsidiary in function", subsidiary)
-            if (!subsidiary) {
-                return
-            }
-
-            let customrecord_cseg_subs_branchSearchObj = search.create({
-                type: "customrecord_cseg_subs_branch",
-                filters: [
-                    ["custrecord_ps_wht_subs_brn_filterby_subs", "anyof", subsidiary]
-                ],
-                columns: [
-                    search.createColumn({
-                        name: "name",
-                        sort: search.Sort.ASC,
-                        label: "Name"
-                    }),
-                    search.createColumn({
-                        name: "internalid",
-                        label: "Internal Id"
-                    }),
-                ]
-            });
-
-            let reportResults = customrecord_cseg_subs_branchSearchObj.run().getRange({
-                start: 0,
-                end: 1000
-            });
-
-            let internalId;
-            let name;
-            let data = [];
-
-            for (let i in reportResults) {
-                internalId = reportResults[i].getValue('internalid')
-                name = reportResults[i].getValue('name')
-                data.push({ id: internalId, name: name })
-            }
-
-            log.debug("data: ", data)
-
-            return data
         }
 
 
