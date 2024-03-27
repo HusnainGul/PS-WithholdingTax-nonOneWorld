@@ -38,7 +38,7 @@
                     let currentRec = context.currentRecord;
                     let searchParams = new URLSearchParams(window.location.search);
 
-                    /** The withholding condition and subsidiary branch was being set from the before load of the payments UEs. 
+                    /** The withholding condition was being set from the before load of the payments UEs. 
                      * but after getting errors in different payment forms in setting th fields, we have shifted the logic here that will work
                      * on both venodr payment and customer payment
                      ----------------------------------------------------------------------------------------------------------------*/
@@ -240,18 +240,7 @@
                             currentRec.setValue('custbody_ps_wht_tax_period', taxPeriod)
                         }
 
-                        if (fieldId == "subsidiary")
-                        {
-                          let subsidiary = currentRec.getValue('subsidiary')
-                          let preferredBranchCode = helper_lib.getpreferredBranchSubsidiary(subsidiary)
-              
-                          console.log("preferredBranchCode", preferredBranchCode)
                          
-                          if (preferredBranchCode) {
-                            currentRec.setValue({ fieldId: 'cseg_subs_branch', value: preferredBranchCode });
-                          }
-              
-                        }    
 
                         if (sublistId === 'apply') {
                             
@@ -413,35 +402,14 @@
 
             }
 
-            
-        function saveRecord(context) {
-            var currentRecordObj = currentRecord.get();
-            
-            // Replace 'custbody_custom_field_id' with your custom field's internal ID
-            var customField = currentRecordObj.getValue({
-                fieldId: 'cseg_subs_branch'
-            });
-
-            console.log("customField::",customField);
-            
-            if (!customField) {
-                dialog.alert({
-                    title: 'Warning',
-                    message: 'Please enter Subsidiary Branch before saving the record.'
-                });
-                return false; // Prevents the record from being saved
-            }
-            
-            return true; // Allows the record to be saved
-        }
+    
       
 
 
             return {
 
                 fieldChanged: fieldChanged,
-                pageInit: pageInit,
-              //  saveRecord : saveRecord
+                pageInit: pageInit
 
             };
 
