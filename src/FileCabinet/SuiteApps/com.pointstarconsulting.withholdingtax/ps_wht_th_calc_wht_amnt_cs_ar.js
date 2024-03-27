@@ -313,18 +313,6 @@ define(['N/currentRecord', 'N/record', 'N/ui/dialog', 'N/search', 'N/log', 'N/ui
                     currentRec.setValue('custbody_ps_wht_tax_period', taxPeriod)
                 }
                 
-                else if (fldId == 'subsidiary')
-                {
-                  let subsidiary = currentRec.getValue(fldId)
-                  let preferredBranchCode = helper_lib.getpreferredBranchSubsidiary(subsidiary)
-      
-                  console.log("preferredBranchCode", preferredBranchCode)
-                 
-                  if (preferredBranchCode) {
-                    currentRec.setValue({ fieldId: 'cseg_subs_branch', value: preferredBranchCode });
-                  }
-      
-                }   
             
 
 
@@ -375,33 +363,12 @@ define(['N/currentRecord', 'N/record', 'N/ui/dialog', 'N/search', 'N/log', 'N/ui
         }
          
 
-        function saveRecord(context) {
-            var currentRecordObj = currentRecord.get();
-            
-            // Replace 'custbody_custom_field_id' with your custom field's internal ID
-            var customField = currentRecordObj.getValue({
-                fieldId: 'cseg_subs_branch'
-            });
-
-            console.log("customField::",customField);
-            
-            if (!customField) {
-                dialog.alert({
-                    title: 'Warning',
-                    message: 'Please enter Subsidiary Branch before saving the record.'
-                });
-                return false; // Prevents the record from being saved
-            }
-            
-            return true; // Allows the record to be saved
-        }
       
 
         return {
             pageInit: pageInit,
             fieldChanged: fieldChanged,
-            postSourcing : postSourcing,
-           // saveRecord : saveRecord
+            postSourcing : postSourcing
            
         };
 
