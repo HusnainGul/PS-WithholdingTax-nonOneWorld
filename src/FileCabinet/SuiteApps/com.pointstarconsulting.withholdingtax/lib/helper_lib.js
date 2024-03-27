@@ -1489,7 +1489,7 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
         }
 
 
-        function setBillCreditLines(billCreditRecord, billdata, billLineNoObj, taxLinesObj, subsidiary, isSuiteTaxEnabled, vatTaxRateObj) {
+        function setBillCreditLines(billCreditRecord, billdata, billLineNoObj, taxLinesObj, isSuiteTaxEnabled, vatTaxRateObj) {
 
 
             try {
@@ -1504,9 +1504,7 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                 log.debug("vatTaxRateObj", vatTaxRateObj);
 
                 if (!isSuiteTaxEnabled) {
-                    // let subsidairy = checkRecord.getValue("subsidiary");
-                    // log.debug("subsidairy", subsidairy)
-                    taxCodeValue = getDefaultVatCode(subsidiary)
+                    taxCodeValue = getDefaultVatCode()
                     log.debug("taxCodeValue", taxCodeValue)
                 }
 
@@ -3759,9 +3757,8 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                 let taxCodeValue = ''
 
                 if (!isSuiteTaxEnabled) {
-                    let subsidairy = recordObject.getValue("subsidiary");
-                    log.debug("subsidairy", subsidairy)
-                    taxCodeValue = getDefaultVatCode(subsidairy)
+                  
+                    taxCodeValue = getDefaultVatCode()
                     log.debug("taxCodeValue", taxCodeValue)
                 }
 
@@ -3879,9 +3876,8 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                 let taxCodeValue = '';
 
                 if (!isSuiteTaxEnabled) {
-                    let subsidairy = checkRecord.getValue("subsidiary");
-                    log.debug("subsidairy", subsidairy)
-                    taxCodeValue = getDefaultVatCode(subsidairy)
+                 
+                    taxCodeValue = getDefaultVatCode()
                     log.debug("taxCodeValue", taxCodeValue)
                 }
 
@@ -3958,7 +3954,7 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
         }
 
 
-        function getDefaultVatCode(subsidiary) {
+        function getDefaultVatCode() {
             try {
                 var taxCodeArray = []
 
@@ -3966,14 +3962,11 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                     type: "salestaxitem",
                     filters:
                         [
-                            // ["name","is", defaultVatCode],
-                            ["country", "anyof", "TH"],
-                            "AND",
-                            ["rate", "equalto", 0],
-                            "AND",
-                            ["subsidiary", "anyof", subsidiary],
-                            "AND",
-                            ["availableon", "anyof", "BOTH"]
+                            ["country","anyof","TH"], 
+                            "AND", 
+                            ["rate","equalto","0"], 
+                            "AND", 
+                            ["availableon","anyof","BOTH"]
                         ],
                     columns:
                         [

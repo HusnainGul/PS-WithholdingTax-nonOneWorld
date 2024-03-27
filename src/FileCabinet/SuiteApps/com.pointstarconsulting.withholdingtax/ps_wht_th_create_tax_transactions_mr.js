@@ -221,8 +221,7 @@ define(['N/search', 'N/record', 'N/config', 'N/format', 'N/runtime', './lib/help
                 let thaiTransactionForms = helper_lib.getFormId(toType);
                 let billCreditForm = helper_lib.getValueByKey(creditFormType, thaiTransactionForms)                 
                 log.debug("billCreditForm : ", billCreditForm);
-                let subsidiary = transformRecordObj.getValue("subsidiary");
-                log.debug("subsidiary : ", subsidiary);
+           
 
              
            
@@ -350,7 +349,7 @@ define(['N/search', 'N/record', 'N/config', 'N/format', 'N/runtime', './lib/help
                 // log.debug("testCount | after line removed: ", testCount);
 
 
-                helper_lib.setBillCreditLines(transformRecordObj, tranData, billLineNoObj, taxLinesObj, subsidiary, isSuiteTaxEnabled, vatTaxRateObj)
+                helper_lib.setBillCreditLines(transformRecordObj, tranData, billLineNoObj, taxLinesObj, isSuiteTaxEnabled, vatTaxRateObj)
 
                 // testCount = transformRecordObj.getLineCount('item');
 
