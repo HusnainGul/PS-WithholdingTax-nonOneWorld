@@ -15,7 +15,7 @@
   <help></help>
   <isformula>F</isformula>
   <ismandatory>F</ismandatory>
-  <label>PS|THT|VAT REGISTRATION NO (Thai Tax Subsidiary)</label>
+  <label>PS|THT|VAT REGISTRATION NO</label>
   <linktext></linktext>
   <maxlength></maxlength>
   <maxvalue></maxvalue>

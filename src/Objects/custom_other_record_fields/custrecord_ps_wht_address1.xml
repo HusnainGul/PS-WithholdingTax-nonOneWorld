@@ -2,7 +2,7 @@
   <accesslevel>2</accesslevel>
   <applyformatting>F</applyformatting>
   <checkspelling>F</checkspelling>
-  <defaultchecked>F</defaultchecked>
+  <defaultchecked>F</defaultchecked> 
   <defaultselection></defaultselection>
   <defaultvalue></defaultvalue>
   <description></description>
@@ -15,7 +15,7 @@
   <help></help>
   <isformula>F</isformula>
   <ismandatory>F</ismandatory>
-  <label>PS|THT|Address 1 (Thai Tax Subsidiary)</label>
+  <label>PS|THT|Address 1</label>
   <linktext></linktext>
   <maxlength></maxlength>
   <maxvalue></maxvalue>

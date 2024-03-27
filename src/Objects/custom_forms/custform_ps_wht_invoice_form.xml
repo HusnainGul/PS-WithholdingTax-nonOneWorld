@@ -262,15 +262,7 @@
       <showTitle>T</showTitle>
       <singleColumn>F</singleColumn>
       <fields position="MIDDLE">
-        <field>
-          <id>SUBSIDIARY</id>
-          <label>Subsidiary</label>
-          <visible>T</visible>
-          <mandatory>F</mandatory>
-          <displayType>NORMAL</displayType>
-          <columnBreak>F</columnBreak>
-          <sameRowAsPrevious>F</sameRowAsPrevious>
-        </field>
+       
         <field>
           <id>DEPARTMENT</id>
           <label>Department</label>
@@ -322,15 +314,7 @@
           <columnBreak>F</columnBreak>
           <sameRowAsPrevious>F</sameRowAsPrevious>
         </field> -->
-        <!-- <field>
-           <id>[scriptid=cseg_subs_branch]</id>
-          <label>PS|WHT|Subsidiary Branch</label>
-          <visible>T</visible>
-          <mandatory>F</mandatory>
-          <displayType>NORMAL</displayType>
-          <columnBreak>F</columnBreak>
-          <sameRowAsPrevious>F</sameRowAsPrevious>
-        </field> -->
+        
       </fields>
     </fieldGroup>
     <defaultFieldGroup>
@@ -671,11 +655,7 @@
               <visible>T</visible>
             </column>
             
-            <!-- <column>
-              <id>[type=transactioncolumncustomfield, scriptid=cseg_subs_branch]</id>
-              <label>Subsidiary Branch</label>
-              <visible>F</visible>
-            </column> -->
+           
             <column>
               <id>[scriptid=custcol_ps_wht_bill_line_no]</id>
               <label>PS|THT|Bill Line No</label>
@@ -1302,16 +1282,7 @@
       <fieldGroups>
         <defaultFieldGroup>
           <fields position="MIDDLE">
-<!--           
-          <field>
-              <id>[type=transactionbodycustomfield, scriptid=cseg_subs_branch]</id>
-              <label>Subsidiary Branch</label>
-              <visible>F</visible>
-              <mandatory>F</mandatory>
-              <displayType>NORMAL</displayType>
-              <columnBreak>F</columnBreak>
-              <sameRowAsPrevious>F</sameRowAsPrevious>
-            </field> -->
+
          
             <field>
               <id>[scriptid=custbody_ps_wht_certificate_no]</id>
@@ -1322,15 +1293,7 @@
               <columnBreak>F</columnBreak>
               <sameRowAsPrevious>F</sameRowAsPrevious>
             </field>
-            <!-- <field>
-              <id>[scriptid=custbody_wht_tax_subsidiarybranch_code]</id>
-              <label>WHT Tax Subsidiary Branch Code</label>
-              <visible>F</visible>
-              <mandatory>F</mandatory>
-              <displayType>NORMAL</displayType>
-              <columnBreak>F</columnBreak>
-              <sameRowAsPrevious>F</sameRowAsPrevious>
-            </field> -->
+           
             <field>
               <id>[scriptid=custbody_ps_wht_bill_lines_data]</id>
         <label>PS|THT|Lines Payload</label>
