@@ -5,8 +5,8 @@
  */
 
 
-define(['N/currentRecord', 'N/record', 'N/url', 'N/search', 'N/https', 'N/runtime','./lib/template_helper_lib'],
-    function(nsCurrentRec, nsRecord, url, search, https, runtime,helper_lib,) {
+define(['N/currentRecord', 'N/record', 'N/url', 'N/search', 'N/https', 'N/runtime'],
+    function(nsCurrentRec, nsRecord, url, search, https, runtime) {
 
         function pageInit(context) {
 

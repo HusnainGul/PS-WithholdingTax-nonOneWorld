@@ -116,6 +116,29 @@ define([
         text: option.name,
       });
     });
+
+    
+      let subsidiaryBranchFld = form.addField({
+        id: "custpage_subs_branch_fld",
+        type: ui.FieldType.SELECT,
+        label: "Subsidiary Branch",
+        container: "custpage_criteria",
+      });
+       let subsidiaryBranchList = getSubsidaryBranch();
+
+       subsidiaryBranchFld.addSelectOption({
+         value: "",
+         text: "",
+       });
+       if (subsidiaryBranchList) {
+         subsidiaryBranchList.map(function (option) {
+           subsidiaryBranchFld.addSelectOption({
+             value: option.id,
+             text: option.name,
+           });
+         });
+       }
+
  
 
     if (isMultiBook) {
@@ -306,6 +329,43 @@ define([
     }
   }
 
+   function getSubsidaryBranch() {
+   
+     let customrecord_cseg_subs_branchSearchObj = search.create({
+       type: "customrecord_cseg_subs_branch",
+       filters: [],
+       columns: [
+         search.createColumn({
+           name: "name",
+           sort: search.Sort.ASC,
+           label: "Name",
+         }),
+         search.createColumn({
+           name: "internalid",
+           label: "Internal Id",
+         }),
+       ],
+     });
+
+     let reportResults = customrecord_cseg_subs_branchSearchObj.run().getRange({
+       start: 0,
+       end: 1000,
+     });
+
+     let internalId;
+     let name;
+     let data = [];
+
+     for (let i in reportResults) {
+       internalId = reportResults[i].getValue("internalid");
+       name = reportResults[i].getValue("name");
+       data.push({ id: internalId, name: name });
+     }
+
+     log.debug("data: ", data);
+
+     return data;
+   }
  
   function isNull(value) {
     if (

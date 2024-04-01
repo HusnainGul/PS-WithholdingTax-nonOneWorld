@@ -10,33 +10,10 @@
 
 /** QA2 Branch created! */
 
-define([
-  "N/search",
-  "N/file",
-  "N/record",
-  "N/format",
-  "N/runtime",
-  "./lodash.js",
-  "../moment.js",
-  "N/url",
-  "N/format/i18n",
-  "./data_search_lib",
-  "./constants_lib",
-  "N/ui/dialog",
-], function (
-  search,
-  file,
-  record,
-  format,
-  runtime,
-  _,
-  moment,
-  url,
-  formati,
-  search_lib,
-  constant_lib,
-  dialog,
-) {
+define(["N/config","N/search","N/file","N/record","N/format","N/runtime","./lodash.js","../moment.js","N/url","N/format/i18n","./data_search_lib","./constants_lib","N/ui/dialog",
+], function (config,search,file,record,format,runtime, _, moment,url,formati,search_lib,constant_lib,dialog) 
+{
+
   let rootFolder = "SuiteApps/com.pointstarconsulting.withholdingtax/";
 
   function sendAttachemntEmail(renderPDFLayout, subject, body) {
@@ -91,14 +68,10 @@ define([
 
     return subsidiaryBranchName;
   }
-  function getSubsidiaryBranchAddress(internalId) {}
 
-  function getPNDAttachmentTemplateData(
-    isOneWorld,
-    param,
-    pndCategoryValue,
-    efile,
-  ) {
+  function getPNDAttachmentTemplateData(param,pndCategoryValue,efile) 
+  {
+
     let incomeTaxPayLoad = JSON.parse(param.incomeTaxRetrunPayLoad);
     log.debug("incomeTaxPayLoad", incomeTaxPayLoad);
     let printType = param.type;
@@ -132,7 +105,6 @@ define([
       incomeTaxTypeCode5Tax: 0,
     };
 
-    let subsidiary;
     let subsidiaryBranchCode = incomeTaxPayLoad.subsidiaryBranch;
     let whtTaxPeriod = incomeTaxPayLoad.whtPeriod;
     let whtTaxPeriodText = incomeTaxPayLoad.whtPeriodText;
@@ -141,18 +113,10 @@ define([
     let surcharge = incomeTaxPayLoad.surcharge;
     let totalAttachmentPage = incomeTaxPayLoad.totalAttachmentPage;
 
-    if (isOneWorld) {
-      subsidiary = incomeTaxPayLoad.subsidiary;
-    }
+  
 
     if (efile) {
-      let billLines = getLineData(
-        search_lib.getBillPaymentDataForBillData(
-          subsidiary,
-          subsidiaryBranchCode,
-          whtTaxPeriod,
-          filingStatus,
-        ),
+      let billLines = getLineData(search_lib.getBillPaymentDataForBillData(subsidiaryBranchCode,whtTaxPeriod,filingStatus),
         pndCategoryValue,
         printType,
         templateData,
@@ -163,16 +127,10 @@ define([
       log.debug("billLines thai date", fileContent);
 
       return fileContent;
+      
     }
 
-    let billLines = getLineData(
-      search_lib.getBillPaymentDataForBillData(
-        subsidiary,
-        subsidiaryBranchCode,
-        whtTaxPeriod,
-        filingStatus,
-      ),
-      pndCategoryValue,
+    let billLines = getLineData(search_lib.getBillPaymentDataForBillData(subsidiaryBranchCode,whtTaxPeriod,filingStatus),pndCategoryValue,
       printType,
       templateData,
     );
@@ -184,14 +142,9 @@ define([
     templateData["lineData"] = billLines;
     templateData = getLineDataTotal(billLines, templateData);
 
-    loadSubsidiaryForBRNNumber(subsidiary, templateData, printType);
+    loadSubsidiaryForBRNNumber(templateData, printType);
     log.debug("billLines", templateData);
-    loadSubsidiaryBranchCode(
-      subsidiaryBranchCode,
-      templateData,
-      pndCategoryValue,
-      printType,
-    );
+    loadSubsidiaryBranchCode(subsidiaryBranchCode,templateData,pndCategoryValue,printType);
     //loadSubsidiaryBranchCodeForPND53(subsidiary, templateData,printType)
     log.debug("templateData", templateData["lineData"]);
 
@@ -262,7 +215,10 @@ define([
 
     return templateData;
   }
-  function getPNDCoverTemplateData(isOneWorld, param, pndCategoryValue) {
+
+  function getPNDCoverTemplateData(param, pndCategoryValue) 
+  {
+
     let incomeTaxPayLoad = JSON.parse(param.incomeTaxRetrunPayLoad);
     let printType = param.type;
 
@@ -270,7 +226,9 @@ define([
     let year = currentDate.getFullYear();
 
     log.debug("incomeTaxPayLoad", incomeTaxPayLoad);
+
     templateData = {
+
       ordinaryfiling: false,
       additionalfiling: false,
       jan: false,
@@ -324,7 +282,6 @@ define([
       thaiYear: getThaiYear(year),
     };
 
-    let subsidiary;
     let subsidiaryBranch = incomeTaxPayLoad.subsidiaryBranch;
     let whtTaxPeriod = incomeTaxPayLoad.whtPeriod;
     let filingStatus = incomeTaxPayLoad.filingStatus;
@@ -332,47 +289,28 @@ define([
     let accountingBook = incomeTaxPayLoad.accountingBook;
     let surcharge = incomeTaxPayLoad.surcharge;
     let totalAttachmentPage = incomeTaxPayLoad.totalAttachmentPage;
-    templateData[incomeTaxPayLoad.whtFilingType] = true;
+    templateData[incomeTaxPayLoad.whtFilingType? incomeTaxPayLoad.whtFilingType : "none"] = true;
 
-    if (isOneWorld) {
-      subsidiary = incomeTaxPayLoad.subsidiary;
-    }
-
-    log.debug("subsidiary", subsidiary);
-    log.debug("isOneWorld", isOneWorld);
 
     let totalTax = 0;
     log.debug("check bill");
-    let billLines = getLineData(
-      search_lib.getBillPaymentDataForBillData(
-        subsidiary,
-        subsidiaryBranch,
-        whtTaxPeriod,
-        filingStatus,
-      ),
-      pndCategoryValue,
-      printType,
-      templateData,
-    );
+    let billLines = getLineData(search_lib.getBillPaymentDataForBillData(subsidiaryBranch,whtTaxPeriod,filingStatus),pndCategoryValue,printType,
+      templateData);
 
     log.debug("billLines", billLines);
 
-    templateData["count"] = billLines.length;
+    templateData["count"]       = billLines.length;
     templateData["totalVendor"] = getTotalVendor(billLines);
-
-    log.debug("billLines", billLines);
 
     // filingStatus Mark check & additional Filing number
 
     filingStatusText = filingStatusText.replace(/\s/g, "");
     filingStatusText = filingStatusText.toLowerCase();
-    log.debug("filingStatusText12", filingStatusText);
+  
     let additinalFileNumber = filingStatusText.replace(/[^0-9]/g, "");
     filingStatusText = filingStatusText.replace(/[0-9]/g, "");
 
-    log.debug("additinalFileNumber", additinalFileNumber);
     filingStatus = filingStatus.replace(additinalFileNumber, "");
-
     templateData[filingStatusText ? filingStatusText : "nofileselect"] = true;
 
     templateData["additionalFilingNumber"] = additinalFileNumber;
@@ -381,19 +319,26 @@ define([
     // log.debug("count",count)
 
     if (surcharge) {
+      
       let surcharge1 = convertInToCurrency(surcharge);
       surcharge1 = surcharge1.split(".");
-      if (surcharge1.length > 1) {
+
+      if (surcharge1.length > 1) 
+      {
         templateData["surcharge"] = surcharge1[0];
         templateData["surchargeAfterDot"] = surcharge1[1];
-      } else {
+      } 
+      else 
+      {
         templateData["surcharge"] = surcharge1;
         templateData["surchargeAfterDot"] = "00";
       }
+
     }
 
     templateData = getLineDataTotal(billLines, templateData);
     // log.debug("billLines templateData Total",templateData)
+    
     if (templateData["totalTaxAmount"]) {
       totalTax = templateData["totalTaxAmount"];
       let totalTax1 = totalTax.split(".");
@@ -420,9 +365,8 @@ define([
     }
     log.debug("typeof totalTax", typeof totalTax);
 
-    let plus23 = (
-      Number(totalTax.replace(/,/g, "")) + Number(surcharge.replace(/,/g, ""))
-    ).toString();
+    let plus23 = (Number(totalTax.replace(/,/g, "")) + Number(surcharge.replace(/,/g, ""))
+).toString();
     log.debug("plus23", plus23);
     plus23 = convertInToCurrency(plus23);
 
@@ -440,9 +384,8 @@ define([
     }
 
     log.debug("plus23 templateData", templateData);
-    loadSubsidiaryPND3(subsidiary, templateData, printType);
-
-    loadSubsidiaryBranchCodeForPND53(subsidiaryBranch, templateData, printType);
+     loadSubsidiaryPND3(templateData, printType);
+     loadSubsidiaryBranchCodeForPND53(subsidiaryBranch, templateData, printType);
 
     log.debug("templateData", templateData);
 
@@ -450,15 +393,10 @@ define([
 
     let isSuiteTaxEnabled =
       taxConfigration[0].values["custrecord_ps_wht_suitetax_enabled"];
-    log.debug("isSuiteTaxEnabled on templat", isSuiteTaxEnabled);
-
-    log.debug("isSuiteTaxEnabled on templat if", isSuiteTaxEnabled);
+   
     loadTaxPeriod(whtTaxPeriod, templateData);
 
-    log.debug(
-      "template data for whtFilingType1",
-      templateData["whtFilingType1"],
-    );
+   
     return templateData;
   }
 
@@ -485,314 +423,7 @@ define([
     }
   }
 
-  function ispnd3TransactionAvailable(
-    subsidiary,
-    subsidiaryBranchCode,
-    taxPeriod,
-    filingStatus,
-  ) {
-    var isOneWorld = runtime.isFeatureInEffect({ feature: "SUBSIDIARIES" });
 
-    if (!subsidiary && isOneWorld) {
-      alert("Please Select Subsidiary");
-      return;
-    } else if (!subsidiaryBranchCode && isOneWorld) {
-      alert("Please Select Subsidiary Branch");
-      return;
-    } else if (!taxPeriod) {
-      alert("Please Select WHT Period");
-      return;
-    } else if (!filingStatus) {
-      alert("Please Select Filing Status");
-      return;
-    }
-
-    let transactionSearchObj = search.create({
-      type: "vendorpayment",
-      filters: [
-        ["type", "anyof", "VendPymt"],
-        "AND",
-        ["custbody_ps_wht_tax_period", "anyof", taxPeriod],
-        "AND",
-        ["subsidiary", "anyof", subsidiary],
-        "AND",
-        ["custbody_ps_wht_filing_status", "anyof", filingStatus],
-        "AND",
-        ["custbody_ps_wht_subsidiary_branch", "anyof", subsidiaryBranchCode],
-        "AND",
-        ["custbody_ps_wht_bill_lines_data", "isnotempty", ""],
-        "AND",
-        ["mainline", "is", "F"],
-      ],
-      columns: [
-        search.createColumn({ name: "trandate", label: "Date" }),
-        search.createColumn({ name: "internalid", label: "InternalId" }),
-        search.createColumn({
-          name: "custbody_ps_wht_bill_lines_data",
-          label: "Bill Data",
-        }),
-        search.createColumn({
-          name: "entityid",
-          join: "vendor",
-          label: "Name",
-        }),
-        search.createColumn({
-          name: "address",
-          join: "vendor",
-          label: "Address",
-        }),
-      ],
-    });
-
-    let postingData = transactionSearchObj.run();
-    range = postingData.getRange(0, 999);
-    let parseData = JSON.parse(JSON.stringify(range));
-
-    if (parseData.length > 0) {
-      if (
-        ispnd3TransactionWithTaxCodeAvailable(
-          subsidiary,
-          subsidiaryBranchCode,
-          taxPeriod,
-          filingStatus,
-        )
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    } else {
-      alert("No Transaction Found");
-      false;
-    }
-  }
-
-  function ispnd3TransactionWithTaxCodeAvailable(
-    subsidiary,
-    subsidiaryBranchCode,
-    taxPeriod,
-    filingStatus,
-  ) {
-    let vendorpaymentSearchObj = search.create({
-      type: "vendorpayment",
-      filters: [
-        ["type", "anyof", "VendPymt"],
-        "AND",
-        ["custbody_ps_wht_tax_period", "anyof", taxPeriod],
-        "AND",
-        ["subsidiary", "anyof", subsidiary],
-        "AND",
-        ["custbody_ps_wht_filing_status", "anyof", filingStatus],
-        "AND",
-        ["custbody_ps_wht_subsidiary_branch", "anyof", subsidiaryBranchCode],
-        "AND",
-        ["custbody_ps_wht_bill_lines_data", "isnotempty", ""],
-        "AND",
-        ["mainline", "is", "F"],
-      ],
-      columns: [
-        search.createColumn({ name: "trandate", label: "Date" }),
-        search.createColumn({ name: "internalid", label: "InternalId" }),
-        search.createColumn({
-          name: "custbody_ps_wht_bill_lines_data",
-          label: "Bill Data",
-        }),
-        search.createColumn({
-          name: "entityid",
-          join: "vendor",
-          label: "Name",
-        }),
-        search.createColumn({
-          name: "address",
-          join: "vendor",
-          label: "Address",
-        }),
-      ],
-    });
-
-    let postingData = vendorpaymentSearchObj.run();
-    range = postingData.getRange(0, 999);
-    let parseData = JSON.parse(JSON.stringify(range));
-
-    if (parseData.length > 0) {
-      return true;
-    } else {
-      alert("No Transaction Found");
-      false;
-    }
-  }
-
-  function extractNumberFromPndCategory(string) {
-    // Use a regular expression to match the number at the end of the string
-    const match = string.match(/\d+$/);
-
-    // If a match is found, return the matched number as a string
-    if (match) {
-      return match[0];
-    }
-
-    // Otherwise, return null
-    return null;
-  }
-
-  function getWhtCategory(taxCode) {
-    let customrecord_ps_tht_wht_tax_codeSearchObj = search.create({
-      type: "customrecord_ps_tht_wht_tax_code",
-      filters: [["internalid", "anyof", taxCode]],
-      columns: ["custrecord_ps_wht_taxcode_category"],
-    });
-
-    let results = customrecord_ps_tht_wht_tax_codeSearchObj
-      .run()
-      .getRange({ start: 0, end: 1000 });
-
-    let category;
-
-    for (let i = 0; i < results.length; i++) {
-      category = results[i].getText({
-        name: "custrecord_ps_wht_taxcode_category",
-      });
-    }
-
-    log.debug("category: ", category);
-    let pndNumber = extractNumberFromPndCategory(category);
-
-    log.debug("pndNumber: ", pndNumber);
-
-    return pndNumber;
-  }
-
-  function getBillTaxCode(billRecord, tranType) {
-    log.debug("getBillTaxCode()");
-    log.debug("tranType", tranType);
-    log.debug("billRecord", billRecord);
-
-    let taxCode;
-
-    let itemLinesCount = billRecord.getLineCount("item");
-    let expenseLinesCount = billRecord.getLineCount("expense");
-    let totalLines = 0;
-    let sublist;
-
-    if (itemLinesCount > 0) {
-      totalLines = itemLinesCount;
-      sublist = "item";
-    } else if (expenseLinesCount > 0) {
-      totalLines = expenseLinesCount;
-      sublist = "expense";
-    }
-
-    log.debug("totalLines", totalLines);
-
-    for (let i = 0; i < totalLines; i++) {
-      log.debug(" i", i);
-
-      let whtTaxCode = billRecord.getSublistValue(sublist, whtTaxCodeFld, i);
-
-      if (whtTaxCode) {
-        taxCode = whtTaxCode;
-        return taxCode;
-      }
-    }
-
-    log.debug("taxCode : ", taxCode);
-
-    return taxCode;
-  }
-
-  function checkIfWhtCodeExist(billRecord, sublist) {
-    let taxCodeApplied = false;
-
-    let totalLines = billRecord.getLineCount({
-      sublistId: sublist,
-    });
-
-    for (let i = 0; i < totalLines; i++) {
-      let whtTaxCode = billRecord.getSublistValue(sublist, whtTaxCodeFld, i);
-
-      if (whtTaxCode) {
-        taxCodeApplied = true;
-
-        return taxCodeApplied;
-      }
-    }
-
-    log.debug("taxCodeApplied : ", taxCodeApplied);
-
-    return taxCodeApplied;
-  }
-
-  function getBillPaymentDataForBillData(
-    subsidiary,
-    subsidiaryBranchCode,
-    taxPeriod,
-    filingStatus,
-  ) {
-    let attachmentArray = [];
-
-    let vendorpaymentSearchObj = search.create({
-      type: "transaction",
-      filters: [
-        ["type", "anyof", "VendPymt", "Check"],
-        "AND",
-        ["custbody_ps_wht_tax_period", "anyof", taxPeriod],
-        // "AND", ["subsidiary", "anyof", subsidiary],
-        "AND",
-        ["custbody_ps_wht_filing_status", "anyof", filingStatus],
-        "AND",
-        ["custbody_ps_wht_subsidiary_branch", "anyof", subsidiaryBranchCode],
-        "AND",
-        ["custbody_ps_wht_bill_lines_data", "isnotempty", ""],
-        "AND",
-        ["mainline", "is", "F"],
-      ],
-      columns: [
-        search.createColumn({
-          name: "custbody_ps_wht_bill_lines_data",
-          label: "Bill Data",
-        }),
-        search.createColumn({ name: "internalid", label: "InternalId" }),
-      ],
-    });
-
-    let searchResultCount = vendorpaymentSearchObj.runPaged().count;
-
-    vendorpaymentSearchObj.run().each(function (searchItem) {
-      let searchObj = {};
-      searchObj.billData = searchItem.getValue({
-        name: "custbody_ps_wht_bill_lines_data",
-      });
-      searchObj.internalid = searchItem.getValue({ name: "internalid" });
-
-      attachmentArray.push(searchObj);
-      return true;
-    });
-    log.debug("attachmentArray", attachmentArray);
-
-    return attachmentArray;
-  }
-
-  function getLastDayOfMonth(month) {
-    const lastDayOfMonth = moment(month, "MM").endOf("month").format("D");
-
-    return lastDayOfMonth;
-  }
-
-  function convertDateToNetSuiteFormat(date) {
-    let netsuiteDateFormat = getNetsuiteDateFormat();
-    log.debug("Netsuite Date date", date);
-
-    const parsedDate = moment(date, "MM/DD/YYYY"); //Parsing to current DateFormat
-    const formattedDate = parsedDate.format(netsuiteDateFormat); //Parsing to netsuite DateFormat
-    log.debug("formattedDate", formattedDate);
-
-    let netsuiteDate = format.format({
-      value: formattedDate,
-      type: format.Type.DATE,
-    });
-
-    return netsuiteDate;
-  }
   function convertDateFormatToMMDDYYYY(date) {
     let netsuiteDateFormat = getNetsuiteDateFormat();
     log.debug("Netsuite Date date", netsuiteDateFormat);
@@ -1056,10 +687,9 @@ define([
     let subsidiaryBranchInternalId = vendPaymentObj.getValue({
       fieldId: "cseg_subs_branch",
     });
-    let paymentDate = getThaiDate(
-      vendPaymentObj.getText({ fieldId: "trandate" }),
-    );
-    templateData["paymentDate"] = paymentDate;
+    let paymentDateInThai = getThaiDate(vendPaymentObj.getText({ fieldId: "trandate" }));
+    let paymentDate = vendPaymentObj.getText({ fieldId: "trandate" });
+    templateData["paymentDate"] = paymentDateInThai;
 
     templateData = getHoldingTaxTemplateTaxCode(templateData);
 
@@ -1145,7 +775,8 @@ define([
                 Number(billDataLines[i].partialTaxAmount) * exchangerate;
               paidAmount =
                 Number(billDataLines[i].partialAmount) * exchangerate;
-            } else if (!billDataLines[i].isPartialPayment) {
+            }
+             else if (!billDataLines[i].isPartialPayment) {
               taxAmount = Number(billDataLines[i].taxAmount) * exchangerate;
               paidAmount = Number(billDataLines[i].amount) * exchangerate;
             }
@@ -1176,6 +807,8 @@ define([
             });
 
             lineObj[whtTaxCodeValue + ":taxCode" + taxSectionCode] = lineArray;
+
+            log.debug("lineArray check",lineArray)
 
             itemLineWithTaxCodeArray.push(lineObj);
 
@@ -1281,7 +914,7 @@ define([
               taxCertificateSectionName: values.taxCertificateSectionName,
               taxAmount: convertInToCurrency(values.taxAmount),
               paidAmount: convertInToCurrency(values.paidAmount),
-              paymentDate: getDATEINTODDMMYY(paymentDate),
+              paymentDate: getThaiDate(paymentDate),
               whtTaxIncomeType: values.whtTaxIncomeType,
               taxRate: values.taxRate,
               taxInWords: amountsTowords(values.taxAmount),
@@ -1693,14 +1326,17 @@ define([
         if (billPaymentObj[i].customerIsPerson) {
           entityFirstName = billPaymentObj[i].customerFirstName;
           entityLastName = billPaymentObj[i].customerLastName;
-        } else {
+        } 
+        else {
           entityCompanyName = billPaymentObj[i].customerCompanyName
             ? billPaymentObj[i].customerCompanyName.replace(/&/g, "&amp;")
             : billPaymentObj[i].customerCompanyName;
         }
       }
 
-      log.debug("entityId template lib", entityId);
+
+
+      log.debug("entityId template entityCompanyName", entityCompanyName);
 
       // log.debug("billData[j].taxCode : attachmentArray", billData)
       for (let j = 0; j < billData.length; j++) {
@@ -1764,10 +1400,7 @@ define([
           templateData[incomeTaxTypeCode + "Tax"] =
             templateData[incomeTaxTypeCode + "Tax"] + taxAmount;
 
-          let date = moment(
-            getDATEINTODDMMYY(billPaymentObj[i].trandate),
-            "DD/MM/YYYY",
-          );
+          let date = moment(getDATEINTODDMMYY(billPaymentObj[i].trandate),"DD/MM/YYYY");
           log.debug("thai date year", date + "--" + date.year());
           let year = getThaiYear(date.year());
           let month = date.month() + 1;
@@ -2083,19 +1716,19 @@ define([
   }
 
   function loadSubsidiaryBRN(internalId, templateData, pndCategory, printType) {
-    let subsidiaryBranchObj = record.load({
-      id: internalId,
-      type: "subsidiary",
-      isDynamic: true,
-    });
 
-    let brnNumber = subsidiaryBranchObj.getText({
-      fieldId: "custrecord_ps_wht_brn",
-    });
-    log.debug(
-      "constant_lib.colorCodeObj[printType]-",
-      constant_lib.colorCodeObj[printType],
-    );
+
+    // let subsidiaryBranchObj = record.load({
+    //   id: internalId,
+    //   type: "subsidiary",
+    //   isDynamic: true,
+    // });
+
+    // let brnNumber = subsidiaryBranchObj.getText({
+    //   fieldId: "custrecord_ps_wht_brn",
+    // });
+    // log.debug("constant_lib.colorCodeObj[printType]-",constant_lib.colorCodeObj[printType]);
+
     let brntd;
     let brnLine;
 
@@ -2112,22 +1745,29 @@ define([
     //log.debug("brntd", brntd)
   }
 
-  function loadSubsidiaryPND3(internalId, templateData, printType) {
-    if (!internalId) {
-      templateData["brnNumber"] = "";
+  function loadSubsidiaryPND3(templateData, printType) {
 
-      return;
-    }
-    let subsidiaryBranchObj = record.load({
-      id: internalId,
-      type: "subsidiary",
-      isDynamic: true,
-    });
 
-    let brnNumber = subsidiaryBranchObj.getText({
-      fieldId: "custrecord_ps_wht_vat_registration_no", // change brn to vat
-    });
-    log.debug("brnNumber-", brnNumber);
+  
+
+    
+
+    /////////////////// remove from  non-world account  ////////////////////// 
+    // let subsidiaryBranchObj = record.load({
+    //   id: internalId,
+    //   type: "subsidiary",
+    //   isDynamic: true,
+    // });
+
+    // let brnNumber = subsidiaryBranchObj.getText({
+    //   fieldId: "custrecord_ps_wht_vat_registration_no", // change brn to vat
+    // });
+    // log.debug("brnNumber-", brnNumber);
+
+    /////////////////// remove from  non-world account  ////////////////////// 
+
+  let brnNumber =  config.load({ type: config.Type.COMPANY_INFORMATION }).getValue({ fieldId: 'custrecord_ps_wht_brn' });
+
     let brntd = `<td align="center"  width="10px" height="5px" font-size="12px" style="border: 1.5px solid ${constant_lib.colorCodeObj[printType]} " > ${brnNumber[0]}</td>`;
     brntd += `<td align="right" width="2px" style="overflow: hidden; font-size:12pt;" >-</td>`;
 
@@ -2140,7 +1780,8 @@ define([
       if (i < 4 && i > 1) {
         brntd += `<td align="center" font-size="12px" width="10px" height="5px" margin-right="0.4px" style="border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]};  border-right: 0.3px dashed${constant_lib.colorCodeObj[printType]}; " >
                        ${brnNumber[i]} </td>`;
-      } else if (i == 4) {
+      } 
+      else if (i == 4) {
         brntd += `<td align="center" font-size="12px" width="10px" height="5px" margin-right="0.4px" style="border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]};  border-right: 1.5px solid ${constant_lib.colorCodeObj[printType]};  " >
                        ${brnNumber[i]} </td>`;
       } else if (i == 5) {
@@ -2150,48 +1791,66 @@ define([
       } else if (i == 6) {
         brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]};border-right: 0.3px dashed ${constant_lib.colorCodeObj[printType]};" >
                          ${brnNumber[i]} </td>`;
-      } else if (i > 6 && i < 10) {
-        brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 0.3px dashed ${constant_lib.colorCodeObj[printType]}; " >
+      } 
+      else if (i > 6 && i < 10) {
+        brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 1.5px solid ${constant_lib.colorCodeObj[printType]}; " >
                          ${brnNumber[i]} </td>`;
-      } else if (i == 10) {
-        brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 0.3px solid ${constant_lib.colorCodeObj[printType]}; " >
-                         ${brnNumber[i]} </td>`;
-      } else if (i == 11) {
-        brntd += `<td align="right" width="2px" style="overflow: hidden; font-size:12pt;" >-</td>`;
+        
+      } 
 
-        brntd += `	<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 0.3px dashed ${constant_lib.colorCodeObj[printType]}; border-left: 1.5px solid ${constant_lib.colorCodeObj[printType]};" >
-                      ${brnNumber[i]}</td>`;
-      } else if (i > 11 && i < 12) {
-        brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 0.3px dashed ${constant_lib.colorCodeObj[printType]}; " >
-                      ${brnNumber[i]}</td>`;
-      } else if (i == 12) {
-        brntd += `	<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 1.5px solid ${constant_lib.colorCodeObj[printType]}; " >
-                      ${brnNumber[i]}</td>`;
-      } else if (i == 13) {
-        brntd += `<td>-</td>
-                              <td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-left: 1.5px solid ${constant_lib.colorCodeObj[printType]}; " >
-                     ${brnNumber[i]} </td>`;
+      else if (i == 10) {
+        brntd += `<td align="right" width="2px" style="overflow: hidden; font-size:12pt;" >-</td>`;
+        brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]};border-right: 0.3px dashed ${constant_lib.colorCodeObj[printType]}; border-left: 1.5px solid ${constant_lib.colorCodeObj[printType]}; " >
+                         ${brnNumber[i]} </td>`;
       }
+       else if (i == 11) {
+        // brntd += `<td align="right" width="2px" style="overflow: hidden; font-size:12pt;" >-</td>`;
+
+        brntd += `	<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 1.5px solid ${constant_lib.colorCodeObj[printType]};  ${constant_lib.colorCodeObj[printType]};" >
+                      ${brnNumber[i]}</td>`;
+      } 
+      // else if (i > 11 && i < 12) {
+      //   brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 0.3px dashed ${constant_lib.colorCodeObj[printType]}; " >
+      //                 ${brnNumber[i]}</td>`;
+      // }
+       else if (i == 12) {
+         brntd += `<td align="right" width="2px" style="overflow: hidden; font-size:12pt;" >-</td>`;
+        brntd += `<td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]};border-right: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-left: 1.5px solid ${constant_lib.colorCodeObj[printType]}; " >
+                         ${brnNumber[i]} </td>`;
+      } 
+      // else if (i == 13) {
+      //   brntd += `<td>-</td>
+      //                         <td align="center" font-size="12px" width="10px" style="overflow: hidden; border-top: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-bottom: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-right: 1.5px solid ${constant_lib.colorCodeObj[printType]}; border-left: 1.5px solid ${constant_lib.colorCodeObj[printType]}; " >
+      //                ${brnNumber[i]} </td>`;
+      // }
 
       templateData["brnNumber"] = brntd;
     }
   }
 
-  function loadSubsidiaryForBRNNumber(internalId, templateData, printType) {
-    if (!internalId) {
-      templateData["brnNumber"] = "";
-      return;
-    }
+  function loadSubsidiaryForBRNNumber(templateData, printType) {
 
-    let subsidiaryBranchObj = record.load({
-      id: internalId,
-      type: "subsidiary",
-      isDynamic: true,
-    });
+  let brnNumber  = config.load({ type: config.Type.COMPANY_INFORMATION }).getValue({ fieldId: 'custrecord_ps_wht_brn' });
 
-    let brnNumber = subsidiaryBranchObj.getText({
-      fieldId: "custrecord_ps_wht_vat_registration_no", //change brn to vat
-    });
+
+  /////////////////  //////////////////////  remove for non-world account   /////////////////////////////
+    // if (!internalId) {
+    //   templateData["brnNumber"] = "";
+    //   return;
+    // }
+
+    // let subsidiaryBranchObj = record.load({
+    //   id: internalId,
+    //   type: "subsidiary",
+    //   isDynamic: true,
+    // });
+
+    // let brnNumber = subsidiaryBranchObj.getText({
+    //   fieldId: "custrecord_ps_wht_vat_registration_no", //change brn to vat
+    // });
+
+    /////////////////  //////////////////////  remove for non-world account   /////////////////////////////
+
 
     let brntd = ``;
     //  log.debug("brnNumber i", brnNumber[0])
@@ -2286,7 +1945,6 @@ define([
   }
 
   function loadSubsidiaryForBRNNumberForInputTaxReport(
-    internalId,
     templateData,
     printType,
   ) {
@@ -2485,10 +2143,10 @@ define([
     dateFormat = dateFormat.replace("Month", "MMM");
     dateFormat = dateFormat.replace("Mon", "MMM");
 
-    // log.debug("check dateFormat", inputDate + "-" + dateFormat)
+     log.debug("check dateFormat", inputDate + "-" + dateFormat)
 
     const formattedDate = moment(inputDate, dateFormat).format(outputFormat);
-    // log.debug("check formattedDate", formattedDate)
+     log.debug("check formattedDate", formattedDate)
 
     return formattedDate;
   }
@@ -2497,7 +2155,7 @@ define([
     return text;
   }
 
-  function amountsTowords(amount) {
+ function amountsTowords(amount) {
     log.debug("amount amountstowords", amount);
 
     if (!amount || amount == null || amount == NaN) {
@@ -2505,7 +2163,7 @@ define([
     }
 
     if (amount === 0) {
-      return "????????????";
+      return "ศูนย์บาทถ้วน";
     }
 
     const amountString = amount.toString();
@@ -2513,112 +2171,126 @@ define([
     const integerPart = parseInt(parts[0]);
     const decimalPart = parseInt(parts[1]) || 0;
 
-    const integerWords = convertIntegerToWords(integerPart);
+    let integerIntoString = integerPart.toString()
+    let thaiformatWord = identifyPlacesForThaiFormat(integerPart)
+
+    let fourDigitIntegerPart = parseInt(removeDigitsFromLeft(integerIntoString))
+
+    const integerWords = convertIntegerToWords(fourDigitIntegerPart);
     const decimalWords = convertDecimalToWords(decimalPart);
 
-    let words = integerWords + "???";
+    let words = thaiformatWord+integerWords + "บาท";
     if (decimalPart !== 0) {
-      words += "???" + decimalWords + "??????";
+     // words += "และ" + decimalWords + "สตางค์";  //remove and from thai word requested by north
+      words +=  decimalWords + "สตางค์";
     }
 
     return words;
   }
 
-  function convertIntegerToWords(integer) {
-    const units = [
-      "",
-      "?????",
-      "???",
-      "???",
-      "???",
-      "???",
-      "??",
-      "????",
-      "???",
-      "????",
-      "???",
-      "???????",
-      "??????",
-      "??????",
-      "??????",
-      "??????",
-      "?????",
-      "???????",
-      "??????",
-      "???????",
-    ];
-    const tens = [
-      "",
-      "",
-      "??????",
-      "??????",
-      "??????",
-      "??????",
-      "?????",
-      "???????",
-      "??????",
-      "???????",
-    ];
-    const scales = [
-      "",
-      "???",
-      "????",
-      "???????",
-      "???????????",
-      "???????????????",
-      "???????????????????",
-    ];
+ function convertIntegerToWords(integer) {
 
-    const chunks = integer
-      .toString()
-      .match(/.{1,3}(?=(.{3})*$)/g)
-      .reverse();
+   const units = [
+     "",
+     "หนึ่ง",
+     "สอง",
+     "สาม",
+     "สี่",
+     "ห้า",
+     "หก",
+     "เจ็ด",
+     "แปด",
+     "เก้า",
+     "สิบ",
+     "สิบเอ็ด",
+     "สิบสอง",
+     "สิบสาม",
+     "สิบสี่",
+     "สิบห้า",
+     "สิบหก",
+     "สิบเจ็ด",
+     "สิบแปด",
+     "สิบเก้า",
+   ];
+   const tens = [
+     "",
+     "",
+     "ยี่สิบ",
+     "สามสิบ",
+     "สี่สิบ",
+     "ห้าสิบ",
+     "หกสิบ",
+     "เจ็ดสิบ",
+     "แปดสิบ",
+     "เก้าสิบ",
+   ];
+   const scales = [
+     "",
+     "พัน",
+     "ล้าน",
+     "พันล้าน",
+     "พันล้านล้าน",
+     "พันล้านล้านล้าน",
+     "พันล้านล้านล้านล้าน",
+   ];
 
-    let words = "";
+   const chunks = integer
+     .toString()
+     .match(/.{1,3}(?=(.{3})*$)/g)
+     .reverse();
 
-    for (let i = 0; i < chunks.length; i++) {
-      const chunk = parseInt(chunks[i]);
-      if (chunk !== 0) {
-        let chunkWords = "";
-        const hundreds = Math.floor(chunk / 100);
-        const tensAndUnits = chunk % 100;
+   let words = "";
 
-        if (hundreds !== 0) {
-          chunkWords += units[hundreds] + "????";
-        }
+   
+   for (let i = 0; i < chunks.length; i++) {
+    
+     const chunk = parseInt(chunks[i]);
+     if (chunk !== 0) {
+       let chunkWords = "";
+       const hundreds = Math.floor(chunk / 100);
+       const tensAndUnits = chunk % 100;
 
-        if (tensAndUnits !== 0) {
-          if (tensAndUnits < 20) {
-            if (hundreds !== 0) {
-              chunkWords += "???";
-            }
-            chunkWords += units[tensAndUnits];
-          } else {
-            const tensDigit = Math.floor(tensAndUnits / 10);
-            const unitsDigit = tensAndUnits % 10;
+       if (hundreds !== 0) {
+         chunkWords += units[hundreds] + "ร้อย";
+       }
 
-            if (hundreds !== 0) {
-              chunkWords += "???";
-            }
-            chunkWords += tens[tensDigit] + " " + units[unitsDigit];
-          }
-        }
+       if (tensAndUnits !== 0) {
+         if (tensAndUnits < 20) {
+           if (hundreds !== 0) {
+            // chunkWords += "และ";
+             chunkWords += "";
+           }
+           chunkWords += units[tensAndUnits];
+         } else {
+           const tensDigit = Math.floor(tensAndUnits / 10);
+           const unitsDigit = tensAndUnits % 10;
 
-        chunkWords += " " + scales[i] + " ";
-        words = chunkWords + words;
-      }
-    }
+           if (hundreds !== 0) {
+            // chunkWords += "และ";
+             chunkWords += "";
+           }
+           chunkWords += tens[tensDigit] + "" + units[unitsDigit];
+         }
+       }
 
-    return words.trim();
-  }
+       chunkWords += "" + scales[i] + "";
+       words = chunkWords + words;
+     }
+   }
+
+   return words.trim();
+ }
+
 
   function convertDecimalToWords(decimal) {
     if (decimal === 0) {
       return "";
     }
 
+    log.debug("decimal check ",decimal)
     const decimalWords = convertIntegerToWords(decimal);
-    return decimalWords.replace(/?????/g, "");
+     log.debug("decimalWords check ",decimalWords)
+    return decimalWords.replace(/ศูนย์/g, "");
   }
 
   function getThaiYear(year) {
@@ -2680,7 +2352,7 @@ define([
       if (i > 0) {
         textFileContent += "\n";
       }
-      // else
+      // elseh
       // {
       textFileContent +=
         "|" +
@@ -2723,13 +2395,9 @@ define([
     return textFileContent;
   }
 
-  function getWHTCertificateTemplateData(
-    isOneWorld,
-    billPaymentObj,
-    internalId,
-    recordType,
-  ) {
-    log.debug("recordType on cm", recordType);
+  function getWHTCertificateTemplateData(isOneWorld,billPaymentObj,internalId,recordType) 
+  {
+    
 
     let entityRecordType = {
       creditmemo: "customer",
@@ -2737,18 +2405,26 @@ define([
       check: "vendor",
     };
 
-    let entityFilter =
-      entityRecordType[recordType] + ".custentity_ps_wht_tax_id";
+    let entityFilter = entityRecordType[recordType] + ".custentity_ps_wht_tax_id";
 
     log.debug("recordType on cm", entityRecordType[recordType]);
     log.debug("recordType on cm entityFilter", entityFilter);
 
     if (billPaymentObj.length > 0) {
+
+
+      ////////////////////////// remove for non-world        ////////////////////////////
+
       // let vendBillInternalId = billPaymentObj[0].values["appliedToTransaction.internalid"][0].text
-      let subsidiary =
-        billPaymentObj[0].values[
-          "subsidiary.custrecord_ps_wht_vat_registration_no"
-        ]; // change brn to vat
+      // let subsidiary =
+      //   billPaymentObj[0].values[
+      //     "subsidiary.custrecord_ps_wht_vat_registration_no"
+      //   ]; // change brn to vat
+     ////////////////////////// remove for nonworld        ////////////////////////////
+      //non-worldaccount123
+
+       let subsidiary = config.load({ type: config.Type.COMPANY_INFORMATION }).getValue({ fieldId: 'custrecord_ps_wht_vat_registration_no' });
+
       let taxId = billPaymentObj[0].values[entityFilter];
       let currency = billPaymentObj[0].values["currency"];
       let exchangerate = billPaymentObj[0].values["exchangerate"];
@@ -2764,15 +2440,15 @@ define([
         exchangerate = 1;
       }
 
-      let trBrnNumber = "";
+      let VATRegistrationNumber = "";
 
-      if (isOneWorld) {
+   
         for (let i = 0; i < subsidiary.length; i++) {
-          trBrnNumber += '<td border="0.5" align="center">';
-          trBrnNumber += subsidiary[i];
-          trBrnNumber += "</td>";
+          VATRegistrationNumber += '<td border="0.5" align="center">';
+          VATRegistrationNumber += subsidiary[i];
+          VATRegistrationNumber += "</td>";
         }
-      }
+     
 
       let vendorTaxId = "";
       for (let i = 0; i < taxId.length; i++) {
@@ -2781,10 +2457,7 @@ define([
         vendorTaxId += "</td>";
       }
 
-      let entity = getEntity(
-        recordType,
-        billPaymentObj[0].values.entity[0]["value"],
-      );
+      let entity = getEntity(recordType,billPaymentObj[0].values.entity[0]["value"]);
 
       templateData = {
         entity: name ? name.replace(/&/g, "&amp;") : "", //billPaymentObj[0].values.entity[0]["text"],
@@ -2804,7 +2477,7 @@ define([
         payeverytime: unCheckedImageURL(),
         payonetime: unCheckedImageURL(),
         other: unCheckedImageURL(),
-        trBrnNumber: trBrnNumber,
+        trBrnNumber: VATRegistrationNumber,
         vendorTaxId: vendorTaxId,
       };
       if (billPaymentObj[0].values.custbody_ps_wht_condition.length > 0) {
@@ -2819,12 +2492,7 @@ define([
 
       log.debug("certificate templateData", templateData);
 
-      templateData = getPaidAndTaxAmounts(
-        internalId,
-        templateData,
-        recordType,
-        exchangerate,
-      );
+      templateData = getPaidAndTaxAmounts(internalId,templateData, recordType,exchangerate);
     }
     return templateData;
   }
@@ -2853,6 +2521,7 @@ define([
   }
 
   function cleanInventoryValuationData(json) {
+
     let jsonArray = [];
 
     for (var i = 0; i < json.length; i++) {
@@ -3291,13 +2960,7 @@ define([
     return finalArray;
   }
 
-  function getPND54TemplateData(
-    isOneWorld,
-    billPaymentObj,
-    internalId,
-    recordType,
-    templateData,
-  ) {
+  function getPND54TemplateData(isOneWorld,billPaymentObj,internalId, recordType,templateData) {
     let templateDataLines = templateData.lines;
     templateDataLines = addPnd54IncomeType(templateDataLines);
 
@@ -3366,67 +3029,82 @@ define([
     pnd54Obj[filingStatusText ? filingStatusText : "noFilingStatus"] = true;
     pnd54Obj["additionalFilingNumber"] = additinalFileNumber;
     //  pnd54Obj["remittance"+remittance] = true
+     let companyObj = config.load({ type: config.Type.COMPANY_INFORMATION })
+  
+      pnd54Obj["companyName"]          = companyObj.getValue({ fieldId: "companyname" }).replace(/&/g, "&amp;")
+      pnd54Obj["companyAddress1"]      = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;") 
+      pnd54Obj["companyAddress2"]      = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;")
+      pnd54Obj["companyAddress3"]      = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;")
+      pnd54Obj["companyZipCode"]       = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;")
+      pnd54Obj["companyZipCodeInHTML"] = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;")
+      pnd54Obj["companyCity"] = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;")
+      pnd54Obj["companyTaxIdInHTML"] = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;")
+      pnd54Obj["companyZipCodeInHTML"] = companyObj.getValue({ fieldId: "custrecord_ps_wht_address1" }).replace(/&/g, "&amp;")
+      pnd54Obj["pnd54VendorTaxIdInXML"] = pnd54ZipCodeInHTML(companyObj.getValue({ fieldId: "custrecord_ps_wht_vat_registration_no" }))
 
-    let subsidiary = "1";
 
-    if (isOneWorld) {
-      subsidiary =
-        billPaymentObj[0].values["subsidiary"].length > 0
-          ? billPaymentObj[0].values["subsidiary"][0].value
-          : "1";
-    }
+      ///////////////////////// ///////// remove for non-world account /////////////////////////////////
 
-    let subsidiaryloopkup = search.lookupFields({
-      type: "subsidiary",
-      id: subsidiary,
-      columns: [
-        "legalname",
-        "custrecord_ps_wht_address1",
-        "custrecord_ps_wht_address2",
-        "custrecord_ps_wht_address3",
-        "custrecord_ps_wht_zip",
-        "custrecord_ps_wht_city",
-        "custrecord_ps_wht_vat_registration_no",
-      ],
-    });
+    // if (isOneWorld) {
+    //   subsidiary =
+    //     billPaymentObj[0].values["subsidiary"].length > 0
+    //       ? billPaymentObj[0].values["subsidiary"][0].value
+    //       : "1";
+    // }
 
-    pnd54Obj["companyName"] = subsidiaryloopkup.legalname
-      ? subsidiaryloopkup.legalname.replace(/&/g, "&amp;")
-      : ".";
+    // let subsidiaryloopkup = search.lookupFields({
+    //   type: "subsidiary",
+    //   id: subsidiary,
+    //   columns: [
+    //     "legalname",
+    //     "custrecord_ps_wht_address1",
+    //     "custrecord_ps_wht_address2",
+    //     "custrecord_ps_wht_address3",
+    //     "custrecord_ps_wht_zip",
+    //     "custrecord_ps_wht_city",
+    //     "custrecord_ps_wht_vat_registration_no",
+    //   ],
+    // });
 
-    pnd54Obj["companyAddress1"] = subsidiaryloopkup.custrecord_ps_wht_address1
-      ? subsidiaryloopkup.custrecord_ps_wht_address1.replace(/&/g, "&amp;")
-      : ".";
+    // pnd54Obj["companyName"] = subsidiaryloopkup.legalname
+    //   ? subsidiaryloopkup.legalname.replace(/&/g, "&amp;")
+    //   : ".";
 
-    pnd54Obj["companyAddress2"] = subsidiaryloopkup.custrecord_ps_wht_address2
-      ? subsidiaryloopkup.custrecord_ps_wht_address2.replace(/&/g, "&amp;")
-      : ".";
+    // pnd54Obj["companyAddress1"] = subsidiaryloopkup.custrecord_ps_wht_address1
+    //   ? subsidiaryloopkup.custrecord_ps_wht_address1.replace(/&/g, "&amp;")
+    //   : ".";
 
-    pnd54Obj["companyAddress3"] = subsidiaryloopkup.custrecord_ps_wht_address3
-      ? subsidiaryloopkup.custrecord_ps_wht_address3.replace(/&/g, "&amp;")
-      : ".";
+    // pnd54Obj["companyAddress2"] = subsidiaryloopkup.custrecord_ps_wht_address2
+    //   ? subsidiaryloopkup.custrecord_ps_wht_address2.replace(/&/g, "&amp;")
+    //   : ".";
 
-    pnd54Obj["companyZipCode"] = subsidiaryloopkup.custrecord_ps_wht_zip
-      ? subsidiaryloopkup.custrecord_ps_wht_zip
-      : ".";
+    // pnd54Obj["companyAddress3"] = subsidiaryloopkup.custrecord_ps_wht_address3
+    //   ? subsidiaryloopkup.custrecord_ps_wht_address3.replace(/&/g, "&amp;")
+    //   : ".";
 
-    pnd54Obj["companyZipCodeInHTML"] = pnd54ZipCodeInHTML(
-      subsidiaryloopkup.custrecord_ps_wht_zip,
-    )
-      ? pnd54ZipCodeInHTML(subsidiaryloopkup.custrecord_ps_wht_zip)
-      : ".";
+    // pnd54Obj["companyZipCode"] = subsidiaryloopkup.custrecord_ps_wht_zip
+    //   ? subsidiaryloopkup.custrecord_ps_wht_zip
+    //   : ".";
 
-    pnd54Obj["companyCity"] = subsidiaryloopkup.custrecord_ps_wht_city
-      ? subsidiaryloopkup.custrecord_ps_wht_city
-      : ".";
+    // pnd54Obj["companyZipCodeInHTML"] = pnd54ZipCodeInHTML(
+    //   subsidiaryloopkup.custrecord_ps_wht_zip,
+    // )
+    //   ? pnd54ZipCodeInHTML(subsidiaryloopkup.custrecord_ps_wht_zip)
+    //   : ".";
 
-    pnd54Obj["companyTaxIdInHTML"] = pnd54VendorTaxIdInXML(
-      subsidiaryloopkup.custrecord_ps_wht_vat_registration_no,
-    )
-      ? pnd54VendorTaxIdInXML(
-          subsidiaryloopkup.custrecord_ps_wht_vat_registration_no,
-        )
-      : ".";
+    // pnd54Obj["companyCity"] = subsidiaryloopkup.custrecord_ps_wht_city
+    //   ? subsidiaryloopkup.custrecord_ps_wht_city
+    //   : ".";
+
+    // pnd54Obj["companyTaxIdInHTML"] = pnd54VendorTaxIdInXML(
+    //   subsidiaryloopkup.custrecord_ps_wht_vat_registration_no,
+    // )
+    //   ? pnd54VendorTaxIdInXML(
+    //       subsidiaryloopkup.custrecord_ps_wht_vat_registration_no,
+    //     )
+    //   : ".";
+
+      ///////////////////////// ///////// remove for non-world account /////////////////////////////////
 
     templateData["Pnd54Header"] = { ...pnd54Obj };
 
@@ -3860,11 +3538,7 @@ define([
     loadTaxPeriod(vatPayLoad["whtPeriod"], templateData);
     log.debug("after tax period", templateData);
 
-    loadSubsidiaryBranchCodePND3(
-      subsidiaryBranchInternalId,
-      templateData,
-      "pp30",
-    );
+    loadSubsidiaryBranchCodePND3(subsidiaryBranchInternalId,templateData,"pp30");
 
     let subsidairyBranchObj = "";
     let subsidairyInternalId;
@@ -3878,21 +3552,13 @@ define([
 
       log.debug("check branch code", subsidairyBranchObj);
       branchName = subsidairyBranchObj["name"];
-      subsidairyInternalId =
-        subsidairyBranchObj["custrecord_ps_wht_subs_brn_filterby_subs"];
-
-      subsidairyInternalId =
-        subsidairyInternalId.length > 0 ? subsidairyInternalId[0].value : "";
+      
       templateData["branchName"] = branchName;
       log.debug("loadSubsidiaryBranch", templateData["branchName"]);
     }
 
-    loadSubsidiaryForBRNNumber(subsidairyInternalId, templateData, "pp30");
-    loadSubsidiaryBranchCodeForPND53(
-      subsidiaryBranchInternalId,
-      templateData,
-      "pp30",
-    );
+    loadSubsidiaryForBRNNumber( templateData, "pp30");
+    loadSubsidiaryBranchCodeForPND53(subsidiaryBranchInternalId,templateData,"pp30");
 
     log.debug("loadSubsidiaryBranch", templateData["branchName"]);
 
@@ -3952,6 +3618,7 @@ define([
   }
 
   function inputOutputTaxReportData(isOneWorld, param, taxReportType) {
+
     let templateData = {};
     let currentDate = new Date();
     let year = currentDate.getFullYear();
@@ -4127,6 +3794,7 @@ define([
   }
 
   function getInputOutputTaxFromSearch(taxReportType, param) {
+
     let taxConfigration = search_lib.getTaxConfigration();
     log.debug("taxConfigration", taxConfigration);
     let isSuiteTaxEnabled =
@@ -4142,11 +3810,7 @@ define([
       : withoutSuiteTaxEnabledFilters(taxReportType, param, undueAccountName);
     log.debug("undueAccountName", undueAccountName);
 
-    let inputTaxData = isSuiteTaxEnabled
-      ? search_lib.getInputVATSavedSearchDataForSuiteTaxEnabled(
-          filters,
-          undueAccountName,
-        )
+    let inputTaxData = isSuiteTaxEnabled ? search_lib.getInputVATSavedSearchDataForSuiteTaxEnabled(filters,undueAccountName)
       : search_lib.getInputVatSavedSearchData(filters);
     let tranData = [];
     let totalAmountWithOutVat = 0;
@@ -4178,10 +3842,8 @@ define([
       tranLineObj["tranNumber"] =
         inputTaxData[i].values["GROUP(transactionnumber)"];
       tranLineObj["trandate"] = getThaiDate(parsedDate);
-      tranLineObj["DocNumber"] = inputTaxData[i].values["GROUP(formulatext)_3"];
-      tranLineObj["whtMemo"] = inputTaxData[i].values[
-        "GROUP(custbody_ps_wht_memo)"
-      ]
+      tranLineObj["DocNumber"] = isSuiteTaxEnabled ? inputTaxData[i].values["GROUP(formulatext)_3"] :inputTaxData[i].values["GROUP(tranid)"];
+      tranLineObj["whtMemo"] = inputTaxData[i].values["GROUP(custbody_ps_wht_memo)"]
         ? inputTaxData[i].values["GROUP(custbody_ps_wht_memo)"].replace(
             /&/g,
             "&amp;",
@@ -4635,12 +4297,19 @@ define([
     log.debug("billPaymentObj", billPaymentObj);
 
     if (billPaymentObj.length > 0) {
+
+       //////////////////// remove for non-world account  ///////////////////
       // let vendBillInternalId = billPaymentObj[0].values["appliedToTransaction.internalid"][0].text
-      let subsidiaryVATRegistrationNumber = isOneWorld
-        ? billPaymentObj[0].values[
-            "subsidiary.custrecord_ps_wht_vat_registration_no"
-          ]
-        : "";
+      // let subsidiaryVATRegistrationNumber = isOneWorld
+      //   ? billPaymentObj[0].values[
+      //       "subsidiary.custrecord_ps_wht_vat_registration_no"
+      //     ]
+      //   : "";
+      //////////////////// remove for non-world account  ///////////////////
+
+    let subsidiaryVATRegistrationNumber =  config.load({ type: config.Type.COMPANY_INFORMATION }).getValue({ fieldId: 'custrecord_ps_wht_vat_registration_no' });
+
+
       let taxId = billPaymentObj[0].values["vendor.custentity_ps_wht_tax_id"];
       let currency = billPaymentObj[0].values["currency"];
       let exchangerate = billPaymentObj[0].values["exchangerate"];
@@ -4804,20 +4473,20 @@ define([
     return templateData;
   }
 
-  function convertToThaiMonthName(monthName) {
+    function convertToThaiMonthName(monthName) {
     const months = {
-      JANUARY: "???????",
-      FEBRUARY: "????????????",
-      MARCH: "???????",
-      APRIL: "????????",
-      MAY: "?????????",
-      JUNE: "?????????",
-      JULY: "????????",
-      AUGUST: "?????????",
-      SEPTEMBER: "????????",
-      OCTOBER: "???????",
-      NOVEMBER: "??????????",
-      DECEMBER: "????????",
+      JANUARY: "มกราคม",
+      FEBRUARY: "กุมภาพันธ์",
+      MARCH: "มีนาคม",
+      APRIL: "เมษายน",
+      MAY: "พฤษภาคม",
+      JUNE: "มิถุนายน",
+      JULY: "กรกฎาคม",
+      AUGUST: "สิงหาคม",
+      SEPTEMBER: "กันยายน",
+      OCTOBER: "ตุลาคม",
+      NOVEMBER: "พฤศจิกายน",
+      DECEMBER: "ธันวาคม",
     };
 
     return months[monthName.toUpperCase().trim()] || "Invalid month";
@@ -4855,15 +4524,52 @@ define([
     }
   }
 
-  function getThaiDate(tranDate) {
+  function getThaiDate(tranDate) 
+  {
     let date = moment(getDATEINTODDMMYY(tranDate), "DD/MM/YYYY");
-    let year = getThaiYear(date.year());
-    let month = date.month() + 1;
-    let day = date.date();
+    let year  =  getThaiYear(date.year());
+    let month =  date.month() + 1;
+    let day   =  date.date();
+   
+    if(month<10)
+    {
+      month = month+""
+      month = 0+month
+    }
+    
     let thaiDate = day + "/" + month + "/" + year;
 
     return thaiDate;
   }
+
+  function identifyPlacesForThaiFormat(number) 
+  {
+     let numberString = number.toString();
+     log.debug("numberString",numberString.length)
+     if (numberString.length < 5) {return "";}
+
+    
+     var wordobj = {"7" : "ล้าน","6": "แสน", "5":"หมื่น"}
+     var rem =  numberString 
+    var i = 0 
+     var thaiformatWord = ""
+
+      while(rem.length>4)
+      {
+        thaiformatWord +=""+convertIntegerToWords(parseInt(numberString[i]))+""+ wordobj[(rem.length).toString()]
+        rem = rem.substring(1);
+         i++
+      }
+      return thaiformatWord
+     // console.log(thaiformatWord)
+  }
+
+  function removeDigitsFromLeft(string) {
+    if (string.length > 4) {
+        string = string.substring(string.length - 4);
+    }
+    return string;
+}
 
   return {
     isNull,

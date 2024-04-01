@@ -5,8 +5,8 @@
  */
 
 
-define(['N/currentRecord', 'N/record', 'N/url', 'N/search', 'N/https', './lib/helper_lib'],
-    function(nsCurrentRec, nsRecord, url, search, https, helper_lib) {
+define(['N/currentRecord', 'N/record', 'N/url', 'N/search', 'N/https'],
+    function(nsCurrentRec, nsRecord, url, search, https) {
 
 
 

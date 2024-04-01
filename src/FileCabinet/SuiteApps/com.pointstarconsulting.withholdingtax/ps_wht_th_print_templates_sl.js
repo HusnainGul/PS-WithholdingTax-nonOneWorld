@@ -72,7 +72,7 @@ define([
 
         
 
-         if (printType == "withHoldingTaxCerificate") 
+        if (printType == "withHoldingTaxCerificate") 
          { 
 
            let internalId = param.internalId
@@ -98,9 +98,9 @@ define([
               log.debug("isPND54Enabled jk test",isPND54Enabled)
             if(isPND54Enabled) 
             {
-                let beneficiaryName = config.load({ type: config.Type.COMPANY_INFORMATION }).getValue({ fieldId: 'companyname' });
+                let beneficiaryName    = config.load({ type: config.Type.COMPANY_INFORMATION }).getValue({ fieldId: 'companyname' });
                 let beneficiaryAddress = config.load({ type: config.Type.COMPANY_INFORMATION }).getValue({ fieldId: 'mainaddress_text' });
-                templateData = helper_lib.getPND54TemplateData(isOneWorld, billPaymentObj, internalId, recordType, templateData)
+                templateData           = helper_lib.getPND54TemplateData(isOneWorld, billPaymentObj, internalId, recordType, templateData)
                 templateData["Pnd54Header"]["beneficiaryName"] = beneficiaryName
                 templateData["Pnd54Header"]["beneficiaryAddress"] = beneficiaryAddress
 
@@ -131,17 +131,22 @@ define([
                     sendAttachemntEmail(renderPDFLayout, subject, body)
                 }
         } 
-        else if (printType == "pnd3") {
-           let templateData = helper_lib.getPNDCoverTemplateData(isOneWorld, param, pndCategoryValue)
+
+        else if (printType == "pnd3") 
+        {
+           let templateData = helper_lib.getPNDCoverTemplateData(param, pndCategoryValue)
 
             log.debug("templateData pnd3a",templateData)
             renderPDFLayout = renderHtmlContent(fileURL, templateData)
             response.renderPdf(renderPDFLayout)
 
         } 
-        else if (printType == "pnd3a") { 
 
-            templateData =  helper_lib.getPNDAttachmentTemplateData(isOneWorld, param, pndCategoryValue, "") 
+        else if (printType == "pnd3a") {  
+
+               log.debug("templateData pnd3a param", param);
+            templateData =  helper_lib.getPNDAttachmentTemplateData( param, pndCategoryValue, "") 
+            log.debug("templateData", templateData);
 
             renderPDFLayout = renderHtmlContent(fileURL, templateData)
             
@@ -149,9 +154,10 @@ define([
 
 
         }
+
          else if (printType == "pnd53a") 
          {
-            templateData = helper_lib.getPNDAttachmentTemplateData(isOneWorld, param, pndCategoryValue, "")
+            templateData = helper_lib.getPNDAttachmentTemplateData( param, pndCategoryValue, "")
             log.debug("templateData final", templateData.lineData)
             renderPDFLayout = renderHtmlContent(fileURL, templateData)
             response.renderPdf(renderPDFLayout)
@@ -159,14 +165,14 @@ define([
 
         else if (printType == "pnd53") 
         {
-           let templateData = helper_lib.getPNDCoverTemplateData(isOneWorld, param, pndCategoryValue)
+           let templateData = helper_lib.getPNDCoverTemplateData(param, pndCategoryValue)
             renderPDFLayout = renderHtmlContent(fileURL, templateData)
             response.renderPdf(renderPDFLayout)
         } 
         
         else if (printType == "pnd2") 
         {
-           let templateData      = helper_lib.getPNDCoverTemplateData(isOneWorld, param, pndCategoryValue)
+           let templateData      = helper_lib.getPNDCoverTemplateData(param, pndCategoryValue)
                templateData      = helper_lib.CalculateTaxAmountANDCountTotalForPND2(templateData)   
                templateData      = helper_lib.getTotalByIncomeTaxTypeForPND2(templateData)
                renderPDFLayout   = renderHtmlContent(fileURL, templateData)
@@ -175,7 +181,7 @@ define([
 
         else if (printType == "pnd2a") 
         {
-           let templateData = helper_lib.getPNDAttachmentTemplateData(isOneWorld, param, pndCategoryValue, "")
+           let templateData = helper_lib.getPNDAttachmentTemplateData(param, pndCategoryValue, "")
            log.debug("templateData pnd2a",templateData)
             renderPDFLayout = renderHtmlContent(fileURL, templateData)
             response.renderPdf(renderPDFLayout)
@@ -194,16 +200,18 @@ define([
             renderPDFLayout = renderHtmlContent(fileURL, templateData)
             response.renderPdf(renderPDFLayout)
         }
+
         else if (printType == "pp30a") 
         {
-           let templateData = helper_lib.getPNDAttachmentTemplateData(isOneWorld, param, pndCategoryValue)
+           let templateData = helper_lib.getPNDAttachmentTemplateData(param, pndCategoryValue)
            log.debug("fileURL",fileURL)
             renderPDFLayout = renderHtmlContent(fileURL, templateData)
             response.renderPdf(renderPDFLayout)
         }
+
         else if (printType == "pp36") 
         {
-           let internalId = param.internalId;
+          let internalId = param.internalId;
           let isSendEmail = param.email;
           let recordType = param.recordType;
 
@@ -216,12 +224,12 @@ define([
           };
 
           let type = recordTypeObj[recordType];
-          let billPaymentObj = search_lib.getBillDataFromSavedSearch(isOneWorld,internalId, type, recordType);
+          let billPaymentObj = search_lib.getBillDataFromSavedSearch(internalId, type, recordType);
 
           //log.debug("billPaymentObj", billPaymentObj);
          // log.debug("billPaymentObj",helper_lib.getpp36Data(isOneWorld, billPaymentObj, internalId, recordType))
 
-          let templateData = helper_lib.getpp36Data(isOneWorld, billPaymentObj, internalId, recordType)
+          let templateData = helper_lib.getpp36Data(billPaymentObj, internalId, recordType)
 
           log.debug("fileURL", fileURL);
           renderPDFLayout = renderHtmlContent(fileURL, templateData);
@@ -233,7 +241,7 @@ define([
           
           let vatPayLoad = JSON.parse(param.VATPayLoad)
           log.debug("vatPayLoad",vatPayLoad)
-           let templateData = helper_lib.inputOutputTaxReportData(isOneWorld, vatPayLoad, "inputTaxReport")
+           let templateData = helper_lib.inputOutputTaxReportData(vatPayLoad, "inputTaxReport")
            
             log.debug("templateData final",templateData["tranDataLines"])
             //log.debug("templateData pnd3a",templateData.tranDataLines)

@@ -213,32 +213,7 @@ define([
       search.createColumn({ name: "custbody_ps_wht_pp36_section" }),
     ];
 
-    if (isOneWorld) {
-      columns.push(
-        search.createColumn({ name: "subsidiary", label: "Subsidiary" }),
-      );
-      columns.push(
-        search.createColumn({
-          name: "address1",
-          join: "subsidiary",
-          label: "Address 1",
-        }),
-      );
-      columns.push(
-        search.createColumn({
-          name: "custrecord_ps_wht_brn",
-          join: "subsidiary",
-          label: "BRN",
-        }),
-      ),
-        columns.push(
-          search.createColumn({
-            name: "custrecord_ps_wht_vat_registration_no",
-            join: "subsidiary",
-            label: "VAT Resgistration Number",
-          }),
-        );
-    }
+    
 
     var vendorpaymentSearchObj = search.create({
       type: type,
@@ -261,21 +236,12 @@ define([
     return parseData;
   }
 
-  function getpnd3AttachmentData(
-    subsidiary,
-    subsidiaryBranchCode,
-    taxPeriod,
-    whtTaxPeriodText,
-    filingStatus,
-  ) {
+  function getpnd3AttachmentData(subsidiary,subsidiaryBranchCode,taxPeriod,whtTaxPeriodText,filingStatus) 
+  {
     var attachmentArray = [];
     var records = new Array();
-    var internalIdFilter = getpnd3AttachmentNonAppliedData(
-      subsidiary,
-      subsidiaryBranchCode,
-      taxPeriod,
-      filingStatus,
-    );
+
+    var internalIdFilter = getpnd3AttachmentNonAppliedData(subsidiary,subsidiaryBranchCode,taxPeriod,filingStatus);
 
     paymentInternalIds = internalIdFilter.slice(2);
 
@@ -626,12 +592,7 @@ define([
     return templateData;
   }
 
-  function getpnd3AttachmentNonAppliedData(
-    subsidiary,
-    subsidiaryBranchCode,
-    taxPeriod,
-    filingStatus,
-  ) {
+  function getpnd3AttachmentNonAppliedData(subsidiary,subsidiaryBranchCode,taxPeriod,filingStatus ) {
     var attachmentArray = ["internalid", "anyof"];
 
     var transactionSearchObj = search.create({
@@ -726,15 +687,10 @@ define([
     return relatedRecords;
   }
 
-  function getBillPaymentDataForBillData(
-    subsidiary,
-    subsidiaryBranchCode,
-    taxPeriod,
-    filingStatus,
-  ) {
+  function getBillPaymentDataForBillData(subsidiaryBranchCode,taxPeriod,filingStatus) {
+
     var attachmentArray = [];
 
-    log.debug("subsidiary::getBillPaymentDataForBillData:", subsidiary);
 
     let filters = [
       ["type", "anyof", "VendPymt", "Check", "CustPymt"],
@@ -746,10 +702,7 @@ define([
       ["mainline", "is", "T"],
     ];
 
-    if (subsidiary) {
-      filters.push("AND");
-      filters.push(["subsidiary", "anyof", subsidiary]);
-    }
+   
     if (filingStatus) {
       filters.push("AND");
       filters.push(["custbody_ps_wht_filing_status", "anyof", filingStatus]);
