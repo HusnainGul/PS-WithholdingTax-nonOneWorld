@@ -138,7 +138,7 @@ define(['N/record', 'N/search', 'N/task', 'N/runtime', './lib/helper_lib', './li
                 if (context.newRecord.type == 'creditmemo' && context.type === context.UserEventType.CREATE) {
 
                     log.debug("credit memo sale after submit..");
-
+                    
                     const creditMemoId = context.newRecord.id;
                     const creditMemoRecord = record.load({
                         type: 'creditmemo',

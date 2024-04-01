@@ -3801,6 +3801,7 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                             let itemToSet = getItemId(taxCode, tranType)
 
                             log.debug("itemToSet: ", itemToSet)
+                            
 
 
                             recordObject.selectNewLine({
@@ -3808,11 +3809,11 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                             });
 
 
-                            // Set values for the new line item
+                       
                             recordObject.setCurrentSublistValue({
                                 sublistId: 'item',
                                 fieldId: 'item',
-                                value: itemToSet // Item internal ID
+                                value: itemToSet 
                             });
 
 
@@ -3833,6 +3834,7 @@ define(['N/search', 'N/record', 'N/format', 'N/runtime', './lodash.js', '../mome
                                 fieldId: 'amount',
                                 value: taxAmount * (-1)
                             });
+
 
 
                             if (!isSuiteTaxEnabled && taxCodeValue) {
